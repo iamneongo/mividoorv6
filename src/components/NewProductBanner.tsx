@@ -1,9 +1,3 @@
-"use client";
-
-import Image from "next/image";
-
-import useEmblaCarousel from "embla-carousel-react";
-
 const demoVideos = [
   "/mividoor/videos/video_1.mp4",
   "/mividoor/videos/video_2.mp4",
@@ -12,10 +6,6 @@ const demoVideos = [
 ];
 
 export function NewProductBanner() {
-  const [emblaRef] = useEmblaCarousel({
-    align: "start",
-    dragFree: true,
-  });
 
   return (
     <section
@@ -24,29 +14,29 @@ export function NewProductBanner() {
     >
       {/* Decorative large background text */}
       <div className="pointer-events-none absolute -left-20 top-10 select-none text-[120px] font-black uppercase leading-none tracking-tighter text-black/[0.02] md:text-[240px]">
-        Luxury
+        Vietbuild
       </div>
 
       <div className="mx-auto flex max-w-[1400px] flex-col md:min-h-[600px] md:flex-row md:items-center">
         {/* Copy */}
         <div className="z-10 flex-[0.8] px-6 py-14 md:px-10 md:py-0">
           <p className="mb-6 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
-            Bộ sưu tập
+            Hội ngành cửa & Vietbuild 2026
           </p>
           <h2 className="text-[40px] font-medium leading-[1.05] tracking-[-1px] text-ink md:text-[56px]">
             mividoor{" "}
-            <span className="accent-serif font-normal text-brand">luxury</span>
+            <span className="accent-serif font-normal text-brand">tại</span>
             <br />
-            2026
+            các sự kiện
           </h2>
           <p className="mt-6 max-w-md text-[15px] font-normal leading-[1.6] text-[#5c5852]">
-            Không chỉ dừng lại ở những ưu điểm của cửa composite thông thường, Mividoor vươn mình kiến tạo dòng sản phẩm Luxury. Nơi chất lượng bền bỉ kết hợp cùng thiết kế nghệ thuật tinh xảo, định hình đẳng cấp cho không gian sống.
+            Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
           </p>
           <a
             href="#luxury-collection"
             className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-medium text-white transition hover:bg-brand-2 hover:shadow-[0_10px_30px_rgba(29,78,216,0.2)]"
           >
-            Xem bộ sưu tập
+            Khám phá bộ sưu tập
           </a>
         </div>
 
@@ -66,30 +56,28 @@ export function NewProductBanner() {
             </div>
           </div>
 
-          {/* DESKTOP SMOOTH CAROUSEL LAYOUT */}
-          <div className="hidden overflow-hidden pl-10 md:block" ref={emblaRef}>
-            <div className="flex -ml-5 pb-12 pt-12">
-              {demoVideos.map((src, i) => (
-                <div 
-                  key={i} 
-                  className={`min-w-0 flex-[0_0_auto] pl-5 w-[260px] lg:w-[280px] transition-all duration-700 ${
-                    i % 2 === 0 ? "-translate-y-8" : "translate-y-8"
-                  }`}
-                >
-                  <div className="group relative h-[480px] w-full overflow-hidden rounded-[32px] border-[8px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-                    <video
-                      src={src}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-60 mix-blend-multiply transition-opacity group-hover:opacity-40" />
-                  </div>
+          {/* DESKTOP 2-VIDEO LAYOUT */}
+          <div className="hidden md:flex gap-6 pl-10 pr-4 pb-12 pt-12 items-start">
+            {demoVideos.slice(0, 2).map((src, i) => (
+              <div 
+                key={i} 
+                className={`flex-1 transition-all duration-700 ${
+                  i === 0 ? "-translate-y-6" : "translate-y-6"
+                }`}
+              >
+                <div className="group relative h-[480px] w-full overflow-hidden rounded-[32px] border-[8px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+                  <video
+                    src={src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-60 mix-blend-multiply transition-opacity group-hover:opacity-40" />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -32,8 +32,8 @@ export function CategoryCarousel() {
                 >
                   <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
                     <div
-                      className="absolute inset-0 bg-contain bg-bottom bg-no-repeat mix-blend-darken transition-transform duration-700 group-hover:scale-105 origin-bottom"
-                      style={{ backgroundImage: `url('${c.image}')` }}
+                      className="absolute inset-0 bg-bottom bg-no-repeat transition-transform duration-700 group-hover:scale-105 origin-bottom"
+                      style={{ backgroundImage: `url('${c.image}')`, backgroundSize: 'auto 85%' }}
                     />
                   </div>
                   <div className="flex items-end justify-between px-2">

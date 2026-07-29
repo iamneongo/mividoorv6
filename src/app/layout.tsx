@@ -2,11 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mivicomposite - Nhà máy cửa composite Mividoor công nghệ Đức",
+  title: "Mivicomposite - Nhà máy cửa composite Mividoor",
   description:
     "Mividoor — cửa composite công nghệ Đức: chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành lên đến 10 năm. Hơn 10.000 bộ cửa đã bàn giao trên toàn quốc.",
   icons: {
     icon: "/mividoor/logo.png",
+    apple: "/mividoor/logo.png",
+  },
+  openGraph: {
+    title: "Mivicomposite - Nhà máy cửa composite Mividoor",
+    description:
+      "Cửa composite công nghệ Đức: chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành lên đến 10 năm.",
+    images: ["/mividoor/images/three-doors-showcase.png"],
+    type: "website",
+    locale: "vi_VN",
+    siteName: "Mivicomposite",
   },
 };
 

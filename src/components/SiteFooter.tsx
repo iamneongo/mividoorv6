@@ -10,26 +10,26 @@ export function SiteFooter() {
     <footer id="footer" className="relative overflow-hidden bg-white pt-10">
       {/* Intro card */}
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="flex flex-col gap-8 rounded-[24px] bg-cream p-8 md:flex-row md:items-center md:gap-16 md:p-12">
-          <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-[20px] md:w-[400px]">
+        <div className="flex flex-col gap-8 rounded-[24px] bg-cream p-8 md:flex-row md:items-center md:gap-32 md:p-12">
+          <div className="w-full shrink-0 overflow-hidden rounded-[20px] md:w-[300px]">
             <Image
-              src="/mividoor/images/cau-tao-cua.webp"
-              alt="Cấu tạo cửa composite Mividoor"
-              fill
-              sizes="256px"
-              className="object-cover"
+              src="/mividoor/images/three-doors-showcase.png"
+              alt="Ba mẫu cửa composite cao cấp Mividoor"
+              width={1024}
+              height={1113}
+              className="h-auto w-full object-cover"
             />
           </div>
           <div className="flex w-full flex-1 flex-col items-end text-right">
             <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về Mividoor
             </p>
-            <h2 className="mt-2 max-w-xl text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
+            <h2 className="mt-2 text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
               Mividoor — giải pháp cửa nội thất{" "}
               <span className="accent-serif text-brand">cao cấp</span>, nâng tầm
               trải nghiệm không gian sống.
             </h2>
-            <p className="mt-3 max-w-lg text-[15px] font-normal leading-[1.5] text-[#111111]/80">
+            <p className="mt-3 text-[15px] font-normal leading-[1.5] text-[#111111]/80">
               Cửa composite sản xuất trên dây chuyền công nghệ Đức, chống nước,
               chống mối mọt, cách âm cách nhiệt — bảo hành lên đến 10 năm.
             </p>

@@ -12,11 +12,11 @@ export function MaterialsShowcase() {
           <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand md:mb-2">
             Chất lượng làm nên đẳng cấp
           </p>
-          <h2 className="text-[36px] font-medium leading-[1.05] tracking-[-1px] text-ink md:max-w-lg md:text-[38px] md:leading-[1.2] md:tracking-[-0.5px]">
+          <h2 className="text-[36px] font-medium leading-[1.05] tracking-[-1px] text-ink md:text-[38px] md:leading-[1.2] md:tracking-[-0.5px]">
             Sử dụng nguyên{" "}
             <br className="md:hidden" />
             vật liệu{" "}
-            <span className="accent-serif ml-4 mt-2 block text-[64px] leading-[0.7] text-brand md:ml-0 md:mt-0 md:inline md:text-[48px] md:leading-[1.2]">
+            <span className="accent-serif ml-4 mt-2 block text-[64px] leading-[0.7] text-brand md:ml-1 md:mt-0 md:inline md:text-[44px] md:leading-[1.2]">
               cao cấp
             </span>
           </h2>
