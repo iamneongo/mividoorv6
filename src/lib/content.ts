@@ -29,11 +29,11 @@ export const navLinks: NavLink[] = [
 const IMG = "/mividoor/images";
 
 export const categories: Category[] = [
-  { eyebrow: "hệ", title: "cửa phẳng", image: `${IMG}/mau-cua-phang.webp`, href: "#products" },
-  { eyebrow: "hệ", title: "phào chỉ", image: `${IMG}/mau-phao-chi-noi.webp`, href: "#products" },
-  { eyebrow: "hệ", title: "soi CNC", image: `${IMG}/mau-hoa-van-cnc.webp`, href: "#products" },
-  { eyebrow: "hệ", title: "ô kính", image: `${IMG}/mau-o-kinh.webp`, href: "#products" },
-  { eyebrow: "hệ", title: "cửa vòm", image: `${IMG}/mau-cua-vom.webp`, href: "#products" },
+  { eyebrow: "mẫu", title: "cửa phẳng", image: `${IMG}/mau-cua-phang.webp`, href: "#products" },
+  { eyebrow: "mẫu", title: "phào chỉ", image: `${IMG}/mau-phao-chi-noi.webp`, href: "#products" },
+  { eyebrow: "mẫu", title: "soi CNC", image: `${IMG}/mau-hoa-van-cnc.webp`, href: "#products" },
+  { eyebrow: "mẫu", title: "ô kính", image: `${IMG}/mau-o-kinh.webp`, href: "#products" },
+  { eyebrow: "mẫu", title: "cửa vòm", image: `${IMG}/mau-cua-vom.webp`, href: "#products" },
 ];
 
 export const featuredProducts: Product[] = [
