@@ -107,7 +107,7 @@ export function SiteFooter() {
             </a>
             <a
               href={`mailto:${brand.email}`}
-              className="hover:opacity-60"
+              className="break-all hover:opacity-60"
             >
               {brand.email}
             </a>

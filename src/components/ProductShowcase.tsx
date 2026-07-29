@@ -45,7 +45,7 @@ export function ProductShowcase({
             <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
               {eyebrow}
             </p>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <div className="flex items-center gap-6 overflow-x-auto whitespace-nowrap pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {tabs.map((t) => (
                 <button
                   key={t}
@@ -72,7 +72,7 @@ export function ProductShowcase({
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-5 pb-4">
             {products.map((p) => (
-              <div key={p.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[280px] md:w-[320px]">
+              <div key={p.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[250px] sm:w-[280px] md:w-[320px]">
                 <ProductCard product={p} />
               </div>
             ))}

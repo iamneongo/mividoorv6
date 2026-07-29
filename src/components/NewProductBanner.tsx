@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 
+import useEmblaCarousel from "embla-carousel-react";
+
 const demoVideos = [
   "/mividoor/videos/video_1.mp4",
   "/mividoor/videos/video_2.mp4",
@@ -10,6 +12,11 @@ const demoVideos = [
 ];
 
 export function NewProductBanner() {
+  const [emblaRef] = useEmblaCarousel({
+    align: "start",
+    dragFree: true,
+  });
+
   return (
     <section
       id="luxury"
@@ -43,30 +50,46 @@ export function NewProductBanner() {
           </a>
         </div>
 
-        {/* Static Video Row */}
-        <div className="relative min-w-0 flex-[1.2] py-10 md:py-20 md:pr-10">
-          <div className="flex snap-x snap-mandatory justify-start gap-5 overflow-x-auto px-6 pb-12 pt-12 md:justify-end md:gap-10 md:px-0 md:pl-6 [&::-webkit-scrollbar]:hidden">
-            {demoVideos.slice(0, 2).map((src, i) => (
-              <div 
-                key={i} 
-                className={`relative w-[240px] shrink-0 snap-center md:w-[260px] lg:w-[280px] transition-all duration-700 ${
-                  i % 2 === 0 ? "md:-translate-y-8" : "md:translate-y-8"
-                }`}
-              >
-                <div className="group relative h-[380px] w-full overflow-hidden rounded-[24px] border-[6px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] md:h-[480px] md:rounded-[32px] md:border-[8px]">
-                  <video
-                    src={src}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Premium Gradient Overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-60 mix-blend-multiply transition-opacity group-hover:opacity-40" />
+        {/* Videos Section */}
+        <div className="relative min-w-0 flex-[1.2] py-4 md:py-20 md:pr-10">
+          {/* MOBILE COLLAGE LAYOUT */}
+          <div className="relative mt-8 h-[440px] w-full px-6 md:hidden">
+            {/* Video 2 (Background) */}
+            <div className="absolute right-6 top-12 h-[320px] w-[55%] rotate-[8deg] overflow-hidden rounded-[20px] border-[4px] border-white shadow-xl">
+              <video src={demoVideos[1]} autoPlay muted loop playsInline className="h-full w-full object-cover" />
+              <div className="pointer-events-none absolute inset-0 bg-black/10 mix-blend-multiply" />
+            </div>
+            {/* Video 1 (Foreground) */}
+            <div className="absolute left-6 top-0 z-10 h-[380px] w-[60%] -rotate-[4deg] overflow-hidden rounded-[24px] border-[5px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
+              <video src={demoVideos[0]} autoPlay muted loop playsInline className="h-full w-full object-cover" />
+              <div className="pointer-events-none absolute inset-0 bg-black/5 mix-blend-multiply" />
+            </div>
+          </div>
+
+          {/* DESKTOP SMOOTH CAROUSEL LAYOUT */}
+          <div className="hidden overflow-hidden pl-10 md:block" ref={emblaRef}>
+            <div className="flex -ml-5 pb-12 pt-12">
+              {demoVideos.map((src, i) => (
+                <div 
+                  key={i} 
+                  className={`min-w-0 flex-[0_0_auto] pl-5 w-[260px] lg:w-[280px] transition-all duration-700 ${
+                    i % 2 === 0 ? "-translate-y-8" : "translate-y-8"
+                  }`}
+                >
+                  <div className="group relative h-[480px] w-full overflow-hidden rounded-[32px] border-[8px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+                    <video
+                      src={src}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-60 mix-blend-multiply transition-opacity group-hover:opacity-40" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

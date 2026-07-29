@@ -26,11 +26,11 @@ export function CategoryCarousel() {
           <div className="flex -ml-5 pb-2">
             {categories.map((c) => (
               <div key={c.title} className="min-w-0 flex-[0_0_auto] pl-5">
-                <a
+                  <a
                   href={c.href}
-                  className="group flex w-[300px] flex-col gap-5 md:w-[350px]"
+                  className="group flex w-[180px] sm:w-[220px] flex-col gap-5 md:w-[260px]"
                 >
-                  <div className="relative aspect-[350/393] w-full overflow-hidden rounded-[22px]">
+                  <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
                     <div
                       className="absolute inset-0 bg-contain bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-105"
                       style={{ backgroundImage: `url('${c.image}')` }}

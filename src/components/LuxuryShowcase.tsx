@@ -52,12 +52,12 @@ export function LuxuryShowcase() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-5 pb-2">
             {luxuryDoors.map((d) => (
-              <div key={d.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[280px] md:w-[320px]">
+              <div key={d.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[240px] sm:w-[280px] md:w-[320px]">
                 <a
                   href="#luxury"
                   className="group relative flex w-full flex-col gap-5"
                 >
-                  <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px]">
+                  <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
                     <Image
                       src={d.image}
                       alt={d.code}

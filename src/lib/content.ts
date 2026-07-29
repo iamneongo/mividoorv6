@@ -33,7 +33,6 @@ export const categories: Category[] = [
   { eyebrow: "hệ", title: "phào chỉ", image: `${IMG}/mau-phao-chi-noi.webp`, href: "#products" },
   { eyebrow: "hệ", title: "soi CNC", image: `${IMG}/mau-hoa-van-cnc.webp`, href: "#products" },
   { eyebrow: "hệ", title: "ô kính", image: `${IMG}/mau-o-kinh.webp`, href: "#products" },
-  { eyebrow: "hệ", title: "cửa lùa", image: `${IMG}/mau-cua-lua.webp`, href: "#products" },
   { eyebrow: "hệ", title: "cửa vòm", image: `${IMG}/mau-cua-vom.webp`, href: "#products" },
 ];
 

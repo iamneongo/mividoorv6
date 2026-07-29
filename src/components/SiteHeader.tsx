@@ -53,33 +53,43 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Drawer Backdrop */}
       <div
         className={cn(
-          "pointer-events-auto mx-4 mt-2 overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md transition-all lg:hidden",
-          open ? "max-h-96 opacity-100 shadow-lg" : "max-h-0 opacity-0",
+          "pointer-events-auto fixed inset-0 z-[9998] bg-black/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          open ? "opacity-100" : "pointer-events-none opacity-0"
+        )}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* Mobile Sidebar */}
+      <div
+        className={cn(
+          "pointer-events-auto fixed bottom-0 right-0 top-0 z-[9999] flex w-[280px] flex-col bg-white px-6 py-10 shadow-2xl transition-transform duration-500 ease-in-out lg:hidden",
+          open ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <ul className="flex flex-col gap-1 p-4">
+        <div className="mb-6 flex justify-end">
+          <button 
+            onClick={() => setOpen(false)}
+            className="flex size-10 items-center justify-center rounded-full bg-black/5 text-ink transition-colors hover:bg-black/10"
+          >
+            ✕
+          </button>
+        </div>
+
+        <ul className="flex flex-col gap-4">
           {navLinks.map((l) => (
             <li key={l.label}>
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2 text-[14px] font-medium tracking-[-0.3px] text-ink hover:bg-black/5"
+                className="block text-[18px] font-medium tracking-[-0.5px] text-ink transition-colors hover:text-brand"
               >
                 {l.label}
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href={`tel:${brand.phone.replace(/\s/g, "")}`}
-              className="mt-1 block rounded-lg bg-brand px-3 py-2 text-center text-[14px] font-semibold text-white"
-            >
-              {brand.phone}
-            </a>
-          </li>
         </ul>
       </div>
     </header>
