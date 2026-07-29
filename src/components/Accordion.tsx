@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { accordionItems } from "@/lib/content";
+import { features } from "@/lib/content";
 import { PlusIcon } from "@/components/icons";
 
 export function Accordion() {
@@ -10,7 +10,7 @@ export function Accordion() {
 
   return (
     <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
-      {accordionItems.map((item, i) => {
+      {features.map((item, i) => {
         const isOpen = open === i;
         return (
           <div key={item.title} className="border-t border-[#e3e3e3] last:border-b">

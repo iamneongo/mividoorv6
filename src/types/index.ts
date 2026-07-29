@@ -5,36 +5,49 @@ export interface NavLink {
 
 export interface Product {
   name: string;
+  code: string; // e.g. "MV-01"
+  tagline: string; // e.g. "Tối giản - Tinh tế"
   descr: string;
-  weight?: string;
-  price: string; // e.g. "22,9"
-  currency?: string; // "€"
-  mark?: string; // e.g. "-23%"
-  outOfStock?: boolean;
   image: string; // path under /public
 }
 
 export interface Category {
-  eyebrow: string; // "new" / "the"
-  title: string; // "drop" / "cosmetics"
+  eyebrow: string; // small label above title
+  title: string;
   image: string;
   href: string;
 }
 
-export interface Feedback {
-  type: "video" | "text";
-  thumbnail?: string;
-  videoLabel?: string;
-  author?: string;
-  text?: string;
+export interface LuxuryDoor {
+  code: string; // "MIVI-LUX 01"
+  tagline: string;
+  image: string;
 }
 
-export interface AccordionItem {
+export interface Material {
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
+export interface Feature {
   title: string;
   body: string;
 }
 
-export interface SocialStat {
-  network: "instagram" | "tiktok";
-  handleCount: string;
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export interface ColorSwatch {
+  code: string;
+  image: string;
+  isNew?: boolean;
+}
+
+export interface ContactItem {
+  label: string;
+  value: string;
+  href?: string;
 }

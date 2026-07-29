@@ -1,74 +1,103 @@
+"use client";
+
+import { useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import type { Product } from "@/types";
 import { ProductCard } from "@/components/ProductCard";
-import { ChevronRightIcon } from "@/components/icons";
+import { ChevronRightIcon, ChevronLeftIcon } from "@/components/icons";
 
 interface ProductShowcaseProps {
   id?: string;
+  eyebrow: string;
   tabs: string[];
   activeTab: string;
   products: Product[];
-  showLoadMore?: boolean;
+  ctaLabel?: string;
 }
 
 export function ProductShowcase({
   id,
+  eyebrow,
   tabs,
   activeTab,
   products,
-  showLoadMore = true,
+  ctaLabel = "Xem tất cả sản phẩm",
 }: ProductShowcaseProps) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
+  ]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <section id={id} className="bg-white py-10 md:py-14">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         {/* Header */}
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div className="flex items-center gap-6">
-            {tabs.map((t) => (
-              <button
-                key={t}
-                className={
-                  t === activeTab
-                    ? "text-[15px] font-medium text-[#111111]"
-                    : "text-[15px] font-normal text-[#bdbdbd] transition-colors hover:text-[#111111]"
-                }
-              >
-                {t}
-              </button>
-            ))}
-            <svg
-              viewBox="0 0 60 34"
-              className="hidden h-6 w-11 text-[#111111] sm:block"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.6}
-              strokeLinecap="round"
-            >
-              <path d="M2 6c10 10 18 24 24 24 5 0 8-9 3-14-4-4-9 0-6 6 3 6 18 8 33 3" />
-            </svg>
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
+              {eyebrow}
+            </p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              {tabs.map((t) => (
+                <button
+                  key={t}
+                  className={
+                    t === activeTab
+                      ? "text-[15px] font-medium text-[#111111]"
+                      : "text-[15px] font-normal text-[#bdbdbd] transition-colors hover:text-[#111111]"
+                  }
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
           </div>
           <a
-            href="#all"
+            href="#products"
             className="flex items-center gap-1 text-[15px] font-normal text-[#111111] transition-opacity hover:opacity-60"
           >
-            all products <ChevronRightIcon className="size-4" />
+            {ctaLabel} <ChevronRightIcon className="size-4" />
           </a>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">
-          {products.map((p) => (
-            <ProductCard key={p.name} product={p} />
-          ))}
+        {/* Carousel */}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex -ml-5 pb-4">
+            {products.map((p) => (
+              <div key={p.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[280px] md:w-[320px]">
+                <ProductCard product={p} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {showLoadMore && (
-          <div className="mt-12 flex justify-center">
-            <button className="inline-flex h-11 items-center justify-center rounded-full bg-brand px-8 text-[15px] font-medium text-white transition hover:bg-brand-2">
-              Load more
-            </button>
-          </div>
-        )}
+        {/* Controls */}
+        <div className="mt-4 flex items-center justify-end gap-3">
+          <button
+            aria-label="Trước"
+            onClick={scrollPrev}
+            className="flex size-9 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition hover:bg-black/[0.08]"
+          >
+            <ChevronLeftIcon className="size-4" />
+          </button>
+          <button
+            aria-label="Sau"
+            onClick={scrollNext}
+            className="flex size-9 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition hover:bg-black/[0.08]"
+          >
+            <ChevronRightIcon className="size-4" />
+          </button>
+        </div>
       </div>
     </section>
   );
 }
+

@@ -20,9 +20,9 @@
   --color-muted-gray: var(--muted-gray); /* #818181 */
   --color-line: var(--line); /* #bdbdbd hairline */
 
-  --font-sans: var(--font-onest), "Onest", Arial, sans-serif;
-  --font-serif: "Times New Roman", Times, Georgia, serif;
-  --font-heading: var(--font-onest), "Onest", Arial, sans-serif;
+  --font-sans: "Google Sans", sans-serif;
+  --font-serif: "Great Vibes", cursive;
+  --font-heading: "Google Sans", sans-serif;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -66,34 +66,34 @@
   --radius: 0.625rem;
 
   --ink: #111111;
-  --ink-soft: #0d1717;
-  --cream: #fbfbfb;
-  --brand: #f15730;
-  --brand-2: #f7651a;
-  --peach: #ff8562;
-  --coral: #f95d51;
-  --mint: #62c584;
-  --muted-gray: #818181;
-  --line: #bdbdbd;
+  --ink-soft: #0f172a; /* Slate 900 for dark text */
+  --cream: #f1f5f9;    /* Slate 100 for light grey bg */
+  --brand: #2563eb;    /* Blue 600 for primary CTA */
+  --brand-2: #1d4ed8;  /* Blue 700 for CTA hover */
+  --peach: #93c5fd;    /* Blue 300 for accents */
+  --coral: #60a5fa;    /* Blue 400 for accents */
+  --mint: #cbd5e1;     /* Slate 300 for muted elements */
+  --muted-gray: #64748b; /* Slate 500 */
+  --line: #cbd5e1;     /* Slate 300 */
 
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --card-foreground: #111111;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #111111;
-  --primary: #f15730;
+  --popover-foreground: #0f172a;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #fbfbfb;
-  --secondary-foreground: #111111;
-  --muted: #f4f4f4;
-  --muted-foreground: #818181;
-  --accent: #fbfbfb;
-  --accent-foreground: #111111;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #ececec;
-  --input: #ececec;
-  --ring: #f15730;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -124,8 +124,11 @@
   /* Decorative serif-italic accent words (e.g. "cosmetics", "products") */
   .accent-serif {
     font-family: var(--font-serif);
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
+    font-size: 1.55em; /* Scale up Great Vibes to match Google Sans visual weight */
+    line-height: 0.8; /* Prevent line-height blowout */
+    color: var(--brand);
   }
 }
 

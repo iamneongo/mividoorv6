@@ -1,53 +1,53 @@
 import Image from "next/image";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  SparkleIcon,
-  TiktokIcon,
-} from "@/components/icons";
+import { brand } from "@/lib/content";
+import { SparkleIcon } from "@/components/icons";
+import { PiInstagramLogo, PiFacebookLogo, PiTiktokLogo } from "react-icons/pi";
 
-const bigLinks = ["new drop", "cosmetics", "soap", "boxes", "bath bombs"];
+
 
 export function SiteFooter() {
   return (
-    <footer id="contacts" className="relative overflow-hidden bg-white pt-10">
-      {/* Info + shipping */}
+    <footer id="footer" className="relative overflow-hidden bg-white pt-10">
+      {/* Intro card */}
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="flex flex-col gap-8 rounded-[24px] bg-[#fbfbfb] p-8 md:flex-row md:items-center md:gap-16 md:p-12">
-          <div className="relative h-28 w-56 shrink-0">
+        <div className="flex flex-col gap-8 rounded-[24px] bg-cream p-8 md:flex-row md:items-center md:gap-16 md:p-12">
+          <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-[20px] md:w-[400px]">
             <Image
-              src="/images/3363-336_duct-tape-mockup-v2-.png"
-              alt="Arsenijs Fabrica tape"
+              src="/mividoor/images/cau-tao-cua.webp"
+              alt="Cấu tạo cửa composite Mividoor"
               fill
-              sizes="224px"
-              className="object-contain"
+              sizes="256px"
+              className="object-cover"
             />
           </div>
-          <div id="delivery">
-            <p className="mb-3 text-[15px] font-normal text-[#818181]">info</p>
-            <p className="accent-serif max-w-lg text-[17px] leading-[1.4] text-[#111111]">
-              We are located in Latvia, but we deliver worldwide! No matter where
-              you are, our products can reach you.
+          <div className="flex w-full flex-1 flex-col items-end text-right">
+            <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+              Về Mividoor
             </p>
-            <p className="mt-3 max-w-lg text-[15px] font-normal leading-[1.45] text-[#111111]">
-              We offer secure and reliable international shipping options to
-              ensure your order arrives safely and promptly.
+            <h2 className="mt-2 max-w-xl text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
+              Mividoor — giải pháp cửa nội thất{" "}
+              <span className="accent-serif text-brand">cao cấp</span>, nâng tầm
+              trải nghiệm không gian sống.
+            </h2>
+            <p className="mt-3 max-w-lg text-[15px] font-normal leading-[1.5] text-[#111111]/80">
+              Cửa composite sản xuất trên dây chuyền công nghệ Đức, chống nước,
+              chống mối mọt, cách âm cách nhiệt — bảo hành lên đến 10 năm.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Brand line + socials */}
+      {/* Brand line + socials + big words */}
       <div className="mx-auto max-w-[1400px] px-6 pt-16 lg:px-10">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div>
             <h3 className="max-w-xs text-[28px] font-medium leading-[1.1] tracking-[-0.5px] text-[#111111] md:text-[32px]">
-              Arsenijs Fabrica is a brand of modern and innovative{" "}
-              <span className="accent-serif">cosmetics!</span>{" "}
+              Cửa composite công nghệ{" "}
+              <span className="accent-serif text-brand">Đức</span>{" "}
               <SparkleIcon className="mb-1 inline size-5 text-brand" />
             </h3>
             <div className="mt-6 flex gap-3">
-              {[InstagramIcon, FacebookIcon, TiktokIcon].map((Icon, i) => (
+              {[PiInstagramLogo, PiFacebookLogo, PiTiktokLogo].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
@@ -59,73 +59,74 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Big nav words */}
-          <div className="grid grid-cols-1 gap-x-16 sm:grid-cols-2">
-            {bigLinks.map((l) => (
-              <a
-                key={l}
-                href="#"
-                className="text-[44px] font-medium leading-[1.15] tracking-[-1px] text-[#111111] transition-opacity hover:opacity-60 md:text-[56px]"
-              >
-                {l}
-              </a>
-            ))}
-          </div>
+
         </div>
       </div>
 
       {/* Detail columns */}
       <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-10">
-        <div className="grid grid-cols-2 gap-8 border-t border-[#ececec] pt-10 md:grid-cols-4 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-8 border-t border-[#ececec] pt-10 md:grid-cols-4">
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
-            <a href="#about" className="hover:opacity-60">about us</a>
-            <a href="#feedback" className="hover:opacity-60">feedback</a>
-            <a href="#delivery" className="hover:opacity-60">delivery</a>
+            <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+              Về chúng tôi
+            </p>
+            <a href="#about" className="hover:opacity-60">Giới thiệu</a>
+            <a href="#products" className="hover:opacity-60">Sản phẩm</a>
+            <a href="#luxury" className="hover:opacity-60">Tin tức</a>
+            <a href="#contact" className="hover:opacity-60">Liên hệ</a>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
-            <a href="#" className="hover:opacity-60">Privātuma politika</a>
-            <a href="#" className="hover:opacity-60">Noteikumi un nosacījumi</a>
-            <a href="#" className="hover:opacity-60">Preču atgriešana</a>
-            <a href="#" className="hover:opacity-60">Piegāde</a>
+            <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+              Hỗ trợ
+            </p>
+            <a href="#" className="hover:opacity-60">Hướng dẫn lắp đặt</a>
+            <a href="#" className="hover:opacity-60">Chính sách bảo hành</a>
+            <a href="#" className="hover:opacity-60">Chính sách đổi trả</a>
+            <a href="#" className="hover:opacity-60">Điều khoản sử dụng</a>
           </div>
-          <div className="text-[15px] text-[#111111]">
-            <p className="mb-1 text-[#818181]">Customer care:</p>
-            <a href="mailto:arsenijsfabrica@inbox.lv" className="hover:opacity-60">
-              arsenijsfabrica@inbox.lv
+          <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
+            <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+              Liên hệ
+            </p>
+            <span className="text-[14px] leading-[1.5] text-[#0d1717]">
+              Showroom HCM: 52 Nguyễn Thị Nhung, KĐT Vạn Phúc, Thủ Đức, TP. HCM
+            </span>
+            <span className="text-[14px] leading-[1.5] text-[#0d1717]">
+              Nhà máy: A1-10 đường số 2, KDC Miền Nam, Hưng Phú, Cần Thơ
+            </span>
+          </div>
+          <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
+            <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+              Hotline &amp; Email
+            </p>
+            <a
+              href={`tel:${brand.phone.replace(/\s/g, "")}`}
+              className="text-[18px] font-semibold text-brand hover:opacity-70"
+            >
+              {brand.phone}
             </a>
-          </div>
-          <div className="text-[15px] text-[#111111]">
-            <p className="mb-1 text-[#818181]">PR:</p>
-            <a href="mailto:promotion@arsenijsfabrica.com" className="hover:opacity-60">
-              promotion@arsenijsfabrica.com
+            <a
+              href={`mailto:${brand.email}`}
+              className="hover:opacity-60"
+            >
+              {brand.email}
             </a>
-          </div>
-          <div className="text-[15px] text-[#111111]">
-            <p className="mb-1 text-[#818181]">Wholesale:</p>
-            <a href="mailto:sales@arsenijsfabrica.com" className="hover:opacity-60">
-              sales@arsenijsfabrica.com
-            </a>
-          </div>
-          <div className="text-[13px] leading-[1.6] text-[#818181]">
-            <p>ARSENIJS FABRICA SIA</p>
-            <p>Reg.Number. 50203415881</p>
-            <p>Swedbanka LV39HABA0551053035908</p>
-            <p>Pudiķa iela 33 - 1, Rīga, LV-1006</p>
           </div>
         </div>
         <div className="mt-8 flex items-center justify-between text-[13px] text-[#818181]">
-          <span>website development</span>
-          <span>en</span>
+          <span>© 2024 MIVIDOOR. All rights reserved.</span>
+          <span>Mivicomposite</span>
         </div>
       </div>
 
       {/* Giant watermark */}
       <p
         aria-hidden
-        className="select-none whitespace-nowrap text-center text-[15vw] font-extrabold leading-[0.8] tracking-[-0.03em] text-black/[0.05]"
+        className="select-none whitespace-nowrap text-center text-[19vw] font-extrabold uppercase leading-[0.8] tracking-[-0.03em] text-black/[0.05]"
       >
-        ARSENIJS FABRICA
+        MIVIDOOR
       </p>
     </footer>
   );
 }
+

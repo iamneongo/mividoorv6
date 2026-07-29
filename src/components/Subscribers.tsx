@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { stats } from "@/lib/content";
 
 const images = [
-  "/images/6136-306_mob_1.jpg",
-  "/images/3665-363_boxesremini-enhanced.jpg",
-  "/images/6535-393_soapremini-enhanced_.jpg",
-  "/images/3934-313_bath_bombsremini-enh.jpg",
+  "/mividoor/images/luxury-8.webp",
+  "/mividoor/images/luxury-11.webp",
+  "/mividoor/images/luxury-14.webp",
 ];
 
 export function Subscribers() {
@@ -12,34 +12,52 @@ export function Subscribers() {
     <section className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex flex-col gap-10 md:flex-row md:items-center">
-          <div className="shrink-0 md:w-[340px]">
-            <p className="text-[64px] font-medium leading-none tracking-[-2px] text-[#111111] md:text-[88px]">
-              &gt;200k
+          <div className="shrink-0 md:w-[380px]">
+            <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
+              Chất lượng
             </p>
-            <p className="mt-3 text-[16px] font-normal text-[#111111]">
-              Subscribers in social networks
+            <p className="mt-2 text-[30px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
+              bền đẹp <span className="accent-serif text-brand">vượt</span> thời
+              gian
             </p>
-            <p className="mt-6 max-w-xs text-[15px] font-normal leading-[1.45] text-[#0d1717]">
-              There are over 1000 people in the skincare community. Join us and
-              become part of it.
+            <p className="mt-5 max-w-sm text-[15px] font-normal leading-[1.5] text-[#0d1717]">
+              Chống nước 100%, không cong vênh, chống mối mọt và cách âm hoàn hảo,
+              bảo hành lên đến 10 năm.
             </p>
-            <button className="mt-6 inline-flex h-11 items-center rounded-full bg-brand px-8 text-[15px] font-medium text-white transition hover:bg-brand-2">
-              join
-            </button>
+
+            <div className="mt-8 grid grid-cols-2 gap-6">
+              {stats.map((s) => (
+                <div key={s.label}>
+                  <p className="text-[32px] font-medium leading-none tracking-[-1px] text-[#111111]">
+                    {s.value}
+                  </p>
+                  <p className="mt-2 text-[14px] font-normal text-[#818181]">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              className="mt-8 inline-flex h-11 items-center rounded-full bg-brand px-8 text-[15px] font-medium text-white transition hover:bg-brand-2"
+            >
+              Liên hệ đại lý
+            </a>
           </div>
 
           <div className="no-scrollbar flex flex-1 gap-4 overflow-x-auto">
             {images.map((src, i) => (
               <div
                 key={i}
-                className="relative aspect-[3/4] w-[240px] shrink-0 overflow-hidden rounded-[20px] bg-[#f4f3f1]"
+                className="relative aspect-[3/4] w-[240px] shrink-0 overflow-hidden rounded-[20px] bg-gradient-to-b from-slate-50 to-slate-200"
               >
                 <Image
                   src={src}
                   alt=""
                   fill
                   sizes="240px"
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
               </div>
             ))}
@@ -49,3 +67,4 @@ export function Subscribers() {
     </section>
   );
 }
+

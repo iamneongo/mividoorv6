@@ -1,59 +1,43 @@
-import { ArrowUpRightIcon } from "@/components/icons";
-
 export function Hero() {
   return (
-    <section id="top" className="relative w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Left — model face + copy overlay */}
-        <div
-          className="relative flex min-h-[560px] flex-col justify-end bg-cover bg-center px-6 pb-12 md:h-[760px] md:px-12 md:pb-16 lg:px-16"
-          style={{ backgroundImage: "url('/images/3139-316_11.jpg')" }}
-        >
-          <div className="max-w-xl">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white">
-              Arsenijs Fabrica
-            </p>
-            <h1 className="text-[42px] font-medium leading-[1.02] tracking-[-0.5px] text-white md:text-[48px]">
-              brand of modern
-              <br />
-              and innovative{" "}
-              <span className="accent-serif">cosmetics</span>
-            </h1>
-            <p className="mt-6 max-w-md text-[16px] font-normal leading-[1.35] text-white/95">
-              safe cosmetics that can be bright, smell delicious and be
-              aesthetically pleasing
-            </p>
-            <a
-              href="#drop"
-              className="mt-8 inline-flex h-10 items-center justify-center rounded-full bg-white px-8 text-[12px] font-medium text-[#111111] transition hover:bg-white/90"
-            >
-              shop now
-            </a>
-          </div>
-        </div>
+    <section 
+      id="top" 
+      className="relative w-full h-[600px] md:h-[760px] bg-cover bg-center" 
+      style={{ backgroundImage: "url('/mividoor/images/banner-new-2.png')" }}
+    >
+      {/* Light legibility scrim for white text contrast */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%)",
+        }}
+      />
 
-        {/* Right — studio scene + stat card */}
-        <div
-          className="relative min-h-[420px] bg-cover bg-center md:h-[760px]"
-          style={{ backgroundImage: "url('/images/6466-346_IMG_5007.JPG')" }}
-        >
-          <div className="absolute bottom-8 right-6 w-[210px] rounded-[22px] bg-white/25 p-5 backdrop-blur-md md:right-10">
-            <div className="flex items-start justify-between">
-              <p className="text-[13px] font-normal leading-[1.25] text-[#111111]">
-                Percentage
-                <br />
-                of naturalness
-                <br />
-                of products
-              </p>
-              <ArrowUpRightIcon className="size-4 shrink-0 text-[#111111]" />
-            </div>
-            <p className="mt-4 text-[44px] font-medium leading-none tracking-[-1px] text-[#111111]">
-              98%
-            </p>
-          </div>
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-16 md:pb-28">
+        {/* Left Copy */}
+        <div className="max-w-xl">
+          <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
+            Mivicomposite
+          </p>
+          <h1 className="text-[42px] font-medium leading-[1.04] tracking-[-0.5px] text-white md:text-[52px] lg:text-[64px]">
+            cửa composite
+            <br />
+            công nghệ <span className="accent-serif italic text-brand">Đức</span>
+          </h1>
+          <p className="mt-6 max-w-md text-[16px] font-normal leading-[1.5] text-white/90">
+            Mỗi bộ cửa được tạo nên từ nguyên vật liệu cao cấp kết hợp cùng
+            công nghệ phủ phim đến từ Đức, hoàn thiện sắc nét vượt trội.
+          </p>
+          <a
+            href="#products"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-semibold text-white transition hover:bg-brand-2"
+          >
+            Khám phá sản phẩm
+          </a>
         </div>
       </div>
     </section>
   );
 }
+

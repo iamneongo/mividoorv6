@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Onest } from "next/font/google";
 import "./globals.css";
 
-const onest = Onest({
-  variable: "--font-onest",
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Arsenijs Fabrica - brand of modern and innovative cosmetics",
+  title: "Mivicomposite - Nhà máy cửa composite Mividoor công nghệ Đức",
   description:
-    "Arsenijs Fabrica — a brand of modern and innovative safe cosmetics that can be bright, smell delicious and be aesthetically pleasing. Worldwide delivery.",
+    "Mividoor — cửa composite công nghệ Đức: chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành lên đến 10 năm. Hơn 10.000 bộ cửa đã bàn giao trên toàn quốc.",
   icons: {
-    icon: "/images/3537-666_favicon_3.ico",
+    icon: "/mividoor/logo.png",
   },
 };
 
@@ -24,7 +16,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${onest.variable} h-full antialiased`}>
+    <html lang="vi" className="h-full antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full bg-background font-sans text-foreground">
         {children}
       </body>
