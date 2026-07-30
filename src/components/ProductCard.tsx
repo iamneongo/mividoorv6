@@ -4,6 +4,7 @@ import type { Product } from "@/types";
 import { ChevronRightIcon } from "@/components/icons";
 
 export function ProductCard({ product }: { product: Product }) {
+  return (
     <div className="group flex w-full flex-col gap-5">
       <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px]">
         <Image
