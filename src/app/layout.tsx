@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { TopBar } from "@/components/TopBar";
+import { ViewTransitions } from "next-view-transitions";
 
 export default function RootLayout({
   children,
@@ -29,29 +30,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className="h-full antialiased">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-full bg-background font-sans text-foreground">
-        <TopBar />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="vi" className="h-full antialiased">
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Great+Vibes&display=swap"
+            rel="stylesheet"
+          />
+        </head>
+        <body className="min-h-full bg-background font-sans text-foreground">
+          <TopBar />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

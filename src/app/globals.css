@@ -20,9 +20,9 @@
   --color-muted-gray: var(--muted-gray); /* #818181 */
   --color-line: var(--line); /* #bdbdbd hairline */
 
-  --font-sans: "Google Sans", sans-serif;
+  --font-sans: "Google Sans Flex", sans-serif;
   --font-serif: "Great Vibes", cursive;
-  --font-heading: "Google Sans", sans-serif;
+  --font-heading: "Google Sans Flex", sans-serif;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -160,5 +160,11 @@
   }
   .af-reveal {
     animation: af-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }

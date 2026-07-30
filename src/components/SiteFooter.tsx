@@ -1,3 +1,4 @@
+import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { brand } from "@/lib/content";
 import { SparkleIcon } from "@/components/icons";
@@ -5,10 +6,11 @@ import { PiInstagramLogo, PiFacebookLogo, PiTiktokLogo } from "react-icons/pi";
 
 
 
-export function SiteFooter() {
+export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) {
   return (
     <footer id="footer" className="relative overflow-hidden bg-white pt-10">
       {/* Intro card */}
+      {!hideIntro && (
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex flex-col gap-8 rounded-[24px] bg-cream p-8 md:flex-row md:items-center md:gap-32 md:p-12">
           <div className="w-full shrink-0 overflow-hidden rounded-[20px] md:w-[300px]">
@@ -36,6 +38,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Brand line + socials + big words */}
       <div className="mx-auto max-w-[1400px] px-6 pt-16 lg:px-10">
@@ -70,19 +73,19 @@ export function SiteFooter() {
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về chúng tôi
             </p>
-            <a href="/#about" className="hover:opacity-60">Giới thiệu</a>
-            <a href="/san-pham" className="hover:opacity-60">Sản phẩm</a>
-            <a href="/tin-tuc" className="hover:opacity-60">Tin tức</a>
-            <a href="/lien-he" className="hover:opacity-60">Liên hệ</a>
+            <Link href="/#about" className="hover:opacity-60">Giới thiệu</Link>
+            <Link href="/san-pham" className="hover:opacity-60">Sản phẩm</Link>
+            <Link href="/tin-tuc" className="hover:opacity-60">Tin tức</Link>
+            <Link href="/lien-he" className="hover:opacity-60">Liên hệ</Link>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Hỗ trợ
             </p>
-            <a href="#" className="hover:opacity-60">Hướng dẫn lắp đặt</a>
-            <a href="#" className="hover:opacity-60">Chính sách bảo hành</a>
-            <a href="#" className="hover:opacity-60">Chính sách đổi trả</a>
-            <a href="#" className="hover:opacity-60">Điều khoản sử dụng</a>
+            <Link href="#" className="hover:opacity-60">Hướng dẫn lắp đặt</Link>
+            <Link href="#" className="hover:opacity-60">Chính sách bảo hành</Link>
+            <Link href="#" className="hover:opacity-60">Chính sách đổi trả</Link>
+            <Link href="#" className="hover:opacity-60">Điều khoản sử dụng</Link>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">

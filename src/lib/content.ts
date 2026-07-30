@@ -8,6 +8,7 @@ import type {
   NavLink,
   Product,
   Stat,
+  NewsItem
 } from "@/types";
 
 export const brand = {
@@ -19,7 +20,7 @@ export const brand = {
 
 export const navLinks: NavLink[] = [
   { label: "Trang chủ", href: "/" },
-  { label: "Về chúng tôi", href: "/#about" },
+  { label: "Về chúng tôi", href: "/ve-chung-toi" },
   { label: "Sản phẩm", href: "/san-pham" },
   { label: "BST Mividoor Luxury", href: "/luxury" },
   { label: "Tin tức", href: "/tin-tuc" },
@@ -159,11 +160,11 @@ export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
 }));
 
 export const materials: Material[] = [
-  { title: "Phôi PVC cao cấp", subtitle: "Tiêu chuẩn nhà máy", image: `${IMG}/phoi-pvc.webp` },
-  { title: "Keo Jowat Đức", subtitle: "Mividoor sử dụng", image: `${IMG}/keo-jowat.webp` },
-  { title: "Lớp phim PVC", subtitle: "Cao cấp dày dặn", image: `${IMG}/phim-pvc.webp` },
-  { title: "Công nghệ phủ phim", subtitle: "Máy Burkle nhập từ Đức", image: `${IMG}/burkle-machine.webp` },
-  { title: "Chêm đố nhựa WPB", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/wpb-plastic.webp` },
+  { title: "Phôi PVC cao cấp", subtitle: "Tiêu chuẩn nhà máy", image: `${IMG}/phoi-pvc-v3.webp` },
+  { title: "Keo Jowat Đức", subtitle: "Mividoor sử dụng", image: `${IMG}/keo-jowat-v3.webp` },
+  { title: "Lớp phim PVC", subtitle: "Cao cấp dày dặn", image: `${IMG}/phim-pvc-v3.webp` },
+  { title: "Công nghệ phủ phim", subtitle: "Máy Burkle nhập từ Đức", image: `${IMG}/burkle-machine-v3.webp` },
+  { title: "Chêm đố nhựa WPB", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/wpb-plastic-v3.webp` },
 ];
 
 export const features: Feature[] = [
@@ -219,9 +220,51 @@ export const contactItems: ContactItem[] = [
     value: "52 Nguyễn Thị Nhung, KĐT Vạn Phúc, Thủ Đức, TP. HCM",
   },
   {
-    label: "Nhà máy sản xuất",
+    label: "Mivicomposite - Nhà máy cửa composite Mividoor",
     value: "A1-10 đường số 2, KDC Miền Nam, Hưng Phú, TP. Cần Thơ",
   },
   { label: "Hotline liên hệ", value: brand.phone, href: `tel:${brand.phone.replace(/\s/g, "")}` },
   { label: "Email liên hệ", value: brand.email, href: `mailto:${brand.email}` },
 ];
+
+export const newsArticles: NewsItem[] = [
+  {
+    slug: "mividoor-trien-lam-vietbuild-2026",
+    title: "Mividoor tham gia Triển lãm Vietbuild 2026",
+    excerpt: "Khám phá không gian trưng bày các mẫu cửa composite cao cấp và bộ sưu tập Mividoor Luxury mới nhất tại sự kiện.",
+    content: "<p>Mividoor tự hào thông báo sự góp mặt tại Triển lãm quốc tế Vietbuild 2026, sự kiện lớn nhất trong năm của ngành xây dựng và kiến trúc tại Việt Nam. Gian hàng của chúng tôi hứa hẹn sẽ mang đến những trải nghiệm không gian sống đỉnh cao thông qua các bộ sưu tập cửa composite cao cấp, đặc biệt là dòng Mividoor Luxury hoàn toàn mới.</p><p>Tại sự kiện, khách hàng sẽ có cơ hội trực tiếp trải nghiệm độ bền bỉ, khả năng chống nước tuyệt đối cùng những hoa văn thiết kế sắc nét nhờ công nghệ ép đùn và phủ phim chuẩn Đức. Mividoor luôn cam kết đem lại giá trị vượt thời gian cho mọi công trình.</p>",
+    category: "Sự kiện",
+    date: "Tháng 10, 2026",
+  },
+  {
+    slug: "ra-mat-bo-suu-tap-mividoor-luxury",
+    title: "Ra mắt Bộ sưu tập Mividoor Luxury",
+    excerpt: "Sự kết hợp hoàn hảo giữa công nghệ Đức và thiết kế tinh xảo, mang lại đẳng cấp cho không gian sống hiện đại.",
+    content: "<p>Tháng 9 vừa qua, Mividoor đã chính thức giới thiệu bộ sưu tập Mividoor Luxury, đánh dấu một bước đột phá mới trong lĩnh vực sản xuất cửa gỗ nhựa composite. Khác với các dòng cửa thông thường, Mividoor Luxury chú trọng vào sự cá nhân hóa qua từng đường phào chỉ nổi bật, các họa tiết CNC mềm mại và bảng màu đặc quyền.</p><p>Sản phẩm không chỉ đáp ứng yêu cầu khắt khe về thẩm mỹ tân cổ điển và hiện đại, mà còn kế thừa toàn bộ tính năng vượt trội: chống nước 100%, không cong vênh, chống mối mọt và cách âm hoàn hảo. Đây chắc chắn là lựa chọn không thể thiếu cho các dự án biệt thự, chung cư cao cấp và nhà phố hạng sang.</p>",
+    category: "Tin tức",
+    date: "Tháng 9, 2026",
+  },
+  {
+    slug: "tai-sao-chon-cua-composite-phong-ngu",
+    title: "Tại sao nên chọn cửa composite cho phòng ngủ?",
+    excerpt: "Những ưu điểm vượt trội về khả năng cách âm, cách nhiệt và độ bền bỉ của cửa gỗ nhựa composite.",
+    content: "<p>Phòng ngủ là không gian cần sự yên tĩnh, riêng tư và an toàn tuyệt đối. Cửa gỗ nhựa composite Mividoor đang dần trở thành sự lựa chọn số 1 thay thế cho cửa gỗ tự nhiên và cửa công nghiệp truyền thống. Với cấu tạo khoang rỗng kết hợp hệ gioăng cao su, cửa Mividoor có khả năng triệt tiêu âm thanh cực tốt, giúp mang lại giấc ngủ trọn vẹn.</p><p>Bên cạnh đó, môi trường sử dụng máy lạnh thường xuyên khiến độ ẩm chênh lệch, tuy nhiên vật liệu composite hoàn toàn không bị co ngót hay nứt nẻ. Khả năng chống cháy lan cũng là một điểm cộng lớn bảo vệ sự an toàn cho các thành viên trong gia đình. Sự đa dạng về màu vân gỗ cũng giúp sản phẩm dễ dàng phối hợp với mọi phong cách nội thất từ tối giản đến sang trọng.</p>",
+    category: "Kiến thức",
+    date: "Tháng 8, 2026",
+  }
+];
+
+export function getNewsBySlug(slug: string): NewsItem | undefined {
+  return newsArticles.find((news) => news.slug === slug);
+}
+
+export function getProductBySlug(slug: string): Product | LuxuryDoor | undefined {
+  // Check featured, catalog, and luxury
+  const catalogMatch = productCatalog.find(p => p.code.toLowerCase().replace(/\s+/g, '-') === slug);
+  if (catalogMatch) return catalogMatch;
+  
+  const luxuryMatch = luxuryDoors.find(p => p.code.toLowerCase().replace(/\s+/g, '-') === slug);
+  if (luxuryMatch) return luxuryMatch;
+
+  return undefined;
+}

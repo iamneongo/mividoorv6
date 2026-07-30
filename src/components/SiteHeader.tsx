@@ -115,17 +115,23 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
         </div>
 
         <ul className="flex flex-col gap-4">
-          {navLinks.map((l) => (
-            <li key={l.label}>
-              <a
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="block text-[18px] font-medium tracking-[-0.5px] text-ink transition-colors hover:text-brand"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+          {navLinks.map((l) => {
+            const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
+            return (
+              <li key={l.label}>
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "block text-[18px] font-medium tracking-[-0.5px] transition-colors hover:text-[#2563EB]",
+                    isActive ? "text-[#2563EB]" : "text-ink"
+                  )}
+                >
+                  {l.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </header>

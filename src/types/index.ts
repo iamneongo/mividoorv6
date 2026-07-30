@@ -51,3 +51,13 @@ export interface ContactItem {
   value: string;
   href?: string;
 }
+
+export interface NewsItem {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  date: string;
+  image?: string;
+}
