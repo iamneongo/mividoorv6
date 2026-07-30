@@ -70,10 +70,10 @@ export function SiteFooter() {
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về chúng tôi
             </p>
-            <a href="#about" className="hover:opacity-60">Giới thiệu</a>
-            <a href="#products" className="hover:opacity-60">Sản phẩm</a>
-            <a href="#luxury" className="hover:opacity-60">Tin tức</a>
-            <a href="#contact" className="hover:opacity-60">Liên hệ</a>
+            <a href="/#about" className="hover:opacity-60">Giới thiệu</a>
+            <a href="/san-pham" className="hover:opacity-60">Sản phẩm</a>
+            <a href="/tin-tuc" className="hover:opacity-60">Tin tức</a>
+            <a href="/lien-he" className="hover:opacity-60">Liên hệ</a>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">

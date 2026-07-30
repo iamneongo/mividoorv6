@@ -18,12 +18,12 @@ export const brand = {
 };
 
 export const navLinks: NavLink[] = [
-  { label: "Trang chủ", href: "#top" },
-  { label: "Về chúng tôi", href: "#about" },
-  { label: "Sản phẩm", href: "#products" },
-  { label: "BST Mividoor Luxury", href: "#luxury" },
-  { label: "Tin tức", href: "#news" },
-  { label: "Liên hệ", href: "#contact" },
+  { label: "Trang chủ", href: "/" },
+  { label: "Về chúng tôi", href: "/#about" },
+  { label: "Sản phẩm", href: "/san-pham" },
+  { label: "BST Mividoor Luxury", href: "/luxury" },
+  { label: "Tin tức", href: "/tin-tuc" },
+  { label: "Liên hệ", href: "/lien-he" },
 ];
 
 const IMG = "/mividoor/images";

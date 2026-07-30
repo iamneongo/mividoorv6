@@ -37,14 +37,6 @@ export function FeaturesShowcase() {
           })}
         </StaggerContainer>
 
-        <SlideUp className="mt-16 flex justify-center" delay={0.4}>
-          <a
-            href="#contact"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-brand px-10 text-[15px] font-medium text-white transition hover:bg-brand-2 hover:shadow-[0_10px_30px_rgba(29,78,216,0.2)]"
-          >
-            Liên hệ đại lý
-          </a>
-        </SlideUp>
       </div>
     </section>
   );

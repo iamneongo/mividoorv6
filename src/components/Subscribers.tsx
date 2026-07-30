@@ -38,12 +38,6 @@ export function Subscribers() {
               ))}
             </div>
 
-            <a
-              href="#contact"
-              className="mt-8 inline-flex h-11 items-center rounded-full bg-brand px-8 text-[15px] font-medium text-white transition hover:bg-brand-2"
-            >
-              Liên hệ đại lý
-            </a>
           </div>
 
           <div className="no-scrollbar flex flex-1 gap-4 overflow-x-auto">

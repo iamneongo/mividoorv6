@@ -2,23 +2,29 @@ import { StaggerContainer, StaggerItem } from "@/components/Animations";
 
 export function Hero() {
   return (
-    <section 
-      id="top" 
-      className="relative w-full h-[600px] md:h-[760px] bg-cover bg-[70%_center] md:bg-center" 
-      style={{ backgroundImage: "url('/mividoor/images/banner-new-2.png')" }}
-    >
-      {/* Light legibility scrim for white text contrast */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%)",
-        }}
-      />
+    <section id="top" className="relative w-full h-[85dvh] md:h-[100dvh] bg-white p-4 md:p-6">
+      <div className="relative w-full h-full rounded-[16px] overflow-hidden">
+        {/* Background Image Carousel */}
+        <div 
+          className="absolute inset-0 bg-cover bg-[65%_center] md:bg-center transition-transform duration-700" 
+          style={{ backgroundImage: "url('/mividoor/images/banner-new-2.png')" }}
+        >
+          {/* Light legibility scrim for white text contrast */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 60%)",
+            }}
+          />
+        </div>
 
-      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-16 md:pb-28">
+
+
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-20 md:pb-24 pointer-events-none">
+        
         {/* Left Copy */}
-        <StaggerContainer className="max-w-xl">
+        <StaggerContainer className="max-w-xl pointer-events-auto">
           <StaggerItem>
             <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
               Mivicomposite
@@ -49,6 +55,7 @@ export function Hero() {
             </a>
           </StaggerItem>
         </StaggerContainer>
+      </div>
       </div>
     </section>
   );
