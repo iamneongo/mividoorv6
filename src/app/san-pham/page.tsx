@@ -1,7 +1,10 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { IngredientsIntro } from "@/components/IngredientsIntro";
-import { CategoryCarousel } from "@/components/CategoryCarousel";
+import { productCatalog } from "@/lib/content";
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRightIcon } from "lucide-react";
 
 export default function ProductsPage() {
   return (
@@ -23,7 +26,42 @@ export default function ProductsPage() {
         </div>
       </div>
       <IngredientsIntro />
-      <CategoryCarousel variant="grid" />
+      
+      <section className="bg-white pb-24 pt-8 md:pt-12">
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
+            {productCatalog.map((product, i) => (
+              <div 
+                key={`${product.code}-${i}`} 
+                className="min-w-0"
+              >
+                <div className="group flex flex-col gap-5 bg-white p-6 rounded-3xl">
+                  <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
+                    <div
+                      className="absolute inset-0 bg-bottom bg-no-repeat transition-transform duration-700 group-hover:scale-105 origin-bottom"
+                      style={{ backgroundImage: `url('${product.image}')`, backgroundSize: 'auto 85%' }}
+                    />
+                  </div>
+                  <div className="flex items-end justify-between px-2">
+                    <div>
+                      <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
+                        {product.code}
+                      </p>
+                      <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink">
+                        {product.name}
+                      </p>
+                    </div>
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
+                      <ChevronRightIcon className="size-5" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </>
   );

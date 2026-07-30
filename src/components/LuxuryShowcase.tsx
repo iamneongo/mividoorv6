@@ -79,7 +79,7 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                         <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
                           {d.code}
                         </p>
-                        <p className="mt-1.5 text-[26px] font-semibold leading-none tracking-[-0.5px] text-ink transition-colors group-hover:text-brand">
+                        <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
                           {d.tagline}
                         </p>
                       </div>
@@ -116,7 +116,7 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                           <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
                             {d.code}
                           </p>
-                          <p className="mt-1.5 text-[26px] font-semibold leading-none tracking-[-0.5px] text-ink transition-colors group-hover:text-brand">
+                          <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
                             {d.tagline}
                           </p>
                         </div>

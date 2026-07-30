@@ -7,17 +7,17 @@ export default function ContactPage() {
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-screen">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-20 h-full min-h-screen flex items-center">
+        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 h-full min-h-[50vh]">
           <div className="mx-auto flex w-full max-w-[1400px] px-6 lg:px-10 flex-col md:flex-row gap-16 md:gap-24 relative z-10">
           
           {/* Left Column: Big Typography and Info */}
-          <div className="flex-1 flex flex-col justify-between py-12">
+          <div className="flex-1 flex flex-col justify-between">
             <div>
-              <h1 className="text-5xl font-medium tracking-tighter text-ink md:text-[72px] leading-[0.9]">
+              <h1 className="text-4xl font-medium tracking-tight text-ink md:text-6xl leading-[1.1]">
                 Liên hệ <br />
-                <span className="text-[#2563EB] accent-serif font-normal text-4xl md:text-[64px]">Mividoor</span>
+                <span className="text-[#2563EB] accent-serif font-normal text-3xl md:text-[56px] inline-block mt-2">Mividoor</span>
               </h1>
-              <p className="mt-8 max-w-md text-lg text-ink/70 leading-relaxed">
+              <p className="mt-6 max-w-md text-lg text-ink/70 leading-relaxed">
                 Hãy để lại thông tin, đội ngũ chuyên gia của chúng tôi sẽ liên hệ lại và tư vấn giải pháp cửa phù hợp nhất cho không gian của bạn.
               </p>
             </div>

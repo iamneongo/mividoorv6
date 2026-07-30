@@ -20,13 +20,13 @@ export function BrandStory() {
         </SlideUp>
 
         {/* Stats Grid */}
-        <StaggerContainer className="mt-16 grid grid-cols-2 gap-y-12 md:gap-y-8 md:mt-24 md:grid-cols-4">
+        <StaggerContainer className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-y-16 md:gap-y-8 md:mt-24 md:grid-cols-4">
           {stats.map((s, i) => (
             <StaggerItem 
               key={s.label} 
-              className={`flex flex-col items-center justify-center text-center px-4 md:px-6 border-black/5 ${i % 2 !== 0 ? 'border-l' : ''} ${i > 0 ? 'md:border-l' : 'md:border-l-0'}`}
+              className={`flex flex-col items-center justify-center text-center px-4 md:px-6 border-black/5 ${i % 2 !== 0 ? 'sm:border-l' : ''} ${i > 0 ? 'md:border-l' : 'md:border-l-0'}`}
             >
-              <p className="text-[56px] accent-serif leading-none text-brand md:text-[72px] lg:text-[84px]">
+              <p className="text-[52px] sm:text-[56px] accent-serif leading-none text-brand md:text-[72px] lg:text-[84px] whitespace-nowrap">
                 <Counter 
                   value={parseInt(s.value.replace(/\./g, ''))} 
                   suffix={s.value.replace(/[0-9.]/g, '')} 

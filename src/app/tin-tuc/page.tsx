@@ -8,12 +8,12 @@ export default function NewsPage() {
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-20 h-full min-h-[50vh]">
+        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 h-full min-h-[50vh]">
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-24">
-              <h1 className="text-5xl font-medium tracking-tighter text-ink md:text-[72px] leading-[0.9]">
+              <h1 className="text-4xl font-medium tracking-tight text-ink md:text-6xl leading-[1.1]">
                 Tin tức & <br />
-                <span className="text-[#2563EB] accent-serif font-normal text-4xl md:text-[64px]">Sự kiện</span>
+                <span className="text-[#2563EB] accent-serif font-normal text-3xl md:text-[56px] inline-block mt-2">Sự kiện</span>
               </h1>
               <p className="max-w-md text-lg text-ink/70 md:text-right pb-4 md:pb-8">
                 Cập nhật những thông tin mới nhất về Mividoor, các hoạt động triển lãm, hội thảo và xu hướng thiết kế nội thất.

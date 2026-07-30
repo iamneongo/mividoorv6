@@ -33,11 +33,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <div className="relative w-full bg-white min-h-screen">
+      <div className="relative w-full bg-white p-4 md:p-6 min-h-screen flex flex-col">
         <SiteHeader />
         
         {/* Main Content Area */}
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 pt-32 pb-24">
+        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] flex-1 pt-32 pb-24">
+          <div className="mx-auto max-w-[1100px] px-6 lg:px-10">
           <Link 
             href={isLuxury ? "/luxury" : "/san-pham"} 
             className="inline-flex items-center gap-2 text-ink/50 hover:text-brand transition-colors mb-8 font-medium text-sm uppercase tracking-wider"
@@ -49,16 +50,16 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
             
             {/* Left: Product Image Showcase */}
-            <div className="w-full lg:w-[55%] sticky top-32">
-              <div className="relative w-full rounded-[32px] bg-[#F7F7F7] p-8 md:p-16 flex items-center justify-center overflow-hidden group">
+            <div className="w-full lg:w-[55%] sticky top-32 flex justify-center">
+              <div className="relative w-full max-w-[500px] rounded-[32px] bg-white p-8 md:p-12 flex items-center justify-center overflow-hidden group shadow-sm">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative w-full aspect-[1/1.5] max-h-[75vh]">
+                <div className="relative w-full aspect-[1/1.8] max-h-[65vh]">
                   <Image
                     src={product.image}
                     alt={name}
                     fill
                     priority
-                    className="object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-multiply"
                   />
                 </div>
               </div>
@@ -130,6 +131,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <SiteFooter hideIntro />
     </>

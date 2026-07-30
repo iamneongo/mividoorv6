@@ -17,7 +17,7 @@ export function AboutValues() {
             <div className="sticky top-32 pr-4">
               <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-ink leading-[1.1] mb-6">
                 Ưu điểm <br className="hidden lg:block"/> 
-                <span className="accent-serif font-normal text-[56px] md:text-[64px] text-[#2563EB] block mt-2 tracking-normal">vượt trội</span>
+                <span className="accent-serif font-normal text-[44px] md:text-[64px] text-[#2563EB] block mt-2 tracking-normal">vượt trội</span>
               </h2>
               <p className="text-lg text-ink/70 leading-relaxed max-w-sm">
                 Chất lượng được khẳng định qua từng chi tiết. Những đặc tính kỹ thuật ưu việt giúp cửa Mividoor luôn bền đẹp và an toàn theo thời gian.

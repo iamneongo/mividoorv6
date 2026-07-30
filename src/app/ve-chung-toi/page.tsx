@@ -15,10 +15,10 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto">
               <h1 className="text-4xl font-medium tracking-tighter text-ink md:text-[56px] leading-[1]">
                 Về chúng tôi <br />
-                <span className="font-normal accent-serif text-[#2563EB] text-[56px] md:text-[80px] tracking-normal inline-block mt-2">Mividoor & Mivicomposite</span>
+                <span className="font-normal accent-serif text-[#2563EB] text-[44px] md:text-[80px] tracking-normal inline-block mt-2">Mividoor & Mivicomposite</span>
               </h1>
               <p className="max-w-2xl text-lg text-ink/70 leading-relaxed mt-2">
-                Sự kết hợp hoàn hảo giữa nhà máy sản xuất ván gỗ nhựa hàng đầu và thương hiệu cửa nội thất cao cấp.
+                Sự kết hợp hoàn hảo giữa nhà máy sản xuất cửa composite và thương hiệu cửa nội thất cao cấp.
               </p>
             </div>
           </div>

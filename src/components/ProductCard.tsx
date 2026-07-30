@@ -1,12 +1,10 @@
-﻿import { Link } from "next-view-transitions";
+
 import Image from "next/image";
 import type { Product } from "@/types";
 import { ChevronRightIcon } from "@/components/icons";
 
 export function ProductCard({ product }: { product: Product }) {
-  const slug = product.code.toLowerCase().replace(/\s+/g, '-');
-  return (
-    <Link href={`/san-pham/${slug}`} className="group flex w-full flex-col gap-5">
+    <div className="group flex w-full flex-col gap-5">
       <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px]">
         <Image
           src={product.image}
@@ -21,7 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
             {product.code}
           </p>
-          <p className="mt-1.5 text-[26px] font-semibold leading-none tracking-[-0.5px] text-ink transition-colors group-hover:text-brand">
+          <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
             {product.name}
           </p>
         </div>
@@ -29,6 +27,6 @@ export function ProductCard({ product }: { product: Product }) {
           <ChevronRightIcon className="size-5" />
         </span>
       </div>
-    </Link>
+    </div>
   );
 }

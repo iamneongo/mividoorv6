@@ -26,12 +26,12 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về Mividoor
             </p>
-            <h2 className="mt-2 text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
+            <h2 className="mt-2 max-w-2xl text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
               Mividoor — giải pháp cửa nội thất{" "}
               <span className="accent-serif text-brand">cao cấp</span>, nâng tầm
               trải nghiệm không gian sống.
             </h2>
-            <p className="mt-3 text-[15px] font-normal leading-[1.5] text-[#111111]/80">
+            <p className="mt-4 max-w-lg text-[15px] font-normal leading-[1.5] text-[#111111]/80">
               Cửa composite sản xuất trên dây chuyền công nghệ Đức, chống nước,
               chống mối mọt, cách âm cách nhiệt — bảo hành lên đến 10 năm.
             </p>
@@ -68,7 +68,7 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
 
       {/* Detail columns */}
       <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-10">
-        <div className="grid grid-cols-2 gap-8 border-t border-[#ececec] pt-10 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 border-t border-[#ececec] pt-10 sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về chúng tôi
@@ -77,15 +77,6 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             <Link href="/san-pham" className="hover:opacity-60">Sản phẩm</Link>
             <Link href="/tin-tuc" className="hover:opacity-60">Tin tức</Link>
             <Link href="/lien-he" className="hover:opacity-60">Liên hệ</Link>
-          </div>
-          <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
-            <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
-              Hỗ trợ
-            </p>
-            <Link href="#" className="hover:opacity-60">Hướng dẫn lắp đặt</Link>
-            <Link href="#" className="hover:opacity-60">Chính sách bảo hành</Link>
-            <Link href="#" className="hover:opacity-60">Chính sách đổi trả</Link>
-            <Link href="#" className="hover:opacity-60">Điều khoản sử dụng</Link>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
@@ -116,7 +107,7 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             </a>
           </div>
         </div>
-        <div className="mt-8 flex items-center justify-between text-[13px] text-[#818181]">
+        <div className="mt-12 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[13px] text-[#818181] text-center md:text-left">
           <span>© 2024 MIVIDOOR. All rights reserved.</span>
           <span>Mivicomposite</span>
         </div>

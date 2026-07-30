@@ -6,7 +6,7 @@ export function Hero() {
       <div className="relative w-full h-full rounded-[16px] overflow-hidden">
         {/* Background Image Carousel */}
         <div 
-          className="absolute inset-0 bg-cover bg-[65%_center] md:bg-center transition-transform duration-700" 
+          className="absolute inset-0 bg-cover bg-[80%_center] md:bg-center transition-transform duration-700" 
           style={{ backgroundImage: "url('/mividoor/images/banner-new-2.png')" }}
         >
           {/* Light legibility scrim for white text contrast */}
