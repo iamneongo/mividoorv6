@@ -1,3 +1,5 @@
+import { Link } from "next-view-transitions";
+
 const demoVideos = [
   "/mividoor/videos/video_1.mp4",
   "/mividoor/videos/video_2.mp4",
@@ -32,12 +34,12 @@ export function NewProductBanner() {
           <p className="mt-6 max-w-md text-[15px] font-normal leading-[1.6] text-[#5c5852]">
             Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
           </p>
-          <a
-            href="#luxury-collection"
+          <Link
+            href="/luxury"
             className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-medium text-white transition hover:bg-brand-2 hover:shadow-[0_10px_30px_rgba(29,78,216,0.2)]"
           >
             Khám phá bộ sưu tập
-          </a>
+          </Link>
         </div>
 
         {/* Videos Section */}

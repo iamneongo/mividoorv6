@@ -1,4 +1,5 @@
 import { StaggerContainer, StaggerItem } from "@/components/Animations";
+import { Link } from "next-view-transitions";
 
 export function Hero() {
   return (
@@ -26,8 +27,8 @@ export function Hero() {
         {/* Left Copy */}
         <StaggerContainer className="max-w-xl pointer-events-auto">
           <StaggerItem>
-            <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-white">
-              Mivicomposite
+            <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/70 mb-4">
+              Cửa composite Mividoor
             </p>
           </StaggerItem>
           
@@ -47,12 +48,12 @@ export function Hero() {
           </StaggerItem>
           
           <StaggerItem>
-            <a
-              href="#products"
+            <Link
+              href="/san-pham"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-semibold text-white transition hover:bg-brand-2"
             >
               Khám phá sản phẩm
-            </a>
+            </Link>
           </StaggerItem>
         </StaggerContainer>
       </div>
