@@ -11,7 +11,7 @@ export function BrandStory() {
             Chất lượng
           </p>
           <h2 className="mt-4 text-[40px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[56px]">
-            bền đẹp <span className="accent-serif font-normal text-brand">vượt</span> thời gian
+            Bền đẹp <span className="accent-serif font-normal text-brand">vượt</span> thời gian
           </h2>
           <p className="mt-6 max-w-2xl text-[16px] font-normal leading-[1.6] text-[#5c5852]">
             Chống nước 100%, không cong vênh, chống mối mọt và cách âm hoàn hảo,

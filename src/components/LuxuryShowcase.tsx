@@ -31,9 +31,9 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <h2 className="max-w-xl text-[28px] font-medium leading-[1.15] tracking-[-0.5px] text-ink md:text-[38px]">
-              bộ sưu tập cửa{" "}
+              Bộ sưu tập cửa{" "}
               <SparkleIcon className="mb-1 inline size-6 text-brand" />{" "}
-              <span className="accent-serif text-brand">luxury</span>
+              <span className="accent-serif text-brand">Luxury</span>
             </h2>
           </div>
           {variant === "carousel" && (

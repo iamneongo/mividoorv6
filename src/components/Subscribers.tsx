@@ -17,7 +17,7 @@ export function Subscribers() {
               Chất lượng
             </p>
             <p className="mt-2 text-[30px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
-              bền đẹp <span className="accent-serif text-brand">vượt</span> thời
+              Bền đẹp <span className="accent-serif text-brand">vượt</span> thời
               gian
             </p>
             <p className="mt-5 max-w-sm text-[15px] font-normal leading-[1.5] text-[#0d1717]">
