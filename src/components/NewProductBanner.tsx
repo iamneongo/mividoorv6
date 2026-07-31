@@ -1,28 +1,87 @@
-import { Link } from "next-view-transitions";
+"use client";
 
-const demoVideos = [
-  "/mividoor/videos/video_1.mp4",
-  "/mividoor/videos/video_2.mp4",
-  "/mividoor/videos/video_3.mp4",
-  "/mividoor/videos/video_4.mp4",
+import Image from "next/image";
+
+const albums = [
+  {
+    id: "vietbuild",
+    prefix: "Triển lãm",
+    title: "Vietbuild 2026",
+    images: [
+      "/mividoor/images/events/vietbuild/IMG_4635.webp",
+      "/mividoor/images/events/vietbuild/IMG_5127.webp",
+      "/mividoor/images/events/vietbuild/IMG_5271.webp",
+      "/mividoor/images/events/vietbuild/IMG_5667.webp",
+      "/mividoor/images/events/vietbuild/IMG_9745.webp",
+    ]
+  },
+  {
+    id: "hoinganhcua",
+    prefix: "Sự kiện",
+    title: "Hội Ngành Cửa",
+    images: [
+      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6870.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
+    ]
+  }
 ];
 
-export function NewProductBanner() {
+import Marquee from "react-fast-marquee";
 
+function AlbumCarousel({ album, index }: { album: typeof albums[0], index: number }) {
   return (
-    <section
-      id="luxury"
-      className="relative w-full overflow-hidden bg-[#fafafa]"
-    >
-      {/* Decorative large background text */}
-      <div className="pointer-events-none absolute -left-20 top-10 select-none text-[120px] font-black uppercase leading-none tracking-tighter text-black/[0.02] md:text-[240px]">
-        Vietbuild
+    <div className="flex flex-col">
+      <div className="mb-8 flex items-center gap-4 md:gap-6">
+        <span className="text-[48px] md:text-[64px] font-black text-black/[0.04] leading-none select-none pointer-events-none">
+          0{index + 1}
+        </span>
+        <h3 className="text-[24px] font-medium tracking-[-0.5px] text-ink md:text-[32px] leading-none pt-1">
+          <span className="accent-serif italic text-brand font-normal pr-2">
+            {album.prefix}
+          </span>
+          {album.title}
+        </h3>
       </div>
+      
+      {/* Marquee Continuous Looping Viewport */}
+      <div className="pb-8 w-full">
+        <Marquee 
+          speed={40} 
+          pauseOnHover={true} 
+          direction={index % 2 === 0 ? "left" : "right"}
+          gradient={false}
+        >
+          <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 py-2">
+            {album.images.map((src, i) => (
+              <div 
+                key={i} 
+                className="relative h-[240px] md:h-[320px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1.5 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src={src} 
+                  alt={`${album.title} photo ${i + 1}`} 
+                  className="block h-full w-auto object-contain rounded-[4px]" 
+                />
+              </div>
+            ))}
+          </div>
+        </Marquee>
+      </div>
+    </div>
+  );
+}
 
-      <div className="mx-auto flex max-w-[1400px] flex-col md:min-h-[600px] md:flex-row md:items-center">
-        {/* Copy */}
-        <div className="z-10 flex-[0.8] px-6 py-14 md:px-10 md:py-0">
-          <p className="mb-6 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
+export function NewProductBanner() {
+  return (
+    <section id="events" className="relative w-full overflow-hidden bg-[#fafafa] py-20">
+      <div className="mx-auto flex max-w-[1400px] flex-col px-6 md:px-10">
+        {/* Header Section */}
+        <div className="z-10 mb-16 text-center max-w-3xl mx-auto">
+          <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
             Hội ngành cửa & Vietbuild 2026
           </p>
           <h2 className="text-[40px] font-medium leading-[1.05] tracking-[-1px] text-ink md:text-[56px]">
@@ -31,56 +90,16 @@ export function NewProductBanner() {
             <br />
             Các sự kiện
           </h2>
-          <p className="mt-6 max-w-md text-[15px] font-normal leading-[1.6] text-[#5c5852]">
+          <p className="mt-6 text-[15px] font-normal leading-[1.6] text-[#5c5852]">
             Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
           </p>
-          <Link
-            href="/luxury"
-            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-medium text-white transition hover:bg-brand-2 hover:shadow-[0_10px_30px_rgba(29,78,216,0.2)]"
-          >
-            Khám phá bộ sưu tập
-          </Link>
         </div>
 
-        {/* Videos Section */}
-        <div className="relative min-w-0 flex-[1.2] py-4 md:py-20 md:pr-10">
-          {/* MOBILE COLLAGE LAYOUT */}
-          <div className="relative mt-8 h-[440px] w-full px-6 md:hidden">
-            {/* Video 2 (Background) */}
-            <div className="absolute right-6 top-12 h-[320px] w-[55%] rotate-[8deg] overflow-hidden rounded-[20px] border-[4px] border-white shadow-xl">
-              <video src={demoVideos[1]} autoPlay muted loop playsInline className="h-full w-full object-cover" />
-              <div className="pointer-events-none absolute inset-0 bg-black/10 mix-blend-multiply" />
-            </div>
-            {/* Video 1 (Foreground) */}
-            <div className="absolute left-6 top-0 z-10 h-[380px] w-[60%] -rotate-[4deg] overflow-hidden rounded-[24px] border-[5px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
-              <video src={demoVideos[0]} autoPlay muted loop playsInline className="h-full w-full object-cover" />
-              <div className="pointer-events-none absolute inset-0 bg-black/5 mix-blend-multiply" />
-            </div>
-          </div>
-
-          {/* DESKTOP 2-VIDEO LAYOUT */}
-          <div className="hidden md:flex gap-6 pl-10 pr-4 pb-12 pt-12 items-start">
-            {demoVideos.slice(0, 2).map((src, i) => (
-              <div 
-                key={i} 
-                className={`flex-1 transition-all duration-700 ${
-                  i === 0 ? "-translate-y-6" : "translate-y-6"
-                }`}
-              >
-                <div className="group relative h-[480px] w-full overflow-hidden rounded-[32px] border-[8px] border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-                  <video
-                    src={src}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-60 mix-blend-multiply transition-opacity group-hover:opacity-40" />
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Albums Display */}
+        <div className="flex flex-col gap-16 md:gap-20">
+          {albums.map((album, i) => (
+            <AlbumCarousel key={album.id} album={album} index={i} />
+          ))}
         </div>
       </div>
     </section>

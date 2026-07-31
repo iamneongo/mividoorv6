@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/Hero";
 import { IngredientsIntro } from "@/components/IngredientsIntro";
 import { CategoryCarousel } from "@/components/CategoryCarousel";
+import { StatsBanner } from "@/components/StatsBanner";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { NewProductBanner } from "@/components/NewProductBanner";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
@@ -24,6 +25,7 @@ export default function Home() {
       <IngredientsIntro />
       <CategoryCarousel />
 
+      <StatsBanner />
       <NewProductBanner />
       <LuxuryShowcase />
 
