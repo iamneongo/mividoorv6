@@ -82,7 +82,7 @@ export const productCatalog: Product[] = [
     tagline: "Tiện ích - Tối ưu",
     descr:
       "Hệ ray trượt siêu êm, độ bền cao — giải pháp thông minh cho phòng có diện tích hẹp.",
-    image: `${IMG}/mau-cua-lua.webp`,
+    image: `${IMG}/mau-cua-lua.png`,
   },
   {
     name: "Cửa Vòm",
@@ -107,7 +107,7 @@ export const productCatalog: Product[] = [
     tagline: "Thoáng khí - Thanh lịch",
     descr:
       "Ô lá sách thông minh giúp lưu thông không khí ngay cả khi đóng cửa.",
-    image: `${IMG}/mau-o-la-sach.webp`,
+    image: `${IMG}/mau-o-la-sach.png`,
   },
   {
     name: "Cửa Ô Fix",
@@ -115,7 +115,7 @@ export const productCatalog: Product[] = [
     tagline: "Đón sáng - Rộng rãi",
     descr:
       "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
-    image: `${IMG}/mau-o-fix.webp`,
+    image: `${IMG}/mau-o-fix.png`,
   },
 ];
 
