@@ -34,7 +34,7 @@ export function Hero() {
           
           <StaggerItem>
             <h1 className="text-[36px] font-medium leading-[1.04] tracking-[-0.5px] text-white md:text-[52px] lg:text-[64px]">
-              cửa composite
+              Cửa composite
               <br />
               công nghệ <span className="accent-serif italic text-brand">Đức</span>
             </h1>
