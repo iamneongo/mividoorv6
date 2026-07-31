@@ -33,7 +33,7 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             </h2>
             <p className="mt-4 max-w-lg text-[15px] font-normal leading-[1.5] text-[#111111]/80">
               Cửa composite sản xuất trên dây chuyền công nghệ Đức, chống nước,
-              chống mối mọt, cách âm cách nhiệt — bảo hành lên đến 10 năm.
+              chống mối mọt, cách âm cách nhiệt — bảo hành 10 năm.
             </p>
           </div>
         </div>

@@ -15,7 +15,7 @@ export function BrandStory() {
           </h2>
           <p className="mt-6 max-w-2xl text-[16px] font-normal leading-[1.6] text-[#5c5852]">
             Chống nước 100%, không cong vênh, chống mối mọt và cách âm hoàn hảo,
-            bảo hành lên đến 10 năm.
+            bảo hành 10 năm.
           </p>
         </SlideUp>
 

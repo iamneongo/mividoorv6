@@ -22,7 +22,7 @@ export function Subscribers() {
             </p>
             <p className="mt-5 max-w-sm text-[15px] font-normal leading-[1.5] text-[#0d1717]">
               Chống nước 100%, không cong vênh, chống mối mọt và cách âm hoàn hảo,
-              bảo hành lên đến 10 năm.
+              bảo hành 10 năm.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6">

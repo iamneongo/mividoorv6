@@ -6,7 +6,7 @@ export function TopBar() {
           <div key={i} className="flex items-center gap-8">
             <span>Cửa composite công nghệ Đức</span>
             <span className="opacity-60">•</span>
-            <span>Bảo hành lên đến 10 năm</span>
+            <span>Bảo hành 10 năm</span>
             <span className="opacity-60">•</span>
             <span>Liên hệ ngay để nhận báo giá tốt nhất</span>
             <span className="opacity-60">•</span>

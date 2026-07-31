@@ -24,10 +24,10 @@ export function NewProductBanner() {
             Hội ngành cửa & Vietbuild 2026
           </p>
           <h2 className="text-[40px] font-medium leading-[1.05] tracking-[-1px] text-ink md:text-[56px]">
-            mividoor{" "}
+            Mividoor{" "}
             <span className="accent-serif font-normal text-brand">tại</span>
             <br />
-            các sự kiện
+            Các sự kiện
           </h2>
           <p className="mt-6 max-w-md text-[15px] font-normal leading-[1.6] text-[#5c5852]">
             Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
