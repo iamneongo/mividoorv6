@@ -84,7 +84,7 @@ export function NewProductBanner() {
           <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
             Hội ngành cửa & Vietbuild 2026
           </p>
-          <h2 className="text-[40px] font-medium leading-[1.05] tracking-[-1px] text-ink md:text-[56px]">
+          <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
             Mividoor{" "}
             <span className="accent-serif font-normal text-brand">tại</span>
             <br />
