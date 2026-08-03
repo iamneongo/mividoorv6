@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import Image from "next/image";
 
@@ -60,7 +61,6 @@ function AlbumCarousel({ album, index }: { album: typeof albums[0], index: numbe
                 key={i} 
                 className="relative h-[240px] md:h-[320px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1.5 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={src} 
                   alt={`${album.title} photo ${i + 1}`} 

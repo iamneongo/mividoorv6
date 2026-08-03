@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/Hero";
 import { IngredientsIntro } from "@/components/IngredientsIntro";

@@ -74,7 +74,7 @@ export function AboutTechProcess() {
           <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[600px] relative">
             <SlideUp className="sticky top-32 h-[calc(100vh-200px)] max-h-[800px] w-full rounded-2xl overflow-hidden bg-brand/5 border-[6px] md:border-[8px] border-white shadow-sm">
                <Image 
-                  src="/mividoor/images/burkle-machine-v3.webp" 
+                  src="/mividoor/images/cong-nghe-quy-trinh.jpg" 
                   alt="Mividoor Tech Process" 
                   fill 
                   className="object-cover"
