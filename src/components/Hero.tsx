@@ -9,7 +9,7 @@ import Fade from "embla-carousel-fade";
 
 const banners = [
   "/mividoor/images/banner-new-2.png",
-  "/mividoor/images/banner-new-3.webp",
+  "/mividoor/images/ben-dep-banner.jpg",
   "/mividoor/images/banner-new-4.webp"
 ];
 

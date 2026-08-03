@@ -1,9 +1,12 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AboutSynergy } from "@/components/AboutSynergy";
-import { AboutFactory } from "@/components/AboutFactory";
-import { AboutBrand } from "@/components/AboutBrand";
-import { AboutValues } from "@/components/AboutValues";
+import { AboutIntro } from "@/components/AboutIntro";
+import { AboutAdvantages } from "@/components/AboutAdvantages";
+import { AboutPhilosophy } from "@/components/AboutPhilosophy";
+import { AboutTechProcess } from "@/components/AboutTechProcess";
+import { AboutWarranty } from "@/components/AboutWarranty";
+import { AboutAccessories } from "@/components/AboutAccessories";
+import { NewProductBanner } from "@/components/NewProductBanner";
 
 export default function AboutPage() {
   return (
@@ -15,20 +18,20 @@ export default function AboutPage() {
             <div className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto">
               <h1 className="text-4xl font-medium tracking-tighter text-ink md:text-[56px] leading-[1]">
                 Về chúng tôi <br />
-                <span className="font-normal accent-serif text-[#2563EB] text-[44px] md:text-[80px] tracking-normal inline-block mt-2">Mividoor & Mivicomposite</span>
+                <span className="font-normal accent-serif text-[#2563EB] text-[44px] md:text-[80px] tracking-normal inline-block mt-2">Mividoor</span>
               </h1>
-              <p className="max-w-2xl text-lg text-ink/70 leading-relaxed mt-2">
-                Sự kết hợp hoàn hảo giữa nhà máy sản xuất cửa composite và thương hiệu cửa nội thất cao cấp.
-              </p>
             </div>
           </div>
         </div>
       </div>
       
-      <AboutSynergy />
-      <AboutFactory />
-      <AboutBrand />
-      <AboutValues />
+      <AboutIntro />
+      <AboutAdvantages />
+      <AboutPhilosophy />
+      <AboutTechProcess />
+      <AboutWarranty />
+      <AboutAccessories />
+      <NewProductBanner />
       
       <SiteFooter />
     </>
