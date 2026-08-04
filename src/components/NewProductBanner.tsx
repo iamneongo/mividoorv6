@@ -162,7 +162,7 @@ export function NewProductBanner() {
             <img 
               src={lightboxImage} 
               alt="Enlarged event photo" 
-              className="max-w-full max-h-full object-contain rounded-[12px] shadow-2xl cursor-default border-[6px] md:border-[12px] border-white bg-white"
+              className="max-w-full max-h-full object-contain rounded-md shadow-2xl cursor-default border-[2px] md:border-[4px] border-white bg-white"
               onClick={(e) => e.stopPropagation()} 
             />
           </div>
