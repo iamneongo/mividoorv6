@@ -8,25 +8,13 @@ const albums = [
     id: "vietbuild",
     prefix: "Triển lãm",
     title: "Vietbuild 2026",
-    images: [
-      "/mividoor/images/events/vietbuild/IMG_4635.webp",
-      "/mividoor/images/events/vietbuild/IMG_5127.webp",
-      "/mividoor/images/events/vietbuild/IMG_5271.webp",
-      "/mividoor/images/events/vietbuild/IMG_5667.webp",
-      "/mividoor/images/events/vietbuild/IMG_9745.webp",
-    ]
+    images: Array.from({ length: 21 }).map((_, i) => `/mividoor/images/events/vietbuildv2/IMG_${String(i + 1).padStart(4, '0')}.webp`)
   },
   {
     id: "hoinganhcua",
     prefix: "Sự kiện",
     title: "Hội Ngành Cửa",
-    images: [
-      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
-      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
-      "/mividoor/images/events/hoinganhcua/IMG_6870.webp",
-      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
-      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
-    ]
+    images: Array.from({ length: 20 }).map((_, i) => `/mividoor/images/events/hoinganhcuav2/IMG_${String(i + 1).padStart(4, '0')}.webp`)
   }
 ];
 
