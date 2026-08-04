@@ -3,7 +3,7 @@ import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const albums = [
+const albums: { id: string; prefix: string; title: string; badge?: string; images: string[] }[] = [
   {
     id: "vietbuild",
     prefix: "Triển lãm",
@@ -14,6 +14,7 @@ const albums = [
     id: "hoinganhcua",
     prefix: "Sự kiện",
     title: "Hội Ngành Cửa",
+    badge: "2026",
     images: Array.from({ length: 20 }).map((_, i) => `/mividoor/images/events/hoinganhcuav2/IMG_${String(i + 1).padStart(4, '0')}.webp?v=2`)
   }
 ];
@@ -47,11 +48,18 @@ function AlbumCarousel({
         <span className="text-[48px] md:text-[64px] font-black text-black/[0.04] leading-none select-none pointer-events-none">
           0{index + 1}
         </span>
-        <h3 className="text-[24px] font-medium tracking-[-0.5px] text-ink md:text-[32px] leading-none pt-1">
-          <span className="accent-serif italic text-brand font-normal pr-2">
-            {album.prefix}
+        <h3 className="text-[24px] font-medium tracking-[-0.5px] text-ink md:text-[32px] leading-none pt-1 flex items-center flex-wrap gap-y-2">
+          <span>
+            <span className="accent-serif italic text-brand font-normal pr-2">
+              {album.prefix}
+            </span>
+            {album.title}
           </span>
-          {album.title}
+          {album.badge && (
+            <span className="ml-2 md:ml-3 inline-flex bg-[#EF4444] text-white text-[18px] md:text-[22px] font-semibold px-3 py-1 rounded-md tracking-normal mt-[-2px]">
+              {album.badge}
+            </span>
+          )}
         </h3>
       </div>
       

@@ -33,15 +33,15 @@ export function AboutAdvantages() {
           <p className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#2563EB] mb-4">
             ƯU THẾ NỔI BẬT
           </p>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-ink mb-6">
-            Giá Trị <span className="accent-serif font-light text-[#2563EB] tracking-normal">Khác Biệt</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-ink mb-2">
+            Mividoor
           </h2>
-          <p className="text-lg text-ink/70 leading-relaxed font-light max-w-xl mx-auto">
-            Chúng tôi chú trọng đầu tư bài bản vào mọi yếu tố nhằm tạo ra sản phẩm hoàn hảo nhất cho khách hàng.
+          <p className="text-lg md:text-xl text-ink/70 font-light max-w-xl mx-auto mt-2 tracking-wide">
+            Tập trung vào giá trị thực
           </p>
         </SlideUp>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 border-y border-black/10">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 border-y md:border-x border-black/10 max-w-[960px] mx-auto md:rounded-xl overflow-hidden bg-[#fdfdfd]">
           {advantages.map((adv, idx) => {
             const Icon = adv.icon;
             const isRightCol = idx % 2 !== 0;
@@ -50,25 +50,25 @@ export function AboutAdvantages() {
             return (
               <StaggerItem 
                 key={idx} 
-                className={`flex flex-col p-8 lg:p-12 group hover:bg-white transition-colors duration-700
+                className={`flex flex-col p-6 md:p-8 lg:p-10 group hover:bg-white transition-colors duration-700
                   ${!isRightCol ? 'md:border-r border-black/10' : ''} 
                   ${!isBottomRow ? 'border-b border-black/10' : 'border-b md:border-b-0 border-black/10'}
                 `}
               >
-                <div className="flex justify-between items-start mb-12 lg:mb-16">
-                  <div className="text-[64px] lg:text-[80px] font-normal text-[#2563EB] accent-serif transition-colors duration-700 leading-none -mt-4">
+                <div className="flex justify-between items-start mb-8 lg:mb-10">
+                  <div className="text-[48px] lg:text-[56px] font-normal text-[#2563EB] accent-serif transition-colors duration-700 leading-none -mt-2">
                     0{idx + 1}
                   </div>
                   <div className="text-black/20 transition-all duration-700 group-hover:text-[#2563EB] group-hover:scale-110">
-                    <Icon size={40} strokeWidth={1.5} />
+                    <Icon size={32} strokeWidth={1.5} />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-semibold text-ink mb-4 tracking-tight group-hover:text-[#2563EB] transition-colors duration-700">
+                <h3 className="text-xl font-semibold text-ink mb-3 tracking-tight group-hover:text-[#2563EB] transition-colors duration-700">
                   {adv.title}
                 </h3>
                 
-                <p className="text-ink/70 leading-relaxed text-[16px] font-light">
+                <p className="text-ink/70 leading-relaxed text-[15px] font-light">
                   {adv.description}
                 </p>
               </StaggerItem>
