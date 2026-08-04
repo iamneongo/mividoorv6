@@ -14,6 +14,12 @@ const albums = [
       "/mividoor/images/events/vietbuild/IMG_5271.webp",
       "/mividoor/images/events/vietbuild/IMG_5667.webp",
       "/mividoor/images/events/vietbuild/IMG_9745.webp",
+      // duplicated for loop
+      "/mividoor/images/events/vietbuild/IMG_4635.webp",
+      "/mividoor/images/events/vietbuild/IMG_5127.webp",
+      "/mividoor/images/events/vietbuild/IMG_5271.webp",
+      "/mividoor/images/events/vietbuild/IMG_5667.webp",
+      "/mividoor/images/events/vietbuild/IMG_9745.webp",
     ]
   },
   {
@@ -21,6 +27,12 @@ const albums = [
     prefix: "Sự kiện",
     title: "Hội Ngành Cửa",
     images: [
+      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6870.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
+      "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
+      // duplicated for loop
       "/mividoor/images/events/hoinganhcua/IMG_6821.webp",
       "/mividoor/images/events/hoinganhcua/IMG_6845.webp",
       "/mividoor/images/events/hoinganhcua/IMG_6870.webp",
