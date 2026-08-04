@@ -44,16 +44,38 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
             {navLinks.map((l) => {
               const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
               return (
-                <li key={l.label}>
+                <li key={l.label} className="group relative py-2">
                   <a
                     href={l.href}
                     className={cn(
-                      "text-[13px] font-medium tracking-tight transition-colors hover:text-[#2563EB]",
+                      "text-[13px] font-medium tracking-tight transition-colors hover:text-[#2563EB] inline-flex items-center gap-1",
                       isActive ? "text-[#2563EB]" : "text-ink"
                     )}
                   >
                     {l.label}
+                    {l.subLinks && (
+                      <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
                   </a>
+                  
+                  {l.subLinks && (
+                    <div className="absolute top-full left-0 mt-0 w-56 rounded-xl bg-white p-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-[10000]">
+                      <ul className="flex flex-col">
+                        {l.subLinks.map((sub) => (
+                          <li key={sub.label}>
+                            <a
+                              href={sub.href}
+                              className="block rounded-lg px-4 py-2.5 text-[14px] font-medium text-ink hover:bg-[#F2F2EC] hover:text-[#2563EB] transition-colors"
+                            >
+                              {sub.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               );
             })}
@@ -115,11 +137,11 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
           </button>
         </div>
 
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 overflow-y-auto pb-6">
           {navLinks.map((l) => {
             const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
             return (
-              <li key={l.label}>
+              <li key={l.label} className="flex flex-col">
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
@@ -130,6 +152,22 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
                 >
                   {l.label}
                 </a>
+                
+                {l.subLinks && (
+                  <ul className="mt-3 flex flex-col gap-2.5 pl-4 border-l-2 border-black/5">
+                    {l.subLinks.map(sub => (
+                      <li key={sub.label}>
+                        <a 
+                          href={sub.href} 
+                          onClick={() => setOpen(false)}
+                          className="block text-[15px] font-medium text-ink/70 hover:text-[#2563EB] py-1"
+                        >
+                          {sub.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             );
           })}

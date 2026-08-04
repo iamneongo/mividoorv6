@@ -21,7 +21,23 @@ export const brand = {
 export const navLinks: NavLink[] = [
   { label: "Trang chủ", href: "/" },
   { label: "Về chúng tôi", href: "/ve-chung-toi" },
-  { label: "Sản phẩm", href: "/san-pham" },
+  { 
+    label: "Sản phẩm", 
+    href: "/san-pham",
+    subLinks: [
+      { label: "Mẫu Luxury", href: "/luxury" },
+      { label: "Mẫu phẳng", href: "/san-pham" },
+      { label: "Mẫu soi huỳnh", href: "/san-pham" },
+      { label: "Mẫu đi epoxy", href: "/san-pham" },
+      { label: "Mẫu đi nẹp nhôm/nẹp inox", href: "/san-pham" },
+      { label: "Mẫu phào chỉ nổi", href: "/san-pham" },
+      { label: "Mẫu 2 cánh", href: "/san-pham" },
+      { label: "Mẫu lùa", href: "/san-pham" },
+      { label: "Mẫu ô kính, lá sách", href: "/san-pham" },
+      { label: "Mẫu vòm", href: "/san-pham" },
+      { label: "Mẫu ô fix", href: "/san-pham" }
+    ]
+  },
   { label: "BST Mividoor Luxury", href: "/luxury" },
   { label: "Tin tức", href: "/tin-tuc" },
   { label: "Liên hệ", href: "/lien-he" },

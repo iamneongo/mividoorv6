@@ -1,6 +1,7 @@
 export interface NavLink {
   label: string;
   href: string;
+  subLinks?: { label: string; href: string }[];
 }
 
 export interface Product {

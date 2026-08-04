@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { IngredientsIntro } from "@/components/IngredientsIntro";
 import { productCatalog } from "@/lib/content";
+import { LuxuryShowcase } from "@/components/LuxuryShowcase";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
@@ -13,6 +14,13 @@ export default function ProductsPage() {
       <div className="relative w-full bg-white p-4 md:p-6">
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-24 min-h-[50vh] flex flex-col justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/mividoor/images/products-banner-v2.png" 
+            alt="Sản phẩm Mividoor" 
+            className="absolute inset-0 w-full h-full object-cover z-0" 
+          />
+          
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10 w-full">
             <div className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto">
               <h1 className="text-4xl font-medium tracking-tighter text-ink md:text-[56px] leading-[1]">
@@ -62,6 +70,8 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      <LuxuryShowcase variant="grid" />
 
       <SiteFooter />
     </>
