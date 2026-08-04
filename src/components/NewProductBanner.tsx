@@ -8,13 +8,13 @@ const albums = [
     id: "vietbuild",
     prefix: "Triển lãm",
     title: "Vietbuild 2026",
-    images: Array.from({ length: 21 }).map((_, i) => `/mividoor/images/events/vietbuildv2/IMG_${String(i + 1).padStart(4, '0')}.webp`)
+    images: Array.from({ length: 21 }).map((_, i) => `/mividoor/images/events/vietbuildv2/IMG_${String(i + 1).padStart(4, '0')}.webp?v=2`)
   },
   {
     id: "hoinganhcua",
     prefix: "Sự kiện",
     title: "Hội Ngành Cửa",
-    images: Array.from({ length: 20 }).map((_, i) => `/mividoor/images/events/hoinganhcuav2/IMG_${String(i + 1).padStart(4, '0')}.webp`)
+    images: Array.from({ length: 20 }).map((_, i) => `/mividoor/images/events/hoinganhcuav2/IMG_${String(i + 1).padStart(4, '0')}.webp?v=2`)
   }
 ];
 
@@ -63,13 +63,13 @@ function AlbumCarousel({
               <div 
                 key={i} 
                 onClick={() => onImageClick(src)}
-                className="relative h-[280px] md:h-[420px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1.5 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-lg hover:border-brand/30 transition-all duration-300"
+                className="relative w-[210px] h-[280px] md:w-[315px] md:h-[420px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-lg hover:border-brand/30 transition-all duration-300 overflow-hidden"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={src} 
                   alt={`${album.title} photo ${i + 1}`} 
-                  className="block h-full w-auto object-contain rounded-[4px]" 
+                  className="block h-full w-full object-cover rounded-[4px]" 
                 />
               </div>
             ))}
