@@ -136,7 +136,7 @@ const luxTaglines = [
 
 const luxFiles = [
   "virtual-try-on-2026-07-28T02-11-25.jpg",
-  "virtual-try-on-2026-07-28T02-17-42.jpg",
+  "tan-co-dien.png",
   "virtual-try-on-2026-07-28T02-20-15.jpg",
   "virtual-try-on-2026-07-28T02-43-42.jpg",
   "virtual-try-on-2026-07-28T02-48-48.jpg",
