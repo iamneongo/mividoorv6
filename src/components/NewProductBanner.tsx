@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
-
-import Image from "next/image";
+import { useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const albums = [
   {
@@ -30,12 +30,32 @@ const albums = [
   }
 ];
 
-import Marquee from "react-fast-marquee";
+function AlbumCarousel({ 
+  album, 
+  index, 
+  onImageClick 
+}: { 
+  album: typeof albums[0], 
+  index: number,
+  onImageClick: (src: string) => void 
+}) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    dragFree: true
+  });
 
-function AlbumCarousel({ album, index }: { album: typeof albums[0], index: number }) {
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <div className="flex flex-col">
-      <div className="mb-8 flex items-center gap-4 md:gap-6">
+      <div className="mb-6 flex items-center gap-4 md:gap-6">
         <span className="text-[48px] md:text-[64px] font-black text-black/[0.04] leading-none select-none pointer-events-none">
           0{index + 1}
         </span>
@@ -47,20 +67,17 @@ function AlbumCarousel({ album, index }: { album: typeof albums[0], index: numbe
         </h3>
       </div>
       
-      {/* Marquee Continuous Looping Viewport */}
-      <div className="pb-8 w-full">
-        <Marquee 
-          speed={40} 
-          pauseOnHover={true} 
-          direction={index % 2 === 0 ? "left" : "right"}
-          gradient={false}
-        >
-          <div className="flex gap-4 md:gap-6 pr-4 md:pr-6 py-2">
+      <div className="relative group w-full">
+        {/* Embla Viewport */}
+        <div className="overflow-hidden py-4" ref={emblaRef}>
+          <div className="flex gap-4 md:gap-6 px-1">
             {album.images.map((src, i) => (
               <div 
                 key={i} 
-                className="relative h-[240px] md:h-[320px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1.5 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)]"
+                onClick={() => onImageClick(src)}
+                className="relative h-[240px] md:h-[320px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1.5 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-lg hover:border-brand/30 transition-all duration-300"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={src} 
                   alt={`${album.title} photo ${i + 1}`} 
@@ -69,40 +86,88 @@ function AlbumCarousel({ album, index }: { album: typeof albums[0], index: numbe
               </div>
             ))}
           </div>
-        </Marquee>
+        </div>
+
+        {/* Navigation Buttons (shown on hover) */}
+        <button 
+          onClick={scrollPrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand hover:text-white z-10"
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button 
+          onClick={scrollNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand hover:text-white z-10"
+          aria-label="Next image"
+        >
+          <ChevronRight size={24} />
+        </button>
       </div>
     </div>
   );
 }
 
 export function NewProductBanner() {
-  return (
-    <section id="events" className="relative w-full overflow-hidden bg-[#fafafa] py-20">
-      <div className="mx-auto flex max-w-[1400px] flex-col px-6 md:px-10">
-        {/* Header Section */}
-        <div className="z-10 mb-16 text-center max-w-3xl mx-auto">
-          <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
-            Hội ngành cửa & Vietbuild 2026
-          </p>
-          <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
-            Mividoor{" "}
-            <span className="accent-serif font-normal text-brand">tại</span>
-            <br />
-            Các sự kiện
-          </h2>
-          <p className="mt-6 text-[15px] font-normal leading-[1.6] text-[#5c5852]">
-            Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
-          </p>
-        </div>
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
-        {/* Albums Display */}
-        <div className="flex flex-col gap-16 md:gap-20">
-          {albums.map((album, i) => (
-            <AlbumCarousel key={album.id} album={album} index={i} />
-          ))}
+  return (
+    <>
+      <section id="events" className="relative w-full overflow-hidden bg-[#fafafa] py-20">
+        <div className="mx-auto flex max-w-[1400px] flex-col px-6 md:px-10">
+          {/* Header Section */}
+          <div className="z-10 mb-16 text-center max-w-3xl mx-auto">
+            <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">
+              Hội ngành cửa & Vietbuild 2026
+            </p>
+            <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
+              Mividoor{" "}
+              <span className="accent-serif font-normal text-brand">tại</span>
+              <br />
+              Các sự kiện
+            </h2>
+            <p className="mt-6 text-[15px] font-normal leading-[1.6] text-[#5c5852]">
+              Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
+            </p>
+          </div>
+
+          {/* Albums Display */}
+          <div className="flex flex-col gap-12 md:gap-16">
+            {albums.map((album, i) => (
+              <AlbumCarousel 
+                key={album.id} 
+                album={album} 
+                index={i} 
+                onImageClick={(src) => setLightboxImage(src)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Lightbox Overlay */}
+      {lightboxImage && (
+        <div 
+          className="fixed inset-0 z-[99999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button 
+            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors"
+            onClick={() => setLightboxImage(null)}
+          >
+            <X size={24} />
+          </button>
+          <div className="relative w-full max-w-[1200px] h-full max-h-[90vh] flex items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src={lightboxImage} 
+              alt="Enlarged event photo" 
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl cursor-default"
+              onClick={(e) => e.stopPropagation()} 
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
-
