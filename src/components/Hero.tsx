@@ -6,6 +6,7 @@ import { Link } from "next-view-transitions";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
   "/mividoor/images/banner-new-2.png",
@@ -60,10 +61,18 @@ const slideContent = [
 
 export function Hero() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", duration: 40 }, [
-    Autoplay({ delay: 6000, stopOnInteraction: false }),
+    Autoplay({ delay: 3000, stopOnInteraction: false }),
     Fade(),
   ]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -81,7 +90,7 @@ export function Hero() {
 
   return (
     <section id="top" className="relative w-full h-[85dvh] md:h-[100dvh] bg-white p-4 md:p-6">
-      <div className="relative w-full h-full rounded-[16px] overflow-hidden">
+      <div className="relative w-full h-full rounded-[16px] overflow-hidden group">
         {/* Background Image Carousel */}
         <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
           <div className="flex h-full">
@@ -103,6 +112,22 @@ export function Hero() {
             ))}
           </div>
         </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={scrollPrev}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40 z-20 pointer-events-auto"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button
+          onClick={scrollNext}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40 z-20 pointer-events-auto"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={24} />
+        </button>
 
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-20 md:pb-24 pointer-events-none">
           

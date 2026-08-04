@@ -13,8 +13,7 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
   {
     id: "hoinganhcua",
     prefix: "Sự kiện",
-    title: "Hội Ngành Cửa",
-    badge: "2026",
+    title: "Hội Ngành Cửa 2026",
     images: Array.from({ length: 20 }).map((_, i) => `/mividoor/images/events/hoinganhcuav2/IMG_${String(i + 1).padStart(4, '0')}.webp?v=2`)
   }
 ];
@@ -55,11 +54,6 @@ function AlbumCarousel({
             </span>
             {album.title}
           </span>
-          {album.badge && (
-            <span className="ml-2 md:ml-3 inline-flex bg-[#EF4444] text-white text-[18px] md:text-[22px] font-semibold px-3 py-1 rounded-md tracking-normal mt-[-2px]">
-              {album.badge}
-            </span>
-          )}
         </h3>
       </div>
       

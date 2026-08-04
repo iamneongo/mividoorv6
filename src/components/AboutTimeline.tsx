@@ -1,7 +1,7 @@
 export function AboutTimeline() {
   const milestones = [
     { year: "2015", title: "Khởi nguồn", desc: "Thành lập xưởng sản xuất nhỏ, đặt những viên gạch đầu tiên cho hành trình kiến tạo vật liệu mới phục vụ thị trường nội địa." },
-    { year: "2018", title: "Mở rộng quy mô", desc: "Khánh thành nhà máy Mivicomposite với dây chuyền công nghệ hiện đại nhập khẩu trực tiếp từ Đức, nâng cao năng suất gấp 5 lần." },
+    { year: "2018", title: "Mở rộng quy mô", desc: "Khánh thành nhà máy Mivicomposite với hệ thống máy phủ phim công nghệ Đức, nâng cao năng suất gấp 5 lần." },
     { year: "2021", title: "Ra mắt Mividoor", desc: "Chính thức giới thiệu thương hiệu cửa nội thất cao cấp Mividoor, hoàn thiện hệ sinh thái khép kín từ nguyên liệu đến thành phẩm." },
     { year: "2024", title: "Vươn tầm", desc: "Phát triển mạng lưới hơn 200 đại lý trên toàn quốc, phục vụ hơn 5000+ công trình mỗi năm và chuẩn bị xuất khẩu." },
   ];
