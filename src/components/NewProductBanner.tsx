@@ -1,6 +1,7 @@
 "use client";
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const albums = [
@@ -39,11 +40,10 @@ function AlbumCarousel({
   index: number,
   onImageClick: (src: string) => void 
 }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    loop: true,
-    dragFree: true
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { align: "start", loop: true, dragFree: true },
+    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
