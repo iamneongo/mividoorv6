@@ -21,12 +21,7 @@ export default function AboutPage() {
             className="absolute inset-0 w-full h-full object-cover z-0" 
           />
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10 w-full">
-            <div className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto">
-              <h1 className="text-4xl font-medium tracking-tighter text-ink md:text-[56px] leading-[1]">
-                Về chúng tôi <br />
-                <span className="font-normal accent-serif text-[#2563EB] text-[44px] md:text-[80px] tracking-normal inline-block mt-2">Mividoor</span>
-              </h1>
-            </div>
+            {/* Title moved to AboutIntro */}
           </div>
         </div>
       </div>

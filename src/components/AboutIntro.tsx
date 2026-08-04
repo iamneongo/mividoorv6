@@ -24,6 +24,13 @@ export function AboutIntro() {
   return (
     <section className="w-full bg-white py-20 md:py-28">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+        <SlideUp className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto mb-16 lg:mb-24">
+          <h1 className="text-3xl font-medium tracking-tighter text-ink md:text-[40px] leading-[1]">
+            Về chúng tôi <br />
+            <span className="font-normal accent-serif text-[#2563EB] text-[36px] md:text-[56px] tracking-normal inline-block mt-2">Mividoor</span>
+          </h1>
+        </SlideUp>
+
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {introBlocks.map((block, idx) => (
             <StaggerItem key={idx} className="flex flex-col group">
