@@ -36,6 +36,9 @@ export function AboutAdvantages() {
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-ink mb-6">
             Giá Trị <span className="accent-serif font-light text-[#2563EB] tracking-normal">Khác Biệt</span>
           </h2>
+          <p className="text-lg text-ink/70 leading-relaxed font-light max-w-xl mx-auto">
+            Chúng tôi chú trọng đầu tư bài bản vào mọi yếu tố nhằm tạo ra sản phẩm hoàn hảo nhất cho khách hàng.
+          </p>
         </SlideUp>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 border-y border-black/10">
