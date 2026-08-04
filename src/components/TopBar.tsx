@@ -8,8 +8,6 @@ export function TopBar() {
             <span className="opacity-60">•</span>
             <span>Bảo hành 10 năm</span>
             <span className="opacity-60">•</span>
-            <span>Liên hệ ngay để nhận báo giá tốt nhất</span>
-            <span className="opacity-60">•</span>
           </div>
         ))}
       </div>
