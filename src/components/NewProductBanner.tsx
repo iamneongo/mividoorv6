@@ -1,7 +1,6 @@
 "use client";
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const albums = [
@@ -40,10 +39,11 @@ function AlbumCarousel({
   index: number,
   onImageClick: (src: string) => void 
 }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { align: "start", loop: true, dragFree: true },
-    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    dragFree: true
+  });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -148,21 +148,21 @@ export function NewProductBanner() {
       {/* Lightbox Overlay */}
       {lightboxImage && (
         <div 
-          className="fixed inset-0 z-[99999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+          className="fixed inset-0 z-[99999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 md:p-6 cursor-zoom-out"
           onClick={() => setLightboxImage(null)}
         >
           <button 
-            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors"
+            className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 bg-white/10 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors z-[100000]"
             onClick={() => setLightboxImage(null)}
           >
             <X size={24} />
           </button>
-          <div className="relative w-full max-w-[1200px] h-full max-h-[90vh] flex items-center justify-center">
+          <div className="relative w-full max-w-[95vw] md:max-w-[1400px] h-full max-h-[95vh] flex items-center justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src={lightboxImage} 
               alt="Enlarged event photo" 
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl cursor-default"
+              className="max-w-full max-h-full object-contain rounded-[12px] shadow-2xl cursor-default border-[6px] md:border-[12px] border-white bg-white"
               onClick={(e) => e.stopPropagation()} 
             />
           </div>
