@@ -94,6 +94,42 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Vòm 01",
+    code: "MV-VOM-01",
+    tagline: "Mềm mại - Độc đáo",
+    descr: "Những đường cong mềm mại tạo điểm nhấn kiến trúc ấn tượng, thời thượng và lãng mạn.",
+    image: `${IMG}/products/cua-vom/cua-vom-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Vòm 02",
+    code: "MV-VOM-02",
+    tagline: "Mềm mại - Độc đáo",
+    descr: "Những đường cong mềm mại tạo điểm nhấn kiến trúc ấn tượng, thời thượng và lãng mạn.",
+    image: `${IMG}/products/cua-vom/cua-vom-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Vòm 03",
+    code: "MV-VOM-03",
+    tagline: "Mềm mại - Độc đáo",
+    descr: "Những đường cong mềm mại tạo điểm nhấn kiến trúc ấn tượng, thời thượng và lãng mạn.",
+    image: `${IMG}/products/cua-vom/cua-vom-03.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Vòm 04",
+    code: "MV-VOM-04",
+    tagline: "Mềm mại - Độc đáo",
+    descr: "Những đường cong mềm mại tạo điểm nhấn kiến trúc ấn tượng, thời thượng và lãng mạn.",
+    image: `${IMG}/products/cua-vom/cua-vom-04.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Vòm 05",
+    code: "MV-VOM-05",
+    tagline: "Mềm mại - Độc đáo",
+    descr: "Những đường cong mềm mại tạo điểm nhấn kiến trúc ấn tượng, thời thượng và lãng mạn.",
+    image: `${IMG}/products/cua-vom/cua-vom-05.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Nẹp 01",
     code: "MV-NEP-01",
     tagline: "Nổi bật - Sang trọng",
