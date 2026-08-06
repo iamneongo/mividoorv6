@@ -51,16 +51,8 @@ export default function ProductsPage() {
                       style={{ backgroundImage: `url('${product.image}')`, backgroundSize: 'auto 85%' }}
                     />
                   </div>
-                  <div className="flex items-end justify-between px-2">
-                    <div>
-                      <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
-                        {product.code}
-                      </p>
-                      <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink">
-                        {product.name}
-                      </p>
-                    </div>
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
+                  <div className="flex items-end justify-center px-2">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-y-[-2px] group-hover:bg-brand group-hover:text-white">
                       <ChevronRightIcon className="size-5" />
                     </span>
                   </div>
