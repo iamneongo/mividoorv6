@@ -42,7 +42,7 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
         <nav className="hidden items-center lg:flex">
           <ul className="flex items-center gap-6">
             {navLinks.map((l) => {
-              const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
+              const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href)) || (l.subLinks && l.subLinks.some(sub => pathname === sub.href || pathname.startsWith(sub.href)));
               return (
                 <li key={l.label} className="group relative py-2">
                   <a
@@ -67,7 +67,10 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
                           <li key={sub.label}>
                             <a
                               href={sub.href}
-                              className="block rounded-lg px-4 py-2.5 text-[14px] font-medium text-ink hover:bg-[#F2F2EC] hover:text-[#2563EB] transition-colors"
+                              className={cn(
+                                "block rounded-lg px-4 py-2.5 text-[14px] font-medium hover:bg-[#F2F2EC] hover:text-[#2563EB] transition-colors",
+                                (pathname === sub.href || pathname.startsWith(sub.href)) ? "bg-[#F2F2EC] text-[#2563EB]" : "text-ink"
+                              )}
                             >
                               {sub.label}
                             </a>
@@ -139,7 +142,7 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
 
         <ul className="flex flex-col gap-4 overflow-y-auto pb-6">
           {navLinks.map((l) => {
-            const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href));
+            const isActive = pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href)) || (l.subLinks && l.subLinks.some(sub => pathname === sub.href || pathname.startsWith(sub.href)));
             return (
               <li key={l.label} className="flex flex-col">
                 <a
@@ -160,7 +163,10 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
                         <a 
                           href={sub.href} 
                           onClick={() => setOpen(false)}
-                          className="block text-[15px] font-medium text-ink/70 hover:text-[#2563EB] py-1"
+                          className={cn(
+                            "block text-[15px] font-medium hover:text-[#2563EB] py-1",
+                            (pathname === sub.href || pathname.startsWith(sub.href)) ? "text-[#2563EB]" : "text-ink/70"
+                          )}
                         >
                           {sub.label}
                         </a>

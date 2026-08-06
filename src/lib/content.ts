@@ -26,16 +26,16 @@ export const navLinks: NavLink[] = [
     href: "/san-pham",
     subLinks: [
       { label: "Mẫu Luxury", href: "/luxury" },
-      { label: "Mẫu phẳng", href: "/san-pham" },
-      { label: "Mẫu soi huỳnh", href: "/san-pham" },
-      { label: "Mẫu đi epoxy", href: "/san-pham" },
-      { label: "Mẫu đi nẹp nhôm/nẹp inox", href: "/san-pham" },
-      { label: "Mẫu phào chỉ nổi", href: "/san-pham" },
-      { label: "Mẫu 2 cánh", href: "/san-pham" },
-      { label: "Mẫu lùa", href: "/san-pham" },
-      { label: "Mẫu ô kính, lá sách", href: "/san-pham" },
-      { label: "Mẫu vòm", href: "/san-pham" },
-      { label: "Mẫu ô fix", href: "/san-pham" }
+      { label: "Mẫu phẳng", href: "/mau-phang" },
+      { label: "Mẫu soi huỳnh", href: "/mau-soi-huynh" },
+      { label: "Mẫu đi epoxy", href: "/mau-di-epoxy" },
+      { label: "Mẫu đi nẹp nhôm/nẹp inox", href: "/mau-di-nep" },
+      { label: "Mẫu phào chỉ nổi", href: "/mau-phao-chi-noi" },
+      { label: "Mẫu 2 cánh", href: "/mau-2-canh" },
+      { label: "Mẫu lùa", href: "/mau-lua" },
+      { label: "Mẫu ô kính, lá sách", href: "/mau-o-kinh-la-sach" },
+      { label: "Mẫu vòm", href: "/mau-vom" },
+      { label: "Mẫu ô fix", href: "/mau-o-fix" }
     ]
   },
   { label: "BST Mividoor Luxury", href: "/luxury" },
@@ -136,18 +136,18 @@ export const productCatalog: Product[] = [
 ];
 
 const luxTaglines = [
-  "Sang trọng",
-  "Tân cổ điển",
-  "Vòm cổ điển",
-  "Tinh tế",
-  "Cao cấp",
-  "Độc đáo",
-  "Đột phá",
-  "Tối giản",
-  "Đẳng cấp",
-  "Thượng lưu",
-  "Quý phái",
-  "Nghệ thuật",
+  "Mẫu phào chỉ nổi",
+  "Mẫu vòm",
+  "Mẫu soi huỳnh",
+  "Mẫu đi nẹp inox",
+  "Mẫu đi epoxy",
+  "Mẫu phẳng hiện đại",
+  "Mẫu ô kính",
+  "Mẫu lá sách",
+  "Mẫu 2 cánh",
+  "Mẫu lùa",
+  "Mẫu ô fix",
+  "Mẫu phào chỉ nổi kép",
 ];
 
 const luxFiles = [
