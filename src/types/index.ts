@@ -10,6 +10,7 @@ export interface Product {
   tagline: string; // e.g. "Tối giản - Tinh tế"
   descr: string;
   image: string; // path under /public
+  isCategory?: boolean;
 }
 
 export interface Category {
