@@ -56,6 +56,7 @@ export const categories: Category[] = [
 export const featuredProducts: Product[] = [
   {
     name: "Cửa Phẳng Sang Trọng",
+    isCategory: true,
     code: "MV-01",
     tagline: "Tối giản - Tinh tế",
     descr:
@@ -64,6 +65,7 @@ export const featuredProducts: Product[] = [
   },
   {
     name: "Cửa Nẹp Nhôm Inox",
+    isCategory: true,
     code: "MV-02",
     tagline: "Sang trọng - Điểm nhấn",
     descr:
@@ -72,6 +74,7 @@ export const featuredProducts: Product[] = [
   },
   {
     name: "Cửa Phào Chỉ Nổi",
+    isCategory: true,
     code: "MV-03",
     tagline: "Cổ điển - Đẳng cấp",
     descr:
@@ -80,6 +83,7 @@ export const featuredProducts: Product[] = [
   },
   {
     name: "Cửa Soi Huỳnh CNC",
+    isCategory: true,
     code: "MV-06",
     tagline: "Hoa văn - Nghệ thuật",
     descr:
@@ -221,6 +225,7 @@ export const productCatalog: Product[] = [
   featuredProducts[2],
   {
     name: "Cửa Lùa",
+    isCategory: true,
     code: "MV-04",
     tagline: "Tiện ích - Tối ưu",
     descr:
@@ -229,6 +234,7 @@ export const productCatalog: Product[] = [
   },
   {
     name: "Cửa Vòm",
+    isCategory: true,
     code: "MV-05",
     tagline: "Mềm mại - Độc đáo",
     descr:
@@ -238,6 +244,7 @@ export const productCatalog: Product[] = [
   featuredProducts[3],
   {
     name: "Cửa Ô Kính",
+    isCategory: true,
     code: "MV-07",
     tagline: "Hiện đại - Không gian mở",
     descr:
@@ -246,6 +253,7 @@ export const productCatalog: Product[] = [
   },
   {
     name: "Cửa Ô Lá Sách",
+    isCategory: true,
     code: "MV-08",
     tagline: "Thoáng khí - Thanh lịch",
     descr:
@@ -254,6 +262,7 @@ export const productCatalog: Product[] = [
   },
   {
     name: "Cửa Ô Fix",
+    isCategory: true,
     code: "MV-09",
     tagline: "Đón sáng - Rộng rãi",
     descr:

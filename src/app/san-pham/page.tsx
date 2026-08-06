@@ -39,7 +39,7 @@ export default function ProductsPage() {
       <section className="bg-white pb-24 pt-8 md:pt-12">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
-            {productCatalog.map((product, i) => (
+            {productCatalog.filter(p => p.isCategory).map((product, i) => (
               <div 
                 key={`${product.code}-${i}`} 
                 className="min-w-0"
