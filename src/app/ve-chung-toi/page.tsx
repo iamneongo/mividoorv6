@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden pt-32 pb-24 min-h-[60vh] md:min-h-[75vh] flex flex-col justify-center">
+        <div className="relative w-full rounded-[16px] overflow-hidden pt-32 pb-24 min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src="/mividoor/images/about-banner-new.jpg" 
