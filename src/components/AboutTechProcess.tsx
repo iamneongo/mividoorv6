@@ -36,9 +36,9 @@ export function AboutTechProcess() {
   return (
     <section className="w-full bg-[#F2F2EC] py-20 md:py-28 border-t border-black/5">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
           
-          <div className="w-full lg:w-1/2">
+          <div className="w-full xl:w-1/2">
             <SlideUp className="mb-12">
               <span className="text-[#2563EB] font-semibold uppercase tracking-wider text-sm block mb-4">
                 CÔNG NGHỆ QUY TRÌNH
@@ -71,8 +71,8 @@ export function AboutTechProcess() {
             </StaggerContainer>
           </div>
 
-          <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[600px] relative">
-            <SlideUp className="sticky top-32 h-[calc(100vh-200px)] max-h-[800px] w-full rounded-2xl overflow-hidden bg-brand/5 border-[6px] md:border-[8px] border-white shadow-sm">
+          <div className="w-full xl:w-1/2 relative">
+            <SlideUp className="xl:sticky xl:top-32 aspect-[4/3] md:aspect-video xl:aspect-auto xl:h-[calc(100vh-200px)] xl:max-h-[700px] w-full rounded-2xl overflow-hidden bg-brand/5 border-[6px] md:border-[8px] border-white shadow-sm">
                <Image 
                   src="/mividoor/images/cong-nghe-quy-trinh.jpg" 
                   alt="Mividoor Tech Process" 
