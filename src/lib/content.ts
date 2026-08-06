@@ -94,6 +94,35 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Soi Huỳnh 01",
+    code: "MV-SH-01",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Soi Huỳnh 02",
+    code: "MV-SH-02",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Soi Huỳnh 03",
+    code: "MV-SH-03",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-03.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Soi Huỳnh 04",
+    code: "MV-SH-04",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-04.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Lùa 01",
     code: "MV-LUA-01",
     tagline: "Tiện ích - Tối ưu",
