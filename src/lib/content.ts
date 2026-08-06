@@ -94,6 +94,35 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Ô Fix 01",
+    code: "MV-OFIX-01",
+    tagline: "Đón sáng - Rộng rãi",
+    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
+    image: `${IMG}/products/cua-o-fix/cua-o-fix-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Fix 02",
+    code: "MV-OFIX-02",
+    tagline: "Đón sáng - Rộng rãi",
+    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
+    image: `${IMG}/products/cua-o-fix/cua-o-fix-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Fix 03",
+    code: "MV-OFIX-03",
+    tagline: "Đón sáng - Rộng rãi",
+    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
+    image: `${IMG}/products/cua-o-fix/cua-o-fix-03.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Fix 04",
+    code: "MV-OFIX-04",
+    tagline: "Đón sáng - Rộng rãi",
+    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
+    image: `${IMG}/products/cua-o-fix/cua-o-fix-04.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Vòm 01",
     code: "MV-VOM-01",
     tagline: "Mềm mại - Độc đáo",
