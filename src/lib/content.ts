@@ -94,6 +94,28 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Nẹp 01",
+    code: "MV-NEP-01",
+    tagline: "Nổi bật - Sang trọng",
+    descr: "Điểm xuyết các đường nẹp nhôm hoặc inox sáng bóng, mang đến vẻ đẹp hiện đại và nổi bật.",
+    image: `${IMG}/products/cua-nep/cua-nep-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Nẹp 02",
+    code: "MV-NEP-02",
+    tagline: "Nổi bật - Sang trọng",
+    descr: "Điểm xuyết các đường nẹp nhôm hoặc inox sáng bóng, mang đến vẻ đẹp hiện đại và nổi bật.",
+    image: `${IMG}/products/cua-nep/cua-nep-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Nẹp 03",
+    code: "MV-NEP-03",
+    tagline: "Nổi bật - Sang trọng",
+    descr: "Điểm xuyết các đường nẹp nhôm hoặc inox sáng bóng, mang đến vẻ đẹp hiện đại và nổi bật.",
+    image: `${IMG}/products/cua-nep/cua-nep-03.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Soi Huỳnh 01",
     code: "MV-SH-01",
     tagline: "Tinh xảo - Đẳng cấp",
