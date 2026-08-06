@@ -94,6 +94,28 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Lùa 01",
+    code: "MV-LUA-01",
+    tagline: "Tiện ích - Tối ưu",
+    descr: "Hệ ray trượt siêu êm, độ bền cao — giải pháp thông minh cho phòng có diện tích hẹp.",
+    image: `${IMG}/products/cua-lua/cua-lua-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Lùa 02",
+    code: "MV-LUA-02",
+    tagline: "Tiện ích - Tối ưu",
+    descr: "Hệ ray trượt siêu êm, độ bền cao — giải pháp thông minh cho phòng có diện tích hẹp.",
+    image: `${IMG}/products/cua-lua/cua-lua-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Lùa 03",
+    code: "MV-LUA-03",
+    tagline: "Tiện ích - Tối ưu",
+    descr: "Hệ ray trượt siêu êm, độ bền cao — giải pháp thông minh cho phòng có diện tích hẹp.",
+    image: `${IMG}/products/cua-lua/cua-lua-03.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Phẳng 01",
     code: "MV-PHANG-01",
     tagline: "Đơn giản - Tinh tế",
