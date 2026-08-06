@@ -94,6 +94,42 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Ô Kính Lá Sách 01",
+    code: "MV-OKLS-01",
+    tagline: "Thoáng khí - Đón sáng",
+    descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Kính Lá Sách 02",
+    code: "MV-OKLS-02",
+    tagline: "Thoáng khí - Đón sáng",
+    descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Kính Lá Sách 03",
+    code: "MV-OKLS-03",
+    tagline: "Thoáng khí - Đón sáng",
+    descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-03.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Kính Lá Sách 04",
+    code: "MV-OKLS-04",
+    tagline: "Thoáng khí - Đón sáng",
+    descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-04.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Ô Kính Lá Sách 05",
+    code: "MV-OKLS-05",
+    tagline: "Thoáng khí - Đón sáng",
+    descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-05.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Phào Chỉ Nổi 01",
     code: "MV-PCN-01",
     tagline: "Cổ điển - Sang trọng",
