@@ -18,7 +18,7 @@ export default function AboutPage() {
           <img 
             src="/mividoor/images/about-banner-new.jpg" 
             alt="Về chúng tôi Mividoor" 
-            className="absolute inset-0 w-full h-full object-cover z-0" 
+            className="absolute inset-0 w-full h-full object-cover object-[center_30%] z-0" 
           />
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10 w-full">
             {/* Title moved to AboutIntro */}
