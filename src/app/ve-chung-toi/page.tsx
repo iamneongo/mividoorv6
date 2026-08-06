@@ -13,13 +13,16 @@ export default function AboutPage() {
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden mt-[100px] h-[400px] md:h-[600px]">
+        <div className="relative w-full rounded-[16px] overflow-hidden pt-32 pb-24 min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src="/mividoor/images/about-banner-new.jpg" 
             alt="Về chúng tôi Mividoor" 
-            className="w-full h-full object-cover object-[center_25%]" 
+            className="absolute inset-0 w-full h-full object-cover z-0" 
           />
+          <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10 w-full">
+            {/* Title moved to AboutIntro */}
+          </div>
         </div>
       </div>
       
