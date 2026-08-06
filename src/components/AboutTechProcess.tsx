@@ -71,8 +71,8 @@ export function AboutTechProcess() {
             </StaggerContainer>
           </div>
 
-          <div className="w-full xl:w-1/2 relative">
-            <SlideUp className="xl:sticky xl:top-32 aspect-[4/3] md:aspect-video xl:aspect-[4/3] w-full rounded-2xl overflow-hidden bg-brand/5 border-[6px] md:border-[8px] border-white shadow-sm">
+          <div className="w-full xl:w-1/2">
+            <SlideUp className="relative xl:sticky xl:top-32 aspect-[4/3] md:aspect-video xl:aspect-[4/3] w-full rounded-2xl overflow-hidden bg-brand/5 border-[6px] md:border-[8px] border-white shadow-sm">
                <Image 
                   src="/mividoor/images/cong-nghe-quy-trinh.jpg" 
                   alt="Mividoor Tech Process" 
