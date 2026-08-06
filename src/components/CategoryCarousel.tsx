@@ -25,12 +25,14 @@ export function CategoryCarousel({ variant = "carousel" }: CategoryCarouselProps
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
+  const categories = productCatalog.filter(p => p.isCategory);
+
   return (
     <section className="bg-white pb-6 pt-4">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         {variant === "grid" ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 pb-4">
-            {productCatalog.map((c, i) => (
+            {categories.map((c, i) => (
               <div key={`${c.name}-${i}`} className="min-w-0">
                 <div className="group flex flex-col gap-5 bg-white p-6 rounded-3xl">
                   <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
@@ -60,7 +62,7 @@ export function CategoryCarousel({ variant = "carousel" }: CategoryCarouselProps
           <>
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex -ml-5 pb-2">
-                {[...productCatalog, ...productCatalog].map((c, i) => (
+                {[...categories, ...categories].map((c, i) => (
                   <div key={`${c.name}-${i}`} className="min-w-0 flex-[0_0_auto] pl-5">
                       <div className="group flex w-[62vw] sm:w-[280px] md:w-[320px] flex-col gap-5">
                       <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
