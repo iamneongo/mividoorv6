@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="relative w-full rounded-[16px] overflow-hidden pt-32 pb-24 min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="/mividoor/images/about-banner.png" 
+            src="/mividoor/images/about-banner-new.jpg" 
             alt="Về chúng tôi Mividoor" 
             className="absolute inset-0 w-full h-full object-cover z-0" 
           />
