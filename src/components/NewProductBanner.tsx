@@ -58,6 +58,7 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/vietbuildv2_real/DSC03061.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC03122.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC03162.JPG",
+      "/mividoor/images/events/vietbuildv2_real/IMG_0145.jpg",
       "/mividoor/images/events/vietbuildv2_real/IMG_4226.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_4464.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_4635.JPG",
@@ -69,12 +70,12 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/vietbuildv2_real/IMG_6921.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_9746.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_9757.JPG"
-    ]
+]
   },
   {
     id: "hoinganhcua",
     prefix: "Sự kiện",
-    title: "Hội Ngành Cửa 2026",
+    title: "Hội Ngành Cửa",
     images: [
       "/mividoor/images/events/hoinganhcuav2_real/755287942_122273964734270212_220337645825156468_n.jpg",
       "/mividoor/images/events/hoinganhcuav2_real/755287943_122273963162270212_1007604716502208972_n.jpg",
@@ -100,6 +101,16 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/hoinganhcuav2_real/758706909_122273965058270212_6153363350259304178_n.jpg",
       "/mividoor/images/events/hoinganhcuav2_real/758765067_122273965226270212_657767302117632253_n.jpg",
       "/mividoor/images/events/hoinganhcuav2_real/759040468_122273962988270212_1583335566118741393_n.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0818.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0822.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0830.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0831.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0841.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0842.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_0992.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_1006.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_1012.jpg",
+      "/mividoor/images/events/hoinganhcuav2_real/IMG_1022.jpg",
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6773.JPG",
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6781.JPG",
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6804.JPG",
@@ -110,7 +121,7 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6828.JPG",
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6902.JPG",
       "/mividoor/images/events/hoinganhcuav2_real/IMG_6936.JPG"
-    ]
+]
   }
 ];
 
