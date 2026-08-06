@@ -94,6 +94,28 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Composite Mẫu Phào Chỉ Nổi 01",
+    code: "MV-PCN-01",
+    tagline: "Cổ điển - Sang trọng",
+    descr: "Gắn thêm phào chỉ nổi trên bề mặt mang lại vẻ đẹp cổ điển, sang trọng phong cách tân cổ điển Châu Âu.",
+    image: `${IMG}/products/phao-chi-noi/phao-chi-noi-01.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Phào Chỉ Nổi 02",
+    code: "MV-PCN-02",
+    tagline: "Cổ điển - Sang trọng",
+    descr: "Gắn thêm phào chỉ nổi trên bề mặt mang lại vẻ đẹp cổ điển, sang trọng phong cách tân cổ điển Châu Âu.",
+    image: `${IMG}/products/phao-chi-noi/phao-chi-noi-02.png`,
+  },
+  {
+    name: "Cửa Composite Mẫu Phào Chỉ Nổi 03",
+    code: "MV-PCN-03",
+    tagline: "Cổ điển - Sang trọng",
+    descr: "Gắn thêm phào chỉ nổi trên bề mặt mang lại vẻ đẹp cổ điển, sang trọng phong cách tân cổ điển Châu Âu.",
+    image: `${IMG}/products/phao-chi-noi/phao-chi-noi-03.png`,
+  },
+
+  {
     name: "Cửa Composite Mẫu Ô Fix 01",
     code: "MV-OFIX-01",
     tagline: "Đón sáng - Rộng rãi",
