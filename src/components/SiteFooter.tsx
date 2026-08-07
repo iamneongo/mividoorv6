@@ -15,7 +15,7 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
         <div className="flex flex-col gap-8 rounded-[24px] bg-cream p-8 md:flex-row md:items-center md:gap-32 md:p-12">
           <div className="w-full shrink-0 overflow-hidden rounded-[20px] md:w-[300px]">
             <Image
-              src="/mividoor/images/three-doors-showcase.png"
+              src="/mividoor/images/three-doors-showcase.webp"
               alt="Ba mẫu cửa composite cao cấp Mividoor"
               width={1024}
               height={1113}

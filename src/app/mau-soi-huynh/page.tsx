@@ -17,7 +17,7 @@ export default function CategoryPage() {
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-24 min-h-[50vh] flex flex-col justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="/mividoor/images/products-banner-v2.png" 
+            src="/mividoor/images/products-banner-v2.webp" 
             alt="Sản phẩm Mividoor" 
             className="absolute inset-0 w-full h-full object-cover z-0" 
           />

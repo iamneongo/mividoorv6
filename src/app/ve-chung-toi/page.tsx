@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden pt-20 pb-12 lg:pt-24 lg:pb-16 h-full bg-[url('/mividoor/images/about-bg-parallax-v2.jpg')] bg-fixed bg-cover bg-center">
+        <div className="relative w-full rounded-[16px] overflow-hidden pt-20 pb-12 lg:pt-24 lg:pb-16 h-full bg-[url('/mividoor/images/cong-nghe-quy-trinh-new.webp')] bg-fixed bg-cover bg-center">
           {/* Dark gradient overlay on the left to make white text readable, fading to transparent on the right */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10 z-0" />
           

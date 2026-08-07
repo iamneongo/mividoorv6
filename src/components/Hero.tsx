@@ -9,7 +9,7 @@ import Fade from "embla-carousel-fade";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
-  "/mividoor/images/banner-new-2.png",
+  "/mividoor/images/banner-new-2.webp",
   "/mividoor/images/ben-dep-banner.jpg",
   "/mividoor/images/banner-new-4.webp"
 ];

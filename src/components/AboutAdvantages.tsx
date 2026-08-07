@@ -26,7 +26,7 @@ const advantages = [
 
 export function AboutAdvantages() {
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section className="bg-white py-12 lg:py-16">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         
         <SlideUp className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 lg:mb-24">

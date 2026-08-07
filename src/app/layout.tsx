@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Cửa composite Mividoor",
     description:
       "Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm.",
-    images: ["/mividoor/images/three-doors-showcase.png"],
+    images: ["/mividoor/images/three-doors-showcase.webp"],
     type: "website",
     locale: "vi_VN",
     siteName: "Mivicomposite",

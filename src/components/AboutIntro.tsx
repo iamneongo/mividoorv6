@@ -22,7 +22,7 @@ export function AboutIntro() {
   ];
 
   return (
-    <section className="w-full bg-white py-20 md:py-28">
+    <section className="w-full bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex flex-col items-center justify-center text-center gap-4 max-w-4xl mx-auto mb-8 lg:mb-12">
           {/* Title has been moved to the hero banner in page.tsx */}

@@ -110,10 +110,12 @@ function AlbumCarousel({
                 className="relative w-[210px] h-[280px] md:w-[315px] md:h-[420px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-lg hover:border-brand/30 transition-all duration-300 overflow-hidden"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src={src} 
-                  alt={`${album.title} photo ${i + 1}`} 
-                  className="block h-full w-full object-cover rounded-[4px]" 
+                <img
+                  src={src}
+                  alt={`${album.title} photo ${i + 1}`}
+                  className="block h-full w-full object-cover rounded-[4px]"
+                  loading={i < 3 ? 'eager' : 'lazy'}
+                  decoding="async"
                 />
               </div>
             ))}
@@ -153,10 +155,9 @@ export function NewProductBanner() {
               Hội ngành cửa & Vietbuild 2026
             </p>
             <h2 className="text-[32px] font-medium leading-[1.1] tracking-[-1px] text-ink md:text-[42px]">
-              Mividoor{" "}
-              <span className="accent-serif font-normal text-brand">tại</span>
+              Mividoor tại
               <br />
-              Các sự kiện
+              <span className="accent-serif font-normal text-brand">Các sự kiện</span>
             </h2>
             <p className="mt-6 text-[15px] font-normal leading-[1.6] text-[#5c5852]">
               Mividoor tự hào mang các bộ sưu tập cửa composite cao cấp trưng bày tại Hội ngành cửa và Vietbuild 2026 — nơi hội tụ những xu hướng thiết kế mới nhất, khẳng định đẳng cấp thương hiệu trên sân chơi quốc gia.
