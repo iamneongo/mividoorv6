@@ -468,17 +468,17 @@ export const productCatalog: Product[] = [
 ];
 
 const luxTaglines = [
-  "Mẫu phào chỉ nổi",
+  "Mẫu soi huỳnh",
+  "Mẫu vòm",
+  "Mẫu ô kính lá sách",
+  "Mẫu đi epoxy",
+  "Mẫu đi nẹp",
   "Mẫu vòm",
   "Mẫu soi huỳnh",
-  "Mẫu đi epoxy",
-  "Mẫu phẳng hiện đại",
+  "Mẫu đi nẹp",
+  "Mẫu phào chỉ nổi",
+  "Mẫu soi huỳnh",
   "Mẫu ô kính",
-  "Mẫu lá sách",
-  "Mẫu 2 cánh",
-  "Mẫu lùa",
-  "Mẫu ô fix",
-  "Mẫu phào chỉ nổi kép",
 ];
 
 const luxFiles = [
