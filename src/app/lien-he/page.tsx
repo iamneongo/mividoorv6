@@ -33,7 +33,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.15em] text-ink/40">Mivicomposite - Nhà máy cửa composite Mividoor</p>
-                <p className="mt-2 text-xl font-medium tracking-tight text-ink">Công nghệ Đức - Tiêu chuẩn Châu Âu</p>
+                <p className="mt-2 text-xl font-medium tracking-tight text-ink">Công nghệ Đức</p>
               </div>
             </div>
           </div>
