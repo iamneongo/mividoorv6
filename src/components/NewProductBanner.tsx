@@ -9,8 +9,10 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
     prefix: "Triển lãm",
     title: "Vietbuild 2026",
     images: [
-      "/mividoor/images/events/vietbuildv2_real/735577578_122270926214270212_4365819149363454070_n.jpg",
+      "/mividoor/images/events/vietbuildv2_real/IMG_5666.JPG",
       "/mividoor/images/events/vietbuildv2_real/735658441_122270922800270212_185300808205250012_n.jpg",
+      "/mividoor/images/events/vietbuildv2_real/DSC03019.png",
+      "/mividoor/images/events/vietbuildv2_real/735577578_122270926214270212_4365819149363454070_n.jpg",
       "/mividoor/images/events/vietbuildv2_real/736045631_122270926556270212_3830791444161114236_n.jpg",
       "/mividoor/images/events/vietbuildv2_real/736172820_122270922686270212_7851627397271427860_n.jpg",
       "/mividoor/images/events/vietbuildv2_real/736235497_122270926202270212_6922142425117337091_n.jpg",
@@ -54,7 +56,6 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/vietbuildv2_real/DSC02818.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC02837.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC02870.JPG",
-      "/mividoor/images/events/vietbuildv2_real/DSC03019.png",
       "/mividoor/images/events/vietbuildv2_real/DSC03061.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC03122.JPG",
       "/mividoor/images/events/vietbuildv2_real/DSC03162.JPG",
@@ -65,12 +66,11 @@ const albums: { id: string; prefix: string; title: string; badge?: string; image
       "/mividoor/images/events/vietbuildv2_real/IMG_4688.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_4818.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_4978.JPG",
-      "/mividoor/images/events/vietbuildv2_real/IMG_5666.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_5699.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_6921.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_9746.JPG",
       "/mividoor/images/events/vietbuildv2_real/IMG_9757.JPG"
-]
+    ]
   },
   {
     id: "hoinganhcua",
