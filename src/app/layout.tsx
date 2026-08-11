@@ -3,21 +3,29 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://noithattuantai.com"),
   title: "Mivicomposite - Nhà máy cửa composite Mividoor",
   description:
     "Mividoor — Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm. Hơn 10.000 bộ cửa đã bàn giao trên toàn quốc.",
   icons: {
-    icon: "/mividoor/logo.png",
-    apple: "/mividoor/logo.png",
+    icon: "/mividoor/favicon.png",
+    apple: "/mividoor/apple-touch-icon.png",
   },
   openGraph: {
     title: "Cửa composite Mividoor",
     description:
       "Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm.",
-    images: ["/mividoor/images/three-doors-showcase.webp"],
+    images: ["/mividoor/images/banner-new-2.webp"],
     type: "website",
     locale: "vi_VN",
     siteName: "Mivicomposite",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cửa composite Mividoor",
+    description:
+      "Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm.",
+    images: ["/mividoor/images/banner-new-2.webp"],
   },
 };
 

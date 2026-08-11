@@ -1,9 +1,11 @@
 import { Link } from "next-view-transitions";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { newsArticles } from "@/lib/content";
+import { getNewsArticles } from "@/lib/news";
 
-export default function NewsPage() {
+export default async function NewsPage() {
+  const newsArticles = await getNewsArticles();
+
   return (
     <>
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">

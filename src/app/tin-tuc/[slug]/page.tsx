@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getNewsBySlug, newsArticles } from "@/lib/content";
+import { getNewsArticleBySlug, getNewsArticles } from "@/lib/news";
 import { Link } from "next-view-transitions";
 import { ArrowLeftIcon } from "lucide-react";
 
@@ -11,7 +11,9 @@ interface PageProps {
   }>;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const newsArticles = await getNewsArticles();
+
   return newsArticles.map((article) => ({
     slug: article.slug,
   }));
@@ -19,7 +21,7 @@ export function generateStaticParams() {
 
 export default async function NewsDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const article = getNewsBySlug(slug);
+  const article = await getNewsArticleBySlug(slug);
 
   if (!article) {
     notFound();
