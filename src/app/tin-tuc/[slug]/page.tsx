@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getNewsArticleBySlug, getNewsArticles } from "@/lib/news";
-import { Link } from "next-view-transitions";
 import { ArrowLeftIcon } from "lucide-react";
 
 interface PageProps {
@@ -33,13 +32,13 @@ export default async function NewsDetailPage({ params }: PageProps) {
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-20 h-full">
           <div className="mx-auto max-w-[800px] px-6 lg:px-10 relative z-10">
-            <Link 
-              href="/tin-tuc" 
+            <a
+              href="/tin-tuc"
               className="inline-flex items-center gap-2 text-ink/60 hover:text-brand transition-colors mb-8 font-medium text-sm uppercase tracking-wider"
             >
               <ArrowLeftIcon className="w-4 h-4" />
               Trở lại tin tức
-            </Link>
+            </a>
             
             <div className="flex items-center gap-4 text-sm font-medium uppercase tracking-wider text-brand mb-6">
               <span>{article.category}</span>

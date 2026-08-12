@@ -1,4 +1,3 @@
-import { Link } from "next-view-transitions";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { getNewsArticles } from "@/lib/news";
@@ -23,7 +22,7 @@ export default async function NewsPage() {
             </div>
             <div className="flex flex-col border-t border-black/10">
               {newsArticles.map((article) => (
-                <Link key={article.slug} href={`/tin-tuc/${article.slug}`} className="group flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-black/10 py-10 transition-colors hover:bg-black/5 px-6 -mx-6">
+                <a key={article.slug} href={`/tin-tuc/${article.slug}`} className="group flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-black/10 py-10 transition-colors hover:bg-black/5 px-6 -mx-6">
                   <div className="flex flex-col gap-2 max-w-2xl">
                     <h3 className="text-2xl font-medium tracking-tight text-ink group-hover:text-brand transition-colors">{article.title}</h3>
                     <p className="text-lg text-ink/60">{article.excerpt}</p>
@@ -33,7 +32,7 @@ export default async function NewsPage() {
                     <span>—</span>
                     <span>{article.date}</span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

@@ -1,4 +1,3 @@
-import { Link } from "next-view-transitions";
 import Image from "next/image";
 import { brand } from "@/lib/content";
 import { SparkleIcon } from "@/components/icons";
@@ -69,10 +68,10 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
               Về chúng tôi
             </p>
-            <Link href="/#about" className="hover:opacity-60">Giới thiệu</Link>
-            <Link href="/san-pham" className="hover:opacity-60">Sản phẩm</Link>
-            <Link href="/tin-tuc" className="hover:opacity-60">Tin tức</Link>
-            <Link href="/lien-he" className="hover:opacity-60">Liên hệ</Link>
+            <a href="/#about" className="hover:opacity-60">Giới thiệu</a>
+            <a href="/san-pham" className="hover:opacity-60">Sản phẩm</a>
+            <a href="/tin-tuc" className="hover:opacity-60">Tin tức</a>
+            <a href="/lien-he" className="hover:opacity-60">Liên hệ</a>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
