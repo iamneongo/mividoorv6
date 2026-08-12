@@ -129,16 +129,12 @@ export async function getNewsArticles(): Promise<NewsItem[]> {
   }
 
   const posts = await fetchJson<WordPressPost[]>(`/wp-json/wp/v2/posts?${query.toString()}`);
-  const mapped = posts?.map(mapPostToNewsItem).filter((post) => post.slug) ?? [];
-  const merged = [...mapped];
-
-  for (const fallbackArticle of fallbackNewsArticles) {
-    if (!merged.some((article) => article.slug === fallbackArticle.slug)) {
-      merged.push(fallbackArticle);
-    }
+  if (posts) {
+    return posts.map(mapPostToNewsItem).filter((post) => post.slug);
   }
 
-  return merged.length > 0 ? merged : fallbackNewsArticles;
+  // Keep the local Mividoor content only as an outage/install fallback.
+  return fallbackNewsArticles;
 }
 
 export async function getNewsArticleBySlug(slug: string): Promise<NewsItem | undefined> {
