@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# The CMS is hosted separately so the existing WordPress installation remains
+# untouched while Mividoor can still provide a convenient admin entry point.
+RewriteRule ^admin/?$ https://noithattuantai.com/wp-admin/ [R=302,L,NE]
+RewriteRule ^wp-login\.php$ https://noithattuantai.com/wp-login.php [R=302,L,NE]
+RewriteRule ^wp-admin(?:/(.*))?$ https://noithattuantai.com/wp-admin/$1 [R=302,L,NE]
+
 # Force HTTPS for the Mividoor site so Chrome does not show "Not secure"
 RewriteRule ^mividoor/tin-tuc/?$ /tin-tuc/ [L,R=301]
 RewriteRule ^mividoor/tin-tuc/(.*)$ /tin-tuc/$1 [L,R=301]
