@@ -130,12 +130,18 @@ export async function getNewsArticles(): Promise<NewsItem[]> {
 
   const posts = await fetchJson<WordPressPost[]>(`/wp-json/wp/v2/posts?${query.toString()}`);
   const mapped = posts?.map(mapPostToNewsItem).filter((post) => post.slug) ?? [];
+  const merged = [...mapped];
 
-  return mapped.length > 0 ? mapped : fallbackNewsArticles;
+  for (const fallbackArticle of fallbackNewsArticles) {
+    if (!merged.some((article) => article.slug === fallbackArticle.slug)) {
+      merged.push(fallbackArticle);
+    }
+  }
+
+  return merged.length > 0 ? merged : fallbackNewsArticles;
 }
 
 export async function getNewsArticleBySlug(slug: string): Promise<NewsItem | undefined> {
   const articles = await getNewsArticles();
   return articles.find((article) => article.slug === slug);
 }
-

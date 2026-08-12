@@ -571,6 +571,17 @@ export const contactItems: ContactItem[] = [
 
 export const newsArticles: NewsItem[] = [
   {
+    slug: "cua-composite-cao-cap-can-tho-bao-gia-5-mau-dep-va-cach-chon-chuan",
+    title: "Cửa composite cao cấp Cần Thơ: Báo giá, 5 mẫu đẹp và cách chọn chuẩn",
+    excerpt:
+      "Tổng hợp báo giá tham khảo, 5 mẫu cửa composite đẹp dễ ứng dụng và các tiêu chí chọn đúng cho nhà phố, căn hộ và công trình tại Cần Thơ.",
+    content:
+      "<p>Ở Cần Thơ, nhu cầu chọn cửa vừa đẹp vừa bền ngày càng tăng khi các công trình nhà phố, căn hộ và homestay đều ưu tiên vật liệu ổn định trước thời tiết nóng ẩm. Cửa composite là lựa chọn nổi bật nhờ khả năng chống nước, chống mối mọt, hạn chế cong vênh và giữ bề mặt thẩm mỹ lâu dài.</p><p>Khi tham khảo báo giá, bạn nên nhìn vào tổng thể cấu hình của bộ cửa: kích thước, độ dày cánh, phụ kiện, kiểu nẹp và mẫu hoàn thiện. Một bộ cửa composite cao cấp không chỉ nằm ở tấm cánh, mà còn ở độ hoàn thiện của khung, nẹp và trải nghiệm sử dụng lâu dài.</p><h2>5 mẫu cửa composite được ưa chuộng</h2><p>1. Cửa phẳng: tối giản, sạch sẽ, phù hợp căn hộ và nhà hiện đại.</p><p>2. Cửa nẹp nhôm/inox: tạo điểm nhấn sang trọng, hợp các không gian cần nét tinh tế.</p><p>3. Cửa phào chỉ nổi: cân bằng giữa cổ điển và hiện đại, dễ tạo cảm giác cao cấp.</p><p>4. Cửa soi huỳnh CNC: phù hợp gia chủ thích chi tiết và bề mặt có chiều sâu.</p><p>5. Cửa ô kính/lá sách: giúp không gian sáng hơn, thoáng hơn và vẫn giữ được độ riêng tư cần thiết.</p><h2>Cách chọn chuẩn cho công trình tại Cần Thơ</h2><p>Hãy bắt đầu từ công năng của từng vị trí: phòng ngủ cần ưu tiên cách âm và kín khít, phòng vệ sinh cần khả năng chịu ẩm, còn khu vực sinh hoạt chung có thể chọn mẫu có thêm ô kính hoặc đường soi để tăng cảm giác rộng hơn. Sau đó mới đi đến màu sắc, phụ kiện và kiểu nẹp để đồng bộ với kiến trúc tổng thể.</p><p>Nếu bạn đang cần phương án nhanh, hãy chọn một mẫu đơn giản, dễ phối màu, rồi tinh chỉnh bằng phụ kiện và bề mặt hoàn thiện. Đó là cách an toàn nhất để vừa kiểm soát ngân sách, vừa giữ được tính thẩm mỹ lâu dài.</p><p>Liên hệ Mividoor nếu bạn muốn được tư vấn mẫu phù hợp với kích thước thực tế và phong cách nội thất của công trình.</p>",
+    category: "Tin tức",
+    date: "Tháng 8, 2026",
+    image: "/mividoor/images/mau-cua-phang.webp",
+  },
+  {
     slug: "mividoor-trien-lam-vietbuild-2026",
     title: "Mividoor tham gia Triển lãm Vietbuild 2026",
     excerpt: "Khám phá không gian trưng bày các mẫu cửa composite cao cấp và bộ sưu tập Mividoor Luxury mới nhất tại sự kiện.",
