@@ -1,7 +1,7 @@
 import type { NewsItem } from "@/types";
 import { newsArticles as fallbackNewsArticles } from "@/lib/content";
 
-const WORDPRESS_BASE_URL = (process.env.WORDPRESS_URL ?? "https://noithattuantai.com").replace(/\/$/, "");
+const WORDPRESS_BASE_URL = (process.env.WORDPRESS_URL ?? "https://mividoor.com/cms").replace(/\/$/, "");
 const NEWS_CATEGORY_SLUG = process.env.WORDPRESS_NEWS_CATEGORY_SLUG ?? "tin-tuc";
 const NEWS_PER_PAGE = 12;
 
