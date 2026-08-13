@@ -2,6 +2,14 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@font-face {
+  font-family: "Mividoor WordPress Manrope";
+  src: url("https://mividoor.com/cms/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -152,7 +160,7 @@
     width: 100%;
     box-sizing: border-box;
     color: #1e1e1e;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Mividoor WordPress Manrope", Manrope, sans-serif;
     font-size: 1rem;
     line-height: 1.65;
   }
@@ -265,8 +273,29 @@
     width: 100%;
     border-radius: 0.75rem;
   }
-  .wp-content .aligncenter { margin-left: auto; margin-right: auto; }
-  .wp-content .alignright { margin-left: auto; }
+  .wp-content .wp-block-image.aligncenter,
+  .wp-content .wp-block-image .aligncenter {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .wp-content .wp-block-image.alignleft,
+  .wp-content .wp-block-image .alignleft {
+    display: table;
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+  }
+  .wp-content .wp-block-image.alignright,
+  .wp-content .wp-block-image .alignright {
+    display: table;
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
+  }
+  .wp-content .has-text-align-left { text-align: left; }
+  .wp-content .has-text-align-center { text-align: center; }
+  .wp-content .has-text-align-right { text-align: right; }
+  .wp-content::after { clear: both; content: ""; display: table; }
 
   @media (max-width: 781px) {
     .wp-content .wp-block-columns:not(.is-not-stacked-on-mobile) {
@@ -277,6 +306,14 @@
     }
     .wp-content .wp-block-image.is-resized img {
       max-width: 100%;
+    }
+    .wp-content .wp-block-image.alignleft,
+    .wp-content .wp-block-image.alignright,
+    .wp-content .wp-block-image .alignleft,
+    .wp-content .wp-block-image .alignright {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
