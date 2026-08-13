@@ -7,17 +7,17 @@ const WORDPRESS_THEME_CSS = "https://mividoor.com/cms/wp-includes/css/dist/block
 
 type WordPressContentFrameProps = {
   html: string;
+  sourceUrl?: string;
 };
 
-function createDocument(html: string) {
+function createDocument(html: string, headAssets = "") {
   return `<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <base href="https://mividoor.com/cms/" />
-    <link rel="stylesheet" href="${WORDPRESS_BLOCK_CSS}" />
-    <link rel="stylesheet" href="${WORDPRESS_THEME_CSS}" />
+    ${headAssets || `<link rel="stylesheet" href="${WORDPRESS_BLOCK_CSS}" /><link rel="stylesheet" href="${WORDPRESS_THEME_CSS}" />`}
     <style>
       * { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; }
@@ -43,9 +43,38 @@ function createDocument(html: string) {
 </html>`;
 }
 
-export function WordPressContentFrame({ html }: WordPressContentFrameProps) {
+export function WordPressContentFrame({ html, sourceUrl }: WordPressContentFrameProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(800);
+  const [sourceDocument, setSourceDocument] = useState<{ html: string; assets: string }>({ html, assets: "" });
+
+  useEffect(() => {
+    let active = true;
+    if (!sourceUrl) {
+      setSourceDocument({ html, assets: "" });
+      return () => { active = false; };
+    }
+
+    fetch(sourceUrl, { cache: "no-store" })
+      .then((response) => response.text())
+      .then((page) => {
+        const parsed = new DOMParser().parseFromString(page, "text/html");
+        const content = parsed.querySelector(".wp-block-post-content, .entry-content");
+        const assets = Array.from(parsed.head.querySelectorAll('link[rel="stylesheet"], style'))
+          .map((node) => {
+            if (node.tagName.toLowerCase() !== "link") return node.outerHTML;
+            const link = node as HTMLLinkElement;
+            return `<link rel="stylesheet" href="${new URL(link.href, sourceUrl).href}" />`;
+          })
+          .join("\n");
+        if (active && content) setSourceDocument({ html: content.innerHTML, assets });
+      })
+      .catch(() => {
+        if (active) setSourceDocument({ html, assets: "" });
+      });
+
+    return () => { active = false; };
+  }, [html, sourceUrl]);
 
   useEffect(() => {
     const frame = frameRef.current;
@@ -69,7 +98,7 @@ export function WordPressContentFrame({ html }: WordPressContentFrameProps) {
     <iframe
       ref={frameRef}
       title="Nội dung bài viết"
-      srcDoc={createDocument(html)}
+      srcDoc={createDocument(sourceDocument.html, sourceDocument.assets)}
       onLoad={() => {
         const document = frameRef.current?.contentDocument;
         if (document) setHeight(Math.max(320, document.documentElement.scrollHeight));

@@ -10,6 +10,7 @@ const API_URL = "/cms/wp-json/wp/v2/posts?_embed=1&per_page=100&orderby=date&ord
 
 type ApiPost = {
   slug: string;
+  link?: string;
   title: { rendered: string };
   excerpt: { rendered: string };
   content: { rendered: string };
@@ -32,6 +33,7 @@ function mapPost(post: ApiPost): NewsItem {
     content: post.content.rendered,
     category: terms.find((term) => term.taxonomy === "category")?.name ?? "Tin tức",
     date: new Intl.DateTimeFormat("vi-VN", { month: "long", year: "numeric" }).format(new Date(post.date)),
+    wordpressUrl: post.link,
   };
 }
 
@@ -90,7 +92,7 @@ export function RealtimeNews() {
                     <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
                     <p className="text-lg md:text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
                     <div className="border-t border-black/10 pt-10">
-                      <WordPressContentFrame html={article.content} />
+                      <WordPressContentFrame html={article.content} sourceUrl={article.wordpressUrl} />
                     </div>
                   </>
                 ) : <p>Không tìm thấy bài viết này.</p>}

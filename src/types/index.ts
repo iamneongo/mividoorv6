@@ -62,4 +62,5 @@ export interface NewsItem {
   category: string;
   date: string;
   image?: string;
+  wordpressUrl?: string;
 }
