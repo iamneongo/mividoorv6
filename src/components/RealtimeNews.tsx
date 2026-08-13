@@ -88,7 +88,7 @@ export function RealtimeNews() {
                     <div className="flex gap-4 text-sm font-medium uppercase tracking-wider text-brand mb-6"><span>{article.category}</span><span>•</span><span>{article.date}</span></div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
                     <p className="text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
-                    <div className="prose prose-lg prose-p:text-ink/80 prose-p:leading-relaxed prose-headings:font-medium prose-headings:text-ink prose-a:text-brand max-w-none border-t border-black/10 pt-10" dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <div className="wp-content max-w-none border-t border-black/10 pt-10" dangerouslySetInnerHTML={{ __html: article.content }} />
                   </>
                 ) : <p>Không tìm thấy bài viết này.</p>}
               </article>
