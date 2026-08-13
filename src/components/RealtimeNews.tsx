@@ -81,13 +81,13 @@ export function RealtimeNews() {
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 min-h-[50vh]">
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10">
             {slug ? (
-              <article className="mx-auto max-w-[920px] pt-4">
+              <article className="mx-auto max-w-[820px] pt-4">
                 <a href="/tin-tuc" className="inline-flex mb-8 text-sm font-medium uppercase tracking-wider text-ink/60 hover:text-brand">Trở lại tin tức</a>
                 {loading ? <p>Đang tải bài viết...</p> : article ? (
                   <>
                     <div className="flex gap-4 text-sm font-medium uppercase tracking-wider text-brand mb-6"><span>{article.category}</span><span>•</span><span>{article.date}</span></div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
-                    <p className="text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
+                    <p className="text-lg md:text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
                     <div className="wp-content max-w-none border-t border-black/10 pt-10" dangerouslySetInnerHTML={{ __html: article.content }} />
                   </>
                 ) : <p>Không tìm thấy bài viết này.</p>}
