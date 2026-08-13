@@ -81,7 +81,7 @@ export function RealtimeNews() {
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 min-h-[50vh]">
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10">
             {slug ? (
-              <article className="mx-auto max-w-[800px] pt-4">
+              <article className="mx-auto max-w-[1100px] pt-4">
                 <a href="/tin-tuc" className="inline-flex mb-8 text-sm font-medium uppercase tracking-wider text-ink/60 hover:text-brand">Trở lại tin tức</a>
                 {loading ? <p>Đang tải bài viết...</p> : article ? (
                   <>
