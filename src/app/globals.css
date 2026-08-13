@@ -198,6 +198,13 @@
     max-width: 100%;
     border-radius: 0;
   }
+  .wp-content .wp-block-image img {
+    vertical-align: bottom;
+  }
+  /* Gutenberg stores resized image widths inline; keep those exact values. */
+  .wp-content .wp-block-image.is-resized img {
+    max-width: none;
+  }
   .wp-content figure,
   .wp-content .wp-block-image,
   .wp-content .wp-block-embed {
@@ -260,6 +267,9 @@
     }
     .wp-content .wp-block-column {
       flex-basis: 100% !important;
+    }
+    .wp-content .wp-block-image.is-resized img {
+      max-width: 100%;
     }
   }
 
