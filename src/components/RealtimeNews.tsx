@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { WordPressContentFrame } from "@/components/WordPressContentFrame";
 import type { NewsItem } from "@/types";
 
 const API_URL = "/cms/wp-json/wp/v2/posts?_embed=1&per_page=100&orderby=date&order=desc";
@@ -88,7 +89,9 @@ export function RealtimeNews() {
                     <div className="flex gap-4 text-sm font-medium uppercase tracking-wider text-brand mb-6"><span>{article.category}</span><span>•</span><span>{article.date}</span></div>
                     <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
                     <p className="text-lg md:text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
-                    <div className="wp-content max-w-none border-t border-black/10 pt-10" dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <div className="border-t border-black/10 pt-10">
+                      <WordPressContentFrame html={article.content} />
+                    </div>
                   </>
                 ) : <p>Không tìm thấy bài viết này.</p>}
               </article>
