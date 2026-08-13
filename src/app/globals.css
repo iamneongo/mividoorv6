@@ -145,9 +145,10 @@
 @layer utilities {
   /* Isolate WordPress editor HTML from the site's global Tailwind rules. */
   .wp-content {
-    all: revert;
     display: block;
     isolation: isolate;
+    margin: 0;
+    padding-top: 2.5rem;
     width: 100%;
     box-sizing: border-box;
     color: #1e1e1e;
@@ -166,6 +167,9 @@
     flex-wrap: wrap;
     gap: 2em;
     margin: 0 0 1.75em;
+  }
+  .wp-content .wp-block-columns.is-layout-flex {
+    gap: var(--wp--preset--spacing--30, 2em);
   }
   .wp-content .wp-block-column {
     flex-basis: 0;
@@ -209,6 +213,9 @@
   .wp-content .wp-block-image,
   .wp-content .wp-block-embed {
     margin: 1.5rem 0;
+  }
+  .wp-content .wp-block-image {
+    max-width: 100%;
   }
   .wp-content figcaption,
   .wp-content .wp-element-caption,
