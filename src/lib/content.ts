@@ -478,8 +478,8 @@ const luxTaglines = [
   "Mẫu đi nẹp",
   "Mẫu phào chỉ nổi",
   "Mẫu soi huỳnh",
-  "Mẫu CNC hiện đại",
   "Mẫu ô kính",
+  "Mẫu CNC hiện đại",
 ];
 
 const luxFiles = [
