@@ -98,35 +98,35 @@ export const productCatalog: Product[] = [
     code: "MV-EPOXY-01",
     tagline: "Tối giản - Hiện đại",
     descr: "Bề mặt cửa epoxy phẳng mịn, đường nét tối giản và tay khóa màu đen cho không gian hiện đại.",
-    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-01.png`,
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-01.webp`,
   },
   {
     name: "Cửa Đi Epoxy",
     code: "MV-EPOXY-02",
     tagline: "Mềm mại - Cá tính",
     descr: "Thiết kế cửa epoxy vòm cong với đường chỉ trang trí độc đáo, tạo điểm nhấn cho không gian.",
-    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-02.png`,
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-02.webp`,
   },
   {
     name: "Cửa Đi Epoxy",
     code: "MV-EPOXY-03",
     tagline: "Tinh tế - Thanh lịch",
     descr: "Mẫu cửa epoxy vân gỗ sáng với đường chỉ đen thanh mảnh, phù hợp với nội thất tối giản.",
-    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-03.png`,
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-03.webp`,
   },
   {
     name: "Cửa Đi Epoxy",
     code: "MV-EPOXY-04",
     tagline: "Thanh thoát - Sang trọng",
     descr: "Bề mặt epoxy xám hiện đại kết hợp đường chỉ kim loại sáng, mang lại vẻ đẹp tinh gọn.",
-    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-04.png`,
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-04.webp`,
   },
   {
     name: "Cửa Đi Epoxy",
     code: "MV-EPOXY-05",
     tagline: "Ấm áp - Đẳng cấp",
     descr: "Mẫu cửa epoxy vòm tông gỗ nâu trầm, tạo cảm giác ấm áp và chắc chắn cho công trình.",
-    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-05.png`,
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-05.webp`,
   },
   {
     name: "Cửa Ô Kính Lá Sách",
@@ -168,7 +168,7 @@ export const productCatalog: Product[] = [
     code: "MV-OKLS-06",
     tagline: "Cổ điển - Tinh tế",
     descr: "Thiết kế ô kính trang trí khung vàng trên nền vân gỗ ấm, tạo điểm nhấn thanh lịch cho không gian.",
-    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-06.png`,
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-06.webp`,
   },
 
   {
@@ -486,7 +486,7 @@ export const productCatalog: Product[] = [
     tagline: "Cân đối - Sang trọng",
     descr:
       "Thiết kế cửa 2 cánh cân đối, bề mặt vân gỗ hiện đại và tay khóa thông minh cho không gian rộng rãi.",
-    image: `${IMG}/products/cua-2-canh/cua-2-canh-01.png`,
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-01.webp`,
   },
   {
     name: "Cửa 2 Cánh",
@@ -494,7 +494,7 @@ export const productCatalog: Product[] = [
     tagline: "Ấm áp - Tinh tế",
     descr:
       "Mẫu cửa 2 cánh tông gỗ nâu đậm, tạo điểm nhấn ấm áp và sang trọng cho mặt tiền hoặc phòng lớn.",
-    image: `${IMG}/products/cua-2-canh/cua-2-canh-02.png`,
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-02.webp`,
   },
   {
     name: "Cửa 2 Cánh",
@@ -502,7 +502,7 @@ export const productCatalog: Product[] = [
     tagline: "Thanh lịch - Nhẹ nhàng",
     descr:
       "Bề mặt gỗ xám thanh lịch kết hợp thiết kế tối giản, phù hợp với nhiều phong cách nội thất hiện đại.",
-    image: `${IMG}/products/cua-2-canh/cua-2-canh-03.png`,
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-03.webp`,
   },
   {
     name: "Cửa 2 Cánh",
@@ -510,7 +510,7 @@ export const productCatalog: Product[] = [
     tagline: "Trầm ấm - Đẳng cấp",
     descr:
       "Thiết kế cửa 2 cánh vân gỗ nâu trầm, tôn lên vẻ chắc chắn và đẳng cấp cho không gian sử dụng.",
-    image: `${IMG}/products/cua-2-canh/cua-2-canh-04.png`,
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-04.webp`,
   },
   {
     name: "Cửa Ô Kính",
