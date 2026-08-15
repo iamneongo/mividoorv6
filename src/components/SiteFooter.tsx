@@ -108,13 +108,6 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
         </div>
       </div>
 
-      {/* Giant watermark */}
-      <p
-        aria-hidden
-        className="select-none whitespace-nowrap text-center text-[19vw] font-extrabold uppercase leading-[0.8] tracking-[-0.03em] text-black/[0.05]"
-      >
-        MIVIDOOR
-      </p>
     </footer>
   );
 }
