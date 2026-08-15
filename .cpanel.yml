@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ulfdxguphosting/public_html/mividoor/
+    - npm ci --include=dev
+    - npm run build
+    - /bin/rm -rf "${DEPLOYPATH}cms-new"
+    - /bin/cp -a out/. "$DEPLOYPATH"
+    - /usr/bin/find "$DEPLOYPATH" -type d -exec /bin/chmod 755 {} +
+    - /usr/bin/find "$DEPLOYPATH" -type f -exec /bin/chmod 644 {} +
