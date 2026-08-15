@@ -128,6 +128,13 @@ export const productCatalog: Product[] = [
     descr: "Ô kính kết hợp lá sách thông minh giúp đón sáng tự nhiên và lưu thông không khí ngay cả khi đóng cửa.",
     image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-05.webp`,
   },
+  {
+    name: "Cửa Ô Kính Lá Sách",
+    code: "MV-OKLS-06",
+    tagline: "Cổ điển - Tinh tế",
+    descr: "Thiết kế ô kính trang trí khung vàng trên nền vân gỗ ấm, tạo điểm nhấn thanh lịch cho không gian.",
+    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-06.png`,
+  },
 
   {
     name: "Cửa Phào Chỉ Nổi",
