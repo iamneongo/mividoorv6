@@ -94,6 +94,41 @@ export const featuredProducts: Product[] = [
 
 export const productCatalog: Product[] = [
   {
+    name: "Cửa Đi Epoxy",
+    code: "MV-EPOXY-01",
+    tagline: "Tối giản - Hiện đại",
+    descr: "Bề mặt cửa epoxy phẳng mịn, đường nét tối giản và tay khóa màu đen cho không gian hiện đại.",
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-01.png`,
+  },
+  {
+    name: "Cửa Đi Epoxy",
+    code: "MV-EPOXY-02",
+    tagline: "Mềm mại - Cá tính",
+    descr: "Thiết kế cửa epoxy vòm cong với đường chỉ trang trí độc đáo, tạo điểm nhấn cho không gian.",
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-02.png`,
+  },
+  {
+    name: "Cửa Đi Epoxy",
+    code: "MV-EPOXY-03",
+    tagline: "Tinh tế - Thanh lịch",
+    descr: "Mẫu cửa epoxy vân gỗ sáng với đường chỉ đen thanh mảnh, phù hợp với nội thất tối giản.",
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-03.png`,
+  },
+  {
+    name: "Cửa Đi Epoxy",
+    code: "MV-EPOXY-04",
+    tagline: "Thanh thoát - Sang trọng",
+    descr: "Bề mặt epoxy xám hiện đại kết hợp đường chỉ kim loại sáng, mang lại vẻ đẹp tinh gọn.",
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-04.png`,
+  },
+  {
+    name: "Cửa Đi Epoxy",
+    code: "MV-EPOXY-05",
+    tagline: "Ấm áp - Đẳng cấp",
+    descr: "Mẫu cửa epoxy vòm tông gỗ nâu trầm, tạo cảm giác ấm áp và chắc chắn cho công trình.",
+    image: `${IMG}/products/cua-di-epoxy/cua-epoxy-05.png`,
+  },
+  {
     name: "Cửa Ô Kính Lá Sách",
     code: "MV-OKLS-01",
     tagline: "Thoáng khí - Đón sáng",
