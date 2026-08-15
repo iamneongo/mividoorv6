@@ -45,6 +45,22 @@ function currentSlug() {
   return index >= 0 ? parts[index + 1] : undefined;
 }
 
+function resizeEmbeddedArticle(event: React.SyntheticEvent<HTMLIFrameElement>) {
+  const iframe = event.currentTarget;
+
+  try {
+    const document = iframe.contentDocument;
+    const height = Math.max(
+      document?.documentElement.scrollHeight ?? 0,
+      document?.body?.scrollHeight ?? 0,
+      640,
+    );
+    iframe.style.height = `${height}px`;
+  } catch {
+    // Cross-origin WordPress pages keep the safe fallback height.
+  }
+}
+
 export function RealtimeNews() {
   const [articles, setArticles] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -90,7 +106,19 @@ export function RealtimeNews() {
                     <div className="flex gap-4 text-sm font-medium uppercase tracking-wider text-brand mb-6"><span>{article.category}</span><span>•</span><span>{article.date}</span></div>
                     <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-ink leading-[1.1] mb-8">{article.title}</h1>
                     <p className="text-lg md:text-xl text-ink/70 leading-relaxed font-medium mb-12">{article.excerpt}</p>
-                    <div className="wp-content border-t border-black/10 pt-10" dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <div className="border-t border-black/10 pt-10">
+                      {article.wordpressUrl ? (
+                        <iframe
+                          title={article.title}
+                          src={article.wordpressUrl}
+                          className="block h-[640px] w-full border-0"
+                          onLoad={resizeEmbeddedArticle}
+                          scrolling="no"
+                        />
+                      ) : (
+                        <div className="wp-content" dangerouslySetInnerHTML={{ __html: article.content }} />
+                      )}
+                    </div>
                   </>
                 ) : <p>Không tìm thấy bài viết này.</p>}
               </article>
