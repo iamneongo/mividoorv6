@@ -478,6 +478,7 @@ const luxTaglines = [
   "Mẫu đi nẹp",
   "Mẫu phào chỉ nổi",
   "Mẫu soi huỳnh",
+  "Mẫu CNC hiện đại",
   "Mẫu ô kính",
 ];
 
@@ -492,7 +493,8 @@ const luxFiles = [
   "virtual-try-on-2026-07-28T03-42-40.jpg",
   "virtual-try-on-2026-07-28T03-45-16.jpg",
   "virtual-try-on-2026-07-28T03-50-33.jpg",
-  "virtual-try-on-2026-07-28T04-25-44.jpg"
+  "virtual-try-on-2026-07-28T04-25-44.jpg",
+  "mivi-lux-12.png"
 ];
 
 export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
