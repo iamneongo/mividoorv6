@@ -499,7 +499,7 @@ export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
   code: `MIVI-LUX ${String(i + 1).padStart(2, "0")}`,
   tagline: luxTaglines[i],
   image: `${IMG}/luxury/${filename}`,
-}));
+})).filter((door) => !["MIVI-LUX 08", "MIVI-LUX 10"].includes(door.code));
 
 export const materials: Material[] = [
   { title: "Phôi PVC cao cấp", subtitle: "Tiêu chuẩn nhà máy", image: `${IMG}/phoi-pvc-v3.webp` },
