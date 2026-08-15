@@ -506,7 +506,7 @@ export const materials: Material[] = [
   { title: "Keo Jowat Đức", subtitle: "Mividoor sử dụng", image: `${IMG}/keo-jowat-v3.webp` },
   { title: "Lớp phim PVC", subtitle: "Cao cấp dày dặn", image: `${IMG}/phim-pvc-v3.webp` },
   { title: "Công nghệ phủ phim", subtitle: "Máy Burkle nhập từ Đức", image: `${IMG}/burkle-machine-v3.webp` },
-  { title: "Chêm đố nhựa WPB", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/wpb-plastic-v3.webp` },
+  { title: "Dán cạnh biên keo PUR", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/wpb-plastic-v3.webp` },
 ];
 
 export const features: Feature[] = [
