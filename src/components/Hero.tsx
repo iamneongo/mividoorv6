@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { StaggerContainer, StaggerItem } from "@/components/Animations";
-import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
@@ -161,12 +160,12 @@ export function Hero() {
             </StaggerItem>
             
             <StaggerItem>
-              <Link
+              <a
                 href={activeContent.linkHref}
                 className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-semibold text-white transition hover:bg-brand-2"
               >
                 {activeContent.linkText}
-              </Link>
+              </a>
             </StaggerItem>
           </StaggerContainer>
         </div>
