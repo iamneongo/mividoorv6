@@ -439,6 +439,38 @@ export const productCatalog: Product[] = [
   },
   featuredProducts[3],
   {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-01",
+    tagline: "Cân đối - Sang trọng",
+    descr:
+      "Thiết kế cửa 2 cánh cân đối, bề mặt vân gỗ hiện đại và tay khóa thông minh cho không gian rộng rãi.",
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-01.png`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-02",
+    tagline: "Ấm áp - Tinh tế",
+    descr:
+      "Mẫu cửa 2 cánh tông gỗ nâu đậm, tạo điểm nhấn ấm áp và sang trọng cho mặt tiền hoặc phòng lớn.",
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-02.png`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-03",
+    tagline: "Thanh lịch - Nhẹ nhàng",
+    descr:
+      "Bề mặt gỗ xám thanh lịch kết hợp thiết kế tối giản, phù hợp với nhiều phong cách nội thất hiện đại.",
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-03.png`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-04",
+    tagline: "Trầm ấm - Đẳng cấp",
+    descr:
+      "Thiết kế cửa 2 cánh vân gỗ nâu trầm, tôn lên vẻ chắc chắn và đẳng cấp cho không gian sử dụng.",
+    image: `${IMG}/products/cua-2-canh/cua-2-canh-04.png`,
+  },
+  {
     name: "Cửa Ô Kính",
     isCategory: true,
     code: "MV-07",
