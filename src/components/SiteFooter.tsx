@@ -69,9 +69,9 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
               Về chúng tôi
             </p>
             <a href="/#about" className="hover:opacity-60">Giới thiệu</a>
-            <a href="/san-pham" className="hover:opacity-60">Sản phẩm</a>
-            <a href="/tin-tuc" className="hover:opacity-60">Tin tức</a>
-            <a href="/lien-he" className="hover:opacity-60">Liên hệ</a>
+            <a href="/san-pham/" className="hover:opacity-60">Sản phẩm</a>
+            <a href="/tin-tuc/" className="hover:opacity-60">Tin tức</a>
+            <a href="/lien-he/" className="hover:opacity-60">Liên hệ</a>
           </div>
           <div className="flex flex-col gap-3 text-[15px] text-[#111111]">
             <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">

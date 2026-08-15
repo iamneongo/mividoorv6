@@ -20,27 +20,27 @@ export const brand = {
 
 export const navLinks: NavLink[] = [
   { label: "Trang chủ", href: "/" },
-  { label: "Về chúng tôi", href: "/ve-chung-toi" },
+  { label: "Về chúng tôi", href: "/ve-chung-toi/" },
   { 
     label: "Sản phẩm", 
-    href: "/san-pham",
+    href: "/san-pham/",
     subLinks: [
-      { label: "Mẫu Luxury", href: "/luxury" },
-      { label: "Mẫu phẳng", href: "/mau-phang" },
-      { label: "Mẫu soi huỳnh", href: "/mau-soi-huynh" },
-      { label: "Mẫu đi epoxy", href: "/mau-di-epoxy" },
-      { label: "Mẫu đi nẹp nhôm/nẹp inox", href: "/mau-di-nep" },
-      { label: "Mẫu phào chỉ nổi", href: "/mau-phao-chi-noi" },
-      { label: "Mẫu 2 cánh", href: "/mau-2-canh" },
-      { label: "Mẫu lùa", href: "/mau-lua" },
-      { label: "Mẫu ô kính, lá sách", href: "/mau-o-kinh-la-sach" },
-      { label: "Mẫu vòm", href: "/mau-vom" },
-      { label: "Mẫu ô fix", href: "/mau-o-fix" }
+      { label: "Mẫu Luxury", href: "/luxury/" },
+      { label: "Mẫu phẳng", href: "/mau-phang/" },
+      { label: "Mẫu soi huỳnh", href: "/mau-soi-huynh/" },
+      { label: "Mẫu đi epoxy", href: "/mau-di-epoxy/" },
+      { label: "Mẫu đi nẹp nhôm/nẹp inox", href: "/mau-di-nep/" },
+      { label: "Mẫu phào chỉ nổi", href: "/mau-phao-chi-noi/" },
+      { label: "Mẫu 2 cánh", href: "/mau-2-canh/" },
+      { label: "Mẫu lùa", href: "/mau-lua/" },
+      { label: "Mẫu ô kính, lá sách", href: "/mau-o-kinh-la-sach/" },
+      { label: "Mẫu vòm", href: "/mau-vom/" },
+      { label: "Mẫu ô fix", href: "/mau-o-fix/" }
     ]
   },
-  { label: "BST Mividoor Luxury", href: "/luxury" },
-  { label: "Tin tức", href: "/tin-tuc" },
-  { label: "Liên hệ", href: "/lien-he" },
+  { label: "BST Mividoor Luxury", href: "/luxury/" },
+  { label: "Tin tức", href: "/tin-tuc/" },
+  { label: "Liên hệ", href: "/lien-he/" },
 ];
 
 const IMG = "/mividoor/images";

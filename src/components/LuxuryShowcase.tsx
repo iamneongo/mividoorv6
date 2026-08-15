@@ -2,7 +2,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -136,7 +136,7 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
         {variant === "carousel" && (
           <div className="mt-10 flex justify-center">
             <Link
-              href="/luxury"
+              href="/luxury/"
               className="inline-flex h-11 items-center justify-center rounded-full bg-brand px-8 text-[15px] font-medium text-white transition hover:bg-brand-2"
             >
               Xem toàn bộ bộ sưu tập

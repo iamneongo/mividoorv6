@@ -29,9 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-import { SmoothScroll } from "@/components/SmoothScroll";
 import { TopBar } from "@/components/TopBar";
-import { ViewTransitions } from "next-view-transitions";
 
 export default function RootLayout({
   children,
@@ -39,8 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="vi" className="h-full antialiased">
+    <html lang="vi" className="h-full antialiased">
         <head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -55,11 +52,8 @@ export default function RootLayout({
         </head>
         <body className="min-h-full bg-background font-sans text-foreground">
           <TopBar />
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
+        {children}
         </body>
-      </html>
-    </ViewTransitions>
+    </html>
   );
 }

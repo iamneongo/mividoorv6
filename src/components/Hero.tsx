@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { StaggerContainer, StaggerItem } from "@/components/Animations";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
@@ -55,7 +55,7 @@ const slideContent = [
     description:
       "Tuyệt tác cửa nội thất định hình không gian sống sang trọng. Thiết kế đột phá với các đường vân nổi tinh xảo, chất liệu composite siêu bền bỉ thách thức thời gian.",
     linkText: "Khám phá bộ sưu tập",
-    linkHref: "/luxury",
+    linkHref: "/luxury/",
   },
 ];
 
