@@ -170,34 +170,6 @@ export const productCatalog: Product[] = [
     descr: "Thiết kế ô kính trang trí khung vàng trên nền vân gỗ ấm, tạo điểm nhấn thanh lịch cho không gian.",
     image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-06.webp`,
   },
-  {
-    name: "Cửa Ô Kính",
-    code: "MV-OK-07",
-    tagline: "Hiện đại - Đón sáng",
-    descr: "Thiết kế ô kính lớn giúp đưa ánh sáng tự nhiên vào không gian và tạo cảm giác rộng thoáng.",
-    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-07.webp`,
-  },
-  {
-    name: "Cửa Ô Kính",
-    code: "MV-OK-08",
-    tagline: "Hiện đại - Đón sáng",
-    descr: "Thiết kế ô kính lớn giúp đưa ánh sáng tự nhiên vào không gian và tạo cảm giác rộng thoáng.",
-    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-08.webp`,
-  },
-  {
-    name: "Cửa Ô Kính",
-    code: "MV-OK-09",
-    tagline: "Hiện đại - Đón sáng",
-    descr: "Thiết kế ô kính lớn giúp đưa ánh sáng tự nhiên vào không gian và tạo cảm giác rộng thoáng.",
-    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-09.webp`,
-  },
-  {
-    name: "Cửa Ô Kính",
-    code: "MV-OK-10",
-    tagline: "Hiện đại - Đón sáng",
-    descr: "Thiết kế ô kính lớn giúp đưa ánh sáng tự nhiên vào không gian và tạo cảm giác rộng thoáng.",
-    image: `${IMG}/products/o-kinh-la-sach/o-kinh-la-sach-10.webp`,
-  },
 
   {
     name: "Cửa Phào Chỉ Nổi",
