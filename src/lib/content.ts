@@ -33,7 +33,8 @@ export const navLinks: NavLink[] = [
       { label: "Mẫu phào chỉ nổi", href: "/mau-phao-chi-noi/" },
       { label: "Mẫu 2 cánh", href: "/mau-2-canh/" },
       { label: "Mẫu lùa", href: "/mau-lua/" },
-      { label: "Mẫu ô kính, lá sách", href: "/mau-o-kinh-la-sach/" },
+      { label: "Mẫu ô kính lá sách", href: "/mau-o-kinh-la-sach/" },
+      { label: "Mẫu ô kính", href: "/mau-o-kinh/" },
       { label: "Mẫu vòm", href: "/mau-vom/" },
       { label: "Mẫu ô fix", href: "/mau-o-fix/" }
     ]
