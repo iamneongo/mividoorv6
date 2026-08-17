@@ -222,28 +222,6 @@ export const productCatalog: Product[] = [
     image: `${IMG}/products/cua-o-fix/cua-o-fix-01.webp`,
   },
   {
-    name: "Cửa Ô Fix",
-    code: "MV-OFIX-02",
-    tagline: "Đón sáng - Rộng rãi",
-    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
-    image: `${IMG}/products/cua-o-fix/cua-o-fix-02.webp`,
-  },
-  {
-    name: "Cửa Ô Fix",
-    code: "MV-OFIX-03",
-    tagline: "Đón sáng - Rộng rãi",
-    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
-    image: `${IMG}/products/cua-o-fix/cua-o-fix-03.webp`,
-  },
-  {
-    name: "Cửa Ô Fix",
-    code: "MV-OFIX-04",
-    tagline: "Đón sáng - Rộng rãi",
-    descr: "Ô kính fix cố định cung cấp thêm ánh sáng cho hành lang hay không gian khuất.",
-    image: `${IMG}/products/cua-o-fix/cua-o-fix-04.webp`,
-  },
-
-  {
     name: "Cửa Vòm",
     code: "MV-VOM-01",
     tagline: "Mềm mại - Độc đáo",
