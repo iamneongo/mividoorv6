@@ -9,7 +9,7 @@ import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 
 export default function CategoryPage() {
-  const filteredProducts = productCatalog.filter(p => p.name === "Cửa Ô Kính Lá Sách");
+  const filteredProducts = productCatalog.filter(p => p.name.toLowerCase().includes("ô kính") || p.name.toLowerCase().includes("lá sách"));
   return (
     <>
       <div className="relative w-full bg-white p-4 md:p-6">
