@@ -544,16 +544,15 @@ export const productCatalog: Product[] = [
 const luxTaglines = [
   "Mẫu soi huỳnh",
   "Mẫu vòm",
-  "Mẫu ô kính lá sách",
-  "Mẫu đi epoxy",
-  "Mẫu đi nẹp",
+  "Mẫu lá sách",
+  "Mẫu phẳng",
+  "Mẫu đi nẹp nhôm/nẹp inox",
   "Mẫu vòm",
-  "Mẫu soi huỳnh",
-  "Mẫu đi nẹp",
+  "Mẫu đi nẹp nhôm/nẹp inox",
   "Mẫu phào chỉ nổi",
   "Mẫu soi huỳnh",
-  "Mẫu ô kính",
-  "Mẫu CNC hiện đại",
+  "Mẫu đi nẹp nhôm/nẹp inox",
+  "Mẫu đi nẹp nhôm/nẹp inox",
 ];
 
 const luxFiles = [
@@ -575,7 +574,12 @@ export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
   code: `MIVI-LUX ${String(i + 1).padStart(2, "0")}`,
   tagline: luxTaglines[i],
   image: `${IMG}/luxury/${filename}`,
-})).filter((door) => !["MIVI-LUX 08", "MIVI-LUX 10"].includes(door.code));
+})).map((door) => {
+  if (["MIVI-LUX 07", "MIVI-LUX 11", "MIVI-LUX 12"].includes(door.code)) {
+    return { ...door, taglineHref: "/mau-di-nep/" };
+  }
+  return door;
+}).filter((door) => !["MIVI-LUX 08", "MIVI-LUX 10"].includes(door.code));
 
 export const materials: Material[] = [
   { title: "Phôi PVC cao cấp", subtitle: "Tiêu chuẩn nhà máy", image: `${IMG}/phoi-pvc-v3.webp` },

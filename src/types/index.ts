@@ -24,6 +24,7 @@ export interface LuxuryDoor {
   code: string; // "MIVI-LUX 01"
   tagline: string;
   image: string;
+  taglineHref?: string;
 }
 
 export interface Material {

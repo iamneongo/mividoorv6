@@ -79,9 +79,15 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                         <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
                           {d.code}
                         </p>
-                        <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
-                          {d.tagline}
-                        </p>
+                        {d.taglineHref ? (
+                          <a href={d.taglineHref} className="mt-1.5 block text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors hover:text-brand">
+                            {d.tagline}
+                          </a>
+                        ) : (
+                          <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
+                            {d.tagline}
+                          </p>
+                        )}
                       </div>
                       <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
                         <ChevronRightIcon className="size-5" />
@@ -116,9 +122,15 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                           <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
                             {d.code}
                           </p>
-                          <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
-                            {d.tagline}
-                          </p>
+                          {d.taglineHref ? (
+                            <a href={d.taglineHref} className="mt-1.5 block text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors hover:text-brand">
+                              {d.tagline}
+                            </a>
+                          ) : (
+                            <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
+                              {d.tagline}
+                            </p>
+                          )}
                         </div>
                         <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
                           <ChevronRightIcon className="size-5" />
