@@ -350,6 +350,48 @@ export const productCatalog: Product[] = [
     descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
     image: `${IMG}/products/soi-huynh/soi-huynh-04.webp`,
   },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-05",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-05.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-06",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-06.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-07",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-07.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-08",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-08.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-09",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-09.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-10",
+    tagline: "Tinh xảo - Đẳng cấp",
+    descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
+    image: `${IMG}/products/soi-huynh/soi-huynh-10.webp`,
+  },
 
   {
     name: "Cửa Lùa",
