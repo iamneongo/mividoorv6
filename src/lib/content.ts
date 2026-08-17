@@ -279,6 +279,48 @@ export const productCatalog: Product[] = [
     descr: "Điểm xuyết các đường nẹp nhôm hoặc inox sáng bóng, mang đến vẻ đẹp hiện đại và nổi bật.",
     image: `${IMG}/products/cua-nep/cua-nep-03.webp`,
   },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-04",
+    tagline: "Cổ điển - Sang trọng",
+    descr: "Cửa nẹp kim loại màu vàng trên nền vân gỗ nâu, tạo điểm nhấn ấm áp và tinh tế.",
+    image: `${IMG}/products/cua-nep/cua-nep-04.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-05",
+    tagline: "Tối giản - Thanh lịch",
+    descr: "Mẫu cửa nẹp màu xám với đường viền vàng cân đối, phù hợp cho không gian hiện đại.",
+    image: `${IMG}/products/cua-nep/cua-nep-05.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-06",
+    tagline: "Hiện đại - Cá tính",
+    descr: "Thiết kế cửa màu than với các đường nẹp vàng phá cách, tạo vẻ mạnh mẽ và nổi bật.",
+    image: `${IMG}/products/cua-nep/cua-nep-06.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-07",
+    tagline: "Tinh gọn - Nhẹ nhàng",
+    descr: "Bề mặt vân gỗ sáng kết hợp hai đường nẹp dọc, mang lại cảm giác rộng và thoáng.",
+    image: `${IMG}/products/cua-nep/cua-nep-07.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-08",
+    tagline: "Trầm ấm - Tinh tế",
+    descr: "Mẫu cửa vân gỗ tối với nẹp inox sáng, phù hợp cho phong cách nội thất sang trọng.",
+    image: `${IMG}/products/cua-nep/cua-nep-08.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-09",
+    tagline: "Ấm áp - Đẳng cấp",
+    descr: "Ba đường nẹp vàng dọc tạo điểm nhấn thanh thoát trên nền vân gỗ nâu trầm.",
+    image: `${IMG}/products/cua-nep/cua-nep-09.webp`,
+  },
 
   {
     name: "Cửa Soi Huỳnh",
