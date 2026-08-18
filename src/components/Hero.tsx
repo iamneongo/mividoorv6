@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { StaggerContainer, StaggerItem } from "@/components/Animations";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
@@ -143,43 +142,43 @@ export function Hero() {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-20 md:pb-24 pointer-events-none">
           
           {/* Left Copy */}
-          <StaggerContainer key={activeIndex} className="max-w-xl pointer-events-auto">
-            <StaggerItem>
+          <div key={activeIndex} className="max-w-xl pointer-events-auto">
+            <div>
               <p 
                 className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/90 mb-4"
                 style={{ textShadow: "0 4px 12px rgba(0,0,0,0.3)" }}
               >
                 {activeContent.subtitle}
               </p>
-            </StaggerItem>
+            </div>
             
-            <StaggerItem>
+            <div>
               <h1 
                 className="text-[36px] font-medium leading-[1.04] tracking-[-0.5px] text-white md:text-[52px] lg:text-[64px]"
                 style={{ textShadow: "0 8px 32px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.2)" }}
               >
                 {activeContent.title}
               </h1>
-            </StaggerItem>
+            </div>
             
-            <StaggerItem>
+            <div>
               <p 
                 className="mt-6 max-w-md text-[16px] font-normal leading-[1.5] text-white/90"
                 style={{ textShadow: "0 4px 16px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.2)" }}
               >
                 {activeContent.description}
               </p>
-            </StaggerItem>
+            </div>
             
-            <StaggerItem>
+            <div>
               <a
                 href={activeContent.linkHref}
                 className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-brand px-8 text-[14px] font-semibold text-white transition hover:bg-brand-2"
               >
                 {activeContent.linkText}
               </a>
-            </StaggerItem>
-          </StaggerContainer>
+            </div>
+          </div>
         </div>
       </div>
     </section>
