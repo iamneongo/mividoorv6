@@ -170,7 +170,7 @@ export function NewProductBanner() {
 
   return (
     <>
-      <section id="events" className="relative w-full overflow-hidden bg-[#fafafa] py-20">
+      <section id="events" className="below-fold-section relative w-full overflow-hidden bg-[#fafafa] py-20">
         <div className="mx-auto flex max-w-[1400px] flex-col px-6 md:px-10">
           {/* Header Section */}
           <div className="z-10 mb-16 text-center max-w-3xl mx-auto">

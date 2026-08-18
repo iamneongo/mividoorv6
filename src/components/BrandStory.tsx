@@ -9,7 +9,7 @@ export function BrandStory() {
   ];
 
   return (
-    <section id="about" className="bg-[#fafafa] pt-20 pb-20 md:pt-28 md:pb-28">
+    <section id="about" className="below-fold-section bg-[#fafafa] pt-20 pb-20 md:pt-28 md:pb-28">
       {/* 1. Header Section */}
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <SlideUp className="flex flex-col items-center text-center max-w-[1200px] mx-auto">

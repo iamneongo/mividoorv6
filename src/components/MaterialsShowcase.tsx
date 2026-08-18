@@ -6,7 +6,7 @@ import { SlideUp, StaggerContainer, StaggerItem } from "@/components/Animations"
 
 export function MaterialsShowcase() {
   return (
-    <section className="bg-[#fafafa] py-16 md:py-24">
+    <section className="below-fold-section bg-[#fafafa] py-16 md:py-24">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <SlideUp className="mb-12 md:mb-10">
           <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.12em] text-brand md:mb-2">

@@ -4,7 +4,7 @@ import { SlideUp, StaggerContainer, StaggerItem } from "@/components/Animations"
 
 export function ColorPalette() {
   return (
-    <section className="bg-white py-14 md:py-20">
+    <section className="below-fold-section bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
         <SlideUp className="mb-12 text-center">
           <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.12em] text-brand">

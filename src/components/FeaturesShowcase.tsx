@@ -6,7 +6,7 @@ const icons = [Droplets, BugOff, Flame, ShieldCheck, VolumeX, Thermometer];
 
 export function FeaturesShowcase() {
   return (
-    <section className="bg-[#fafafa] pt-20 pb-20 md:pt-28 md:pb-28">
+    <section className="below-fold-section bg-[#fafafa] pt-20 pb-20 md:pt-28 md:pb-28">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-10">
         <SlideUp className="mb-12 flex flex-col items-center text-center">
           <h2 className="text-[32px] font-medium leading-[1.2] tracking-[-1px] text-ink md:text-[42px]">

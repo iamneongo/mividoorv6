@@ -45,12 +45,6 @@ export default function RootLayout({
   return (
     <html lang="vi" className="h-full antialiased">
         <head>
-          <link
-            rel="preload"
-            as="image"
-            href="/mividoor/images/banner-new-2.webp"
-            fetchPriority="high"
-          />
         </head>
         <body className="min-h-full bg-background font-sans text-foreground">
           <TopBar />

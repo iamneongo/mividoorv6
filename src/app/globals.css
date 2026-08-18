@@ -175,6 +175,11 @@
 }
 
 @layer utilities {
+  .below-fold-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+  }
+
   /* Isolate WordPress editor HTML from the site's global Tailwind rules. */
   .wp-content {
     display: block;
