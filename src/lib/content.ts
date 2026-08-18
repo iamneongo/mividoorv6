@@ -350,13 +350,6 @@ export const productCatalog: Product[] = [
   },
   {
     name: "Cửa Nẹp",
-    code: "MV-NEP-06",
-    tagline: "Hiện đại - Cá tính",
-    descr: "Thiết kế cửa màu than với các đường nẹp vàng phá cách, tạo vẻ mạnh mẽ và nổi bật.",
-    image: `${IMG}/products/cua-nep/cua-nep-06.webp`,
-  },
-  {
-    name: "Cửa Nẹp",
     code: "MV-NEP-07",
     tagline: "Tinh gọn - Nhẹ nhàng",
     descr: "Bề mặt vân gỗ sáng kết hợp hai đường nẹp dọc, mang lại cảm giác rộng và thoáng.",
