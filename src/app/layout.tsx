@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Mivicomposite - Nhà máy cửa composite Mividoor",
   description:
     "Mividoor — Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm. Hơn 10.000 bộ cửa đã bàn giao trên toàn quốc.",
+  verification: {
+    google: "cnLMjmIL8pWY_gpNv83OkW9IKhuFnNwYRZtdbN7jurc",
+  },
   icons: {
     icon: "/mividoor/favicon.png",
     apple: "/mividoor/apple-touch-icon.png",
