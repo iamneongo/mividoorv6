@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -69,6 +69,27 @@ function AlbumCarousel({
   index: number,
   onImageClick: (src: string) => void 
 }) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadImages, setShouldLoadImages] = useState(false);
+
+  useEffect(() => {
+    const element = sectionRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadImages(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px" },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: false,
@@ -84,7 +105,7 @@ function AlbumCarousel({
   }, [emblaApi]);
 
   return (
-    <div className="flex flex-col">
+    <div ref={sectionRef} className="flex flex-col">
       <div className="mb-6 flex items-center gap-4 md:gap-6">
         <span className="text-[48px] md:text-[64px] font-black text-black/[0.04] leading-none select-none pointer-events-none">
           0{index + 1}
@@ -110,13 +131,15 @@ function AlbumCarousel({
                 className="relative w-[210px] h-[280px] md:w-[315px] md:h-[420px] shrink-0 flex-[0_0_auto] rounded-[8px] bg-white p-1 border border-[#eaeaea] shadow-[0_4px_12px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-lg hover:border-brand/30 transition-all duration-300 overflow-hidden"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={src}
-                  alt={`${album.title} photo ${i + 1}`}
-                  className="block h-full w-full object-cover rounded-[4px]"
-                  loading="lazy"
-                  decoding="async"
-                />
+                {shouldLoadImages ? (
+                  <img
+                    src={src}
+                    alt={`${album.title} photo ${i + 1}`}
+                    className="block h-full w-full object-cover rounded-[4px]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : null}
               </div>
             ))}
           </div>
