@@ -51,16 +51,6 @@ export default function RootLayout({
             href="/mividoor/images/banner-new-2.webp"
             fetchPriority="high"
           />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Pattaya&display=swap"
-            rel="stylesheet"
-          />
         </head>
         <body className="min-h-full bg-background font-sans text-foreground">
           <TopBar />
