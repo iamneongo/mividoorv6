@@ -692,6 +692,7 @@ const luxTaglines = [
   "Mẫu soi huỳnh",
   "Mẫu đi nẹp nhôm/nẹp inox",
   "Mẫu đi nẹp nhôm/nẹp inox",
+  "Mẫu ô kính, lá sách",
 ];
 
 const luxFiles = [
@@ -706,7 +707,8 @@ const luxFiles = [
   "virtual-try-on-2026-07-28T03-45-16.jpg",
   "virtual-try-on-2026-07-28T03-50-33.jpg",
   "virtual-try-on-2026-07-28T04-25-44.jpg",
-  "mivi-lux-12.png"
+  "mivi-lux-12.png",
+  "o-kinh-la-sach-10.webp"
 ];
 
 export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
@@ -716,6 +718,9 @@ export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
 })).map((door) => {
   if (["MIVI-LUX 07", "MIVI-LUX 11", "MIVI-LUX 12"].includes(door.code)) {
     return { ...door, taglineHref: "/mau-di-nep/" };
+  }
+  if (door.code === "MIVI-LUX 13") {
+    return { ...door, taglineHref: "/mau-o-kinh-la-sach/" };
   }
   return door;
 }).filter((door) => !["MIVI-LUX 08", "MIVI-LUX 10"].includes(door.code));
