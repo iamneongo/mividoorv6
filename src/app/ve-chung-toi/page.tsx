@@ -7,6 +7,9 @@ import { AboutTechProcess } from "@/components/AboutTechProcess";
 import { AboutWarranty } from "@/components/AboutWarranty";
 import { AboutAccessories } from "@/components/AboutAccessories";
 import { NewProductBanner } from "@/components/NewProductBanner";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/ve-chung-toi/" } };
 
 export default function AboutPage() {
   return (

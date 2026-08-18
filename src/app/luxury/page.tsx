@@ -1,6 +1,9 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/luxury/" } };
 
 export default function LuxuryPage() {
   return (

@@ -1,6 +1,9 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { brand } from "@/lib/content";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/lien-he/" } };
 
 export default function ContactPage() {
   return (

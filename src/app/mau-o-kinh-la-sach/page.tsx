@@ -7,6 +7,9 @@ import { LuxuryShowcase } from "@/components/LuxuryShowcase";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/mau-o-kinh-la-sach/" } };
 
 export default function CategoryPage() {
   const filteredProducts = productCatalog.filter(p => p.name.toLowerCase().includes("ô kính") || p.name.toLowerCase().includes("lá sách"));
