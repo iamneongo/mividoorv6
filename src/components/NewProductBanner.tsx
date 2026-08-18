@@ -83,7 +83,9 @@ function AlbumCarousel({
           observer.disconnect();
         }
       },
-      { rootMargin: "400px 0px" },
+      // Keep the initial mobile request focused on the hero. Event photos are
+      // intentionally loaded only once the gallery enters the viewport.
+      { rootMargin: "0px" },
     );
 
     observer.observe(element);
