@@ -96,9 +96,21 @@ export function Hero() {
             {banners.map((src, idx) => (
               <div 
                 key={idx} 
-                className="relative min-w-0 flex-[0_0_100%] h-full bg-cover bg-[80%_center] md:bg-center" 
-                style={{ backgroundImage: `url('${src}')` }}
+                className="relative min-w-0 flex-[0_0_100%] h-full bg-black"
               >
+                {/* Only the active slide is eager-loaded so the hero is discoverable as the LCP image. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={idx === activeIndex ? src : undefined}
+                  alt=""
+                  aria-hidden="true"
+                  loading={idx === activeIndex ? "eager" : "lazy"}
+                  fetchPriority={idx === activeIndex ? "high" : "low"}
+                  decoding="async"
+                  width={1672}
+                  height={941}
+                  className="absolute inset-0 h-full w-full object-cover object-[80%_center] md:object-center"
+                />
                 {/* Light legibility scrim for white text contrast */}
                 <div
                   className="absolute inset-0"

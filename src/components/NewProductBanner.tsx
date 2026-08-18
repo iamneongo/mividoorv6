@@ -114,7 +114,7 @@ function AlbumCarousel({
                   src={src}
                   alt={`${album.title} photo ${i + 1}`}
                   className="block h-full w-full object-cover rounded-[4px]"
-                  loading={i < 3 ? 'eager' : 'lazy'}
+                  loading="lazy"
                   decoding="async"
                 />
               </div>

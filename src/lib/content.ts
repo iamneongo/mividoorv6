@@ -776,7 +776,7 @@ const swatchHashes = [
 
 export const colorSwatches: ColorSwatch[] = swatchHashes.map((h, i) => ({
   code: `M-${String(i + 1).padStart(2, "0")}`,
-  image: `${IMG}/mamauu/${h}.webp`,
+  image: `${IMG}/mamauu-optimized/${h}.webp`,
   isNew: i === 14, // M-15 mới
 }));
 
