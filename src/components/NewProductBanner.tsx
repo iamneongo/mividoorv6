@@ -137,6 +137,8 @@ function AlbumCarousel({
                   <img
                     src={src}
                     alt={`${album.title} photo ${i + 1}`}
+                    width={315}
+                    height={420}
                     className="block h-full w-full object-cover rounded-[4px]"
                     loading="lazy"
                     decoding="async"

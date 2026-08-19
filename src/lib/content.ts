@@ -685,7 +685,7 @@ const luxTaglines = [
   "Mẫu soi huỳnh",
   "Mẫu đi nẹp nhôm/nẹp inox",
   "Mẫu đi nẹp nhôm/nẹp inox",
-  "Mẫu ô kính, lá sách",
+  "Mẫu ô kính",
 ];
 
 const luxFiles = [

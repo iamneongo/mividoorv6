@@ -34,6 +34,8 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
           <img 
             src="/mividoor/images/logo.png" 
             alt={brand.name} 
+            width="2000"
+            height="478"
             className="h-[28px] w-auto object-contain md:h-[32px]" 
           />
         </a>

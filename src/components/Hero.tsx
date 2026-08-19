@@ -59,7 +59,9 @@ const slideContent = [
 
 export function Hero() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", duration: 40 }, [
-    Autoplay({ delay: 3000, stopOnInteraction: false }),
+    // Keep the first hero image stable through the initial mobile paint.
+    // Switching at 3s caused Lighthouse to promote a lazy second slide as LCP.
+    Autoplay({ delay: 10000, stopOnInteraction: false }),
     Fade(),
   ]);
   const [activeIndex, setActiveIndex] = useState(0);
