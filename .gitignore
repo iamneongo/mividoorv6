@@ -47,3 +47,6 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Private source images retained before website watermarking.
+private-assets/watermark-originals/
