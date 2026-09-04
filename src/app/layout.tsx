@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description:
     "Mividoor — Cửa composite công nghệ Đức: Chống nước, chống mối mọt, cách âm cách nhiệt, bảo hành 10 năm. Hơn 10.000 bộ cửa đã bàn giao trên toàn quốc.",
   verification: {
+    other: {
+      "msvalidate.01": "5B200A96E4547B1F129421999FC77703",
+    },
     google: "cnLMjmIL8pWY_gpNv83OkW9IKhuFnNwYRZtdbN7jurc",
   },
   alternates: {
