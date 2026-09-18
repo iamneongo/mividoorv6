@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { brand } from "@/lib/content";
 import { SparkleIcon } from "@/components/icons";
-import { PiInstagramLogo, PiFacebookLogo, PiTiktokLogo } from "react-icons/pi";
+import { PiFacebookLogo } from "react-icons/pi";
 
 
 
@@ -45,10 +45,13 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
               <SparkleIcon className="mb-1 inline size-5 text-brand" />
             </h3>
             <div className="mt-6 flex gap-3">
-              {[PiInstagramLogo, PiFacebookLogo, PiTiktokLogo].map((Icon, i) => (
+              {[{ Icon: PiFacebookLogo, label: "Facebook", href: "https://www.facebook.com/mivicomposite" }].map(({ Icon, label, href }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="flex size-11 items-center justify-center rounded-2xl bg-black/[0.05] text-brand transition hover:bg-brand hover:text-white"
                 >
                   <Icon className="size-5" />
@@ -70,6 +73,7 @@ export function SiteFooter({ hideIntro = false }: { hideIntro?: boolean } = {}) 
             </p>
             <a href="/#about" className="hover:opacity-60">Giới thiệu</a>
             <a href="/san-pham/" className="hover:opacity-60">Sản phẩm</a>
+            <a href="/catalogue/" className="hover:opacity-60">Catalogue</a>
             <a href="/tin-tuc/" className="hover:opacity-60">Tin tức</a>
             <a href="/lien-he/" className="hover:opacity-60">Liên hệ</a>
           </div>

@@ -153,14 +153,14 @@ function AlbumCarousel({
         <button 
           onClick={scrollPrev}
           className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand hover:text-white z-10"
-          aria-label="Previous image"
+          aria-label="Ảnh sự kiện trước"
         >
           <ChevronLeft size={24} />
         </button>
         <button 
           onClick={scrollNext}
           className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-brand hover:text-white z-10"
-          aria-label="Next image"
+          aria-label="Ảnh sự kiện sau"
         >
           <ChevronRight size={24} />
         </button>

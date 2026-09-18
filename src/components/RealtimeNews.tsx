@@ -210,9 +210,9 @@ export function RealtimeNews() {
 
   return (
     <>
-      <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
+      <div className="relative w-full bg-white p-2 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 min-h-[50vh]">
+        <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-20 pb-12 md:pt-28 md:pb-20 min-h-[50vh]">
           <div className="mx-auto max-w-[1400px] px-6 lg:px-10 relative z-10">
             {slug ? (
               <article className="mx-auto max-w-[820px] pt-4">
@@ -240,7 +240,7 @@ export function RealtimeNews() {
               </article>
             ) : (
               <>
-                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-24">
+                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-14 md:mb-24">
                   <h1 className="text-4xl font-medium tracking-tight text-ink md:text-6xl leading-[1.1]">Tin tức & <br /><span className="text-[#2563EB] accent-serif font-normal text-3xl md:text-[56px] inline-block mt-2">Sự kiện</span></h1>
                   <p className="max-w-md text-lg text-ink/70 md:text-right pb-4 md:pb-8">Cập nhật những thông tin mới nhất về Mividoor, các hoạt động triển lãm, hội thảo và xu hướng thiết kế nội thất.</p>
                 </div>
@@ -250,7 +250,7 @@ export function RealtimeNews() {
                       <a
                         key={item.slug}
                         href={`/tin-tuc/?post=${encodeURIComponent(item.slug)}`}
-                        className="group flex flex-col gap-5 border-b border-black/10 px-6 py-8 transition-colors hover:bg-black/5 md:-mx-6 md:grid md:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)] md:gap-10 md:py-10"
+                        className="group flex flex-col gap-5 border-b border-black/10 px-4 py-6 transition-colors hover:bg-black/5 md:-mx-6 md:grid md:grid-cols-[minmax(18rem,22rem)_minmax(0,1fr)] md:gap-10 md:py-10"
                       >
                         <NewsThumbnail article={item} />
                         <div className="flex min-w-0 flex-col gap-3 md:pt-1">

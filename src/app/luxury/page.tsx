@@ -1,13 +1,28 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
+import { ProductCollectionJsonLd } from "@/components/ProductCollectionJsonLd";
+import { formatLuxuryCode, luxuryDoors } from "@/lib/content";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/luxury/" } };
+export const metadata: Metadata = {
+  title: "Cửa Luxury Mividoor - Bộ sưu tập cửa composite cao cấp",
+  description: "Khám phá bộ sưu tập cửa Luxury Mividoor với các mẫu cửa composite cao cấp, thiết kế tinh tế và bền đẹp.",
+  alternates: { canonical: "https://mividoor.vn/luxury/" },
+};
 
 export default function LuxuryPage() {
+  const luxuryProducts = luxuryDoors.map((door) => ({
+    name: formatLuxuryCode(door.code),
+    code: door.code,
+    tagline: "Cửa Mividoor Luxury",
+    descr: `${formatLuxuryCode(door.code)} thuộc bộ sưu tập cửa composite cao cấp Mividoor Luxury.`,
+    image: door.image,
+  }));
+
   return (
     <>
+      <ProductCollectionJsonLd title="Bộ sưu tập cửa Mividoor Luxury" path="/luxury/" products={luxuryProducts} />
       <div className="relative w-full bg-white p-4 md:p-6 border-b border-black/5">
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-24 min-h-[50vh] flex flex-col justify-center">

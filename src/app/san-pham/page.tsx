@@ -2,18 +2,44 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { IngredientsIntro } from "@/components/IngredientsIntro";
+import { CategoryListJsonLd } from "@/components/ProductCollectionJsonLd";
 import { productCatalog } from "@/lib/content";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
 import Image from "next/image";
-import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/san-pham/" } };
+const categoryLinks: Record<string, string> = {
+  "MV-01": "/mau-phang/",
+  "MV-02": "/mau-di-nep/",
+  "MV-03": "/mau-phao-chi-noi/",
+  "MV-04": "/mau-lua/",
+  "MV-05": "/mau-vom/",
+  "MV-06": "/mau-soi-huynh/",
+  "MV-07": "/mau-o-kinh-la-sach/",
+  "MV-08": "/mau-o-kinh-la-sach/",
+  "MV-09": "/mau-o-fix/",
+};
+
+export const metadata: Metadata = {
+  title: "Mẫu cửa composite Mividoor - Danh mục sản phẩm",
+  description: "Xem các mẫu cửa composite Mividoor: cửa phẳng, cửa nẹp, cửa soi huỳnh, cửa ô kính, cửa epoxy và nhiều mẫu hoàn thiện khác.",
+  alternates: { canonical: "https://mividoor.vn/san-pham/" },
+};
 
 export default function ProductsPage() {
+  const categoryItems = productCatalog
+    .filter((product) => product.isCategory)
+    .map((product) => ({
+      name: product.name,
+      description: product.descr,
+      path: categoryLinks[product.code] ?? "/san-pham/",
+      image: product.image,
+    }));
+
   return (
     <>
+      <CategoryListJsonLd title="Mẫu cửa composite Mividoor" path="/san-pham/" categories={categoryItems} />
       <div className="relative w-full bg-white p-4 md:p-6">
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-24 min-h-[50vh] flex flex-col justify-center">
@@ -43,8 +69,9 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
             {productCatalog.filter(p => p.isCategory).map((product, i) => (
-              <div 
+              <a
                 key={`${product.code}-${i}`} 
+                href={categoryLinks[product.code] ?? "/san-pham/"}
                 className="min-w-0"
               >
                 <div className="group flex flex-col gap-5 bg-white p-6 rounded-3xl">
@@ -65,7 +92,7 @@ export default function ProductsPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

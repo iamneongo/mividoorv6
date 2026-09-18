@@ -175,6 +175,36 @@
 }
 
 @layer utilities {
+  .contact-pulse {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .contact-pulse::before {
+    position: absolute;
+    z-index: -1;
+    inset: -5px;
+    border-radius: 9999px;
+    background: inherit;
+    content: "";
+    opacity: 0.55;
+    animation: contact-pulse 2.2s ease-out infinite;
+  }
+
+  .contact-pulse:nth-child(2)::before { animation-delay: 0.4s; }
+  .contact-pulse:nth-child(3)::before { animation-delay: 0.8s; }
+  .contact-pulse:nth-child(4)::before { animation-delay: 1.2s; }
+
+  @keyframes contact-pulse {
+    0% { opacity: 0.55; transform: scale(0.92); }
+    70%, 100% { opacity: 0; transform: scale(1.35); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-pulse::before { animation: none; }
+    .contact-pulse { transition: none; }
+  }
+
   .below-fold-section {
     content-visibility: auto;
     contain-intrinsic-size: 800px;

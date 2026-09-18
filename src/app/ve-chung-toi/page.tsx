@@ -6,17 +6,27 @@ import { AboutPhilosophy } from "@/components/AboutPhilosophy";
 import { AboutTechProcess } from "@/components/AboutTechProcess";
 import { AboutWarranty } from "@/components/AboutWarranty";
 import { AboutAccessories } from "@/components/AboutAccessories";
+import { QualityCertificate } from "@/components/QualityCertificate";
 import { NewProductBanner } from "@/components/NewProductBanner";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/ve-chung-toi/" } };
+export const metadata: Metadata = {
+  title: "Về Mividoor - Nhà máy cửa composite công nghệ Đức",
+  description: "Tìm hiểu Mividoor, nhà máy cửa composite công nghệ Đức với giải pháp cửa bền đẹp cho công trình Việt.",
+  alternates: { canonical: "https://mividoor.vn/ve-chung-toi/" },
+};
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Trang chủ", path: "/" }, { name: "Về chúng tôi", path: "/ve-chung-toi/" }]} />
       <div className="relative w-full bg-white p-4 md:p-6 min-h-[50vh]">
         <SiteHeader />
-        <div className="relative w-full rounded-[16px] overflow-hidden pt-20 pb-12 lg:pt-24 lg:pb-16 h-full bg-[url('/mividoor/images/about-bg-showroom.webp')] bg-fixed bg-cover bg-center">
+        <div
+          className="relative w-full rounded-[16px] overflow-hidden pt-20 pb-12 lg:pt-24 lg:pb-16 h-full bg-fixed bg-cover bg-center"
+          style={{ backgroundImage: "url(/mividoor/images/about-bg-showroom.webp)" }}
+        >
           {/* Dark gradient overlay on the left to make white text readable, fading to transparent on the right */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/10 z-0" />
           
@@ -56,6 +66,7 @@ export default function AboutPage() {
       <AboutPhilosophy />
       <AboutTechProcess />
       <AboutWarranty />
+      <QualityCertificate />
       <AboutAccessories />
       <NewProductBanner />
       

@@ -11,7 +11,7 @@ export function ColorPalette() {
             BẢNG MÀU PVC MIVIDOOR
           </p>
           <h2 className="mx-auto max-w-2xl text-[28px] font-medium leading-[1.2] tracking-[-0.5px] text-ink md:text-[38px]">
-            Bộ sưu tập 18 màu phim <span className="accent-serif text-brand">cao cấp</span>, vân gỗ tự nhiên sắc nét
+            Bộ sưu tập 20 màu phim <span className="accent-serif text-brand">cao cấp</span>, vân gỗ tự nhiên sắc nét
           </h2>
         </SlideUp>
 

@@ -28,7 +28,7 @@ export function CategoryCarousel({ variant = "carousel" }: CategoryCarouselProps
   const categories = productCatalog.filter(p => p.isCategory);
 
   return (
-    <section className="bg-white pb-6 pt-4">
+    <section className="below-fold-section bg-white pb-6 pt-4">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         {variant === "grid" ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 pb-4">
@@ -36,9 +36,15 @@ export function CategoryCarousel({ variant = "carousel" }: CategoryCarouselProps
               <div key={`${c.name}-${i}`} className="min-w-0">
                 <div className="group flex flex-col gap-5 bg-white p-6 rounded-3xl">
                   <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
-                    <div
-                      className="absolute inset-0 bg-bottom bg-no-repeat transition-transform duration-700 group-hover:scale-105 origin-bottom"
-                      style={{ backgroundImage: `url('${c.image}')`, backgroundSize: 'auto 85%' }}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={c.image}
+                      alt={c.name}
+                      width={320}
+                      height={480}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute bottom-0 left-1/2 h-[85%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom transition-transform duration-700 group-hover:scale-[1.04]"
                     />
                   </div>
                   <div className="flex items-end justify-between px-2">
@@ -66,9 +72,15 @@ export function CategoryCarousel({ variant = "carousel" }: CategoryCarouselProps
                   <div key={`${c.name}-${i}`} className="min-w-0 flex-[0_0_auto] pl-5">
                       <div className="group flex w-[62vw] sm:w-[280px] md:w-[320px] flex-col gap-5">
                       <div className="relative aspect-[2/3] w-full overflow-hidden rounded-[22px]">
-                        <div
-                          className="absolute inset-0 bg-bottom bg-no-repeat transition-transform duration-700 group-hover:scale-105 origin-bottom"
-                          style={{ backgroundImage: `url('${c.image}')`, backgroundSize: 'auto 85%' }}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={c.image}
+                          alt={c.name}
+                          width={320}
+                          height={480}
+                          loading="lazy"
+                          decoding="async"
+                          className="absolute bottom-0 left-1/2 h-[85%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom transition-transform duration-700 group-hover:scale-[1.04]"
                         />
                       </div>
                       <div className="flex items-end justify-between px-2">

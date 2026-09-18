@@ -1,13 +1,20 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ContactForm } from "@/components/ContactForm";
 import { brand } from "@/lib/content";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/lien-he/" } };
+export const metadata: Metadata = {
+  title: "Liên hệ Mividoor - Tư vấn cửa composite",
+  description: "Liên hệ Mividoor để được tư vấn mẫu cửa composite, báo giá và giải pháp cửa phù hợp cho công trình.",
+  alternates: { canonical: "https://mividoor.vn/lien-he/" },
+};
 
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Trang chủ", path: "/" }, { name: "Liên hệ", path: "/lien-he/" }]} />
       <div className="relative w-full bg-white p-4 md:p-6 min-h-screen">
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-28 pb-20 h-full min-h-[50vh]">
@@ -44,29 +51,7 @@ export default function ContactPage() {
           {/* Right Column: Minimalist Form */}
           <div className="flex-[0.8] pt-12 md:pt-12">
             <h3 className="text-2xl font-medium text-ink mb-10 tracking-tight">Gửi tin nhắn cho chúng tôi</h3>
-            <form className="flex flex-col gap-8">
-              <input 
-                type="text" 
-                placeholder="Họ và tên" 
-                className="w-full border-b border-black/20 bg-transparent py-4 text-lg outline-none transition focus:border-[#2563EB] focus:border-b-2 placeholder:text-ink/30"
-              />
-              <input 
-                type="tel" 
-                placeholder="Số điện thoại" 
-                className="w-full border-b border-black/20 bg-transparent py-4 text-lg outline-none transition focus:border-[#2563EB] focus:border-b-2 placeholder:text-ink/30"
-              />
-              <textarea 
-                placeholder="Nội dung" 
-                rows={4}
-                className="w-full border-b border-black/20 bg-transparent py-4 text-lg outline-none transition focus:border-[#2563EB] focus:border-b-2 resize-none placeholder:text-ink/30"
-              ></textarea>
-              <button 
-                type="button"
-                className="mt-4 self-start rounded-full bg-ink px-10 py-4 text-sm font-medium uppercase tracking-wide text-white transition hover:bg-[#2563EB]"
-              >
-                Gửi yêu cầu
-              </button>
-            </form>
+            <ContactForm />
           </div>
           </div>
         </div>

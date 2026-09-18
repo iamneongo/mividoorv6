@@ -4,7 +4,7 @@ import { SlideUp, StaggerContainer, StaggerItem } from "@/components/Animations"
 export function AboutTechProcess() {
   const processes = [
     {
-      title: "Công nghệ phủ phim",
+      title: "Công nghệ phủ phim từ Đức",
       description: "Máy BURKLE nhập từ Đức cho ra bề mặt cánh cửa có độ thẩm mỹ cao."
     },
     {

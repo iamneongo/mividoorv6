@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
   "/mividoor/images/banner-new-2.webp",
-  "/mividoor/images/ben-dep-banner.jpg",
+  "/mividoor/images/ben-dep-banner.webp",
   "/mividoor/images/banner-new-4.webp"
 ];
 
@@ -89,7 +89,10 @@ export function Hero() {
   const activeContent = slideContent[activeIndex];
 
   return (
-    <section id="top" className="relative w-full h-[85dvh] md:h-[100dvh] bg-white p-4 md:p-6">
+    <section
+      id="top"
+      className="relative w-full h-[100svh] md:h-[min(104dvh,1120px)] bg-white p-4 md:p-6"
+    >
       <div className="relative w-full h-full rounded-[16px] overflow-hidden group">
         {/* Background Image Carousel */}
         <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
@@ -129,19 +132,19 @@ export function Hero() {
         <button
           onClick={scrollPrev}
           className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40 z-20 pointer-events-auto"
-          aria-label="Previous slide"
+          aria-label="Slide trước"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={scrollNext}
           className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/40 z-20 pointer-events-auto"
-          aria-label="Next slide"
+          aria-label="Slide sau"
         >
           <ChevronRight size={24} />
         </button>
 
-        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-20 md:pb-24 pointer-events-none">
+        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-20 md:justify-center md:pb-0 pointer-events-none">
           
           {/* Left Copy */}
           <div key={activeIndex} className="max-w-xl pointer-events-auto">

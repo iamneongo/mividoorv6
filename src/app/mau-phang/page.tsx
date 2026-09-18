@@ -2,6 +2,7 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { IngredientsIntro } from "@/components/IngredientsIntro";
+import { ProductCollectionJsonLd } from "@/components/ProductCollectionJsonLd";
 import { productCatalog } from "@/lib/content";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
 import Image from "next/image";
@@ -9,19 +10,20 @@ import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { alternates: { canonical: "https://mividoor.vn/mau-phang/" } };
+export const metadata: Metadata = { title: "Cửa phẳng composite Mividoor", description: "Mẫu cửa phẳng composite Mividoor tối giản, dễ phối nội thất và phù hợp nhà ở hiện đại.", alternates: { canonical: "https://mividoor.vn/mau-phang/" } };
 
 export default function CategoryPage() {
   const filteredProducts = productCatalog.filter(p => !p.isCategory && p.name.toLowerCase().includes("phẳng"));
-  return (
+    return (
     <>
+      <ProductCollectionJsonLd title="Cửa phẳng Mividoor" path="/mau-phang/" products={filteredProducts} />
       <div className="relative w-full bg-white p-4 md:p-6">
         <SiteHeader />
         <div className="relative w-full rounded-[16px] overflow-hidden bg-[#F2F2EC] pt-32 pb-24 min-h-[50vh] flex flex-col justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src="/mividoor/images/products-banner-v2.webp" 
-            alt="Sản phẩm Mividoor" 
+            alt="Các mẫu cửa phẳng composite Mividoor" 
             className="absolute inset-0 w-full h-full object-cover z-0" 
           />
           

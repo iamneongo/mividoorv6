@@ -5,7 +5,7 @@ import { useCallback } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { luxuryDoors } from "@/lib/content";
+import { formatLuxuryCode, luxuryDoors } from "@/lib/content";
 import { ChevronLeftIcon, ChevronRightIcon, SparkleIcon } from "@/components/icons";
 
 interface LuxuryShowcaseProps {
@@ -26,7 +26,7 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
   }, [emblaApi]);
 
   return (
-    <section id="luxury-collection" className="bg-white py-14 md:py-20">
+    <section id="luxury-collection" className="below-fold-section bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
@@ -39,7 +39,7 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
           {variant === "carousel" && (
             <div className="flex items-center gap-2">
               <button
-                aria-label="TrÆ°á»›c"
+                aria-label="Trước"
                 onClick={scrollPrev}
                 className="flex size-9 items-center justify-center rounded-full bg-black/[0.04] transition hover:bg-black/[0.08]"
               >
@@ -59,7 +59,6 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
         {variant === "grid" ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 pb-4">
             {luxuryDoors.map((d) => {
-              const slug = d.code.toLowerCase().replace(/\s+/g, '-');
               return (
                 <div key={d.code} className="min-w-0">
                   <div
@@ -77,17 +76,8 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                     <div className="flex items-end justify-between px-2">
                       <div>
                         <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
-                          {d.code}
+                          {formatLuxuryCode(d.code)}
                         </p>
-                        {d.taglineHref ? (
-                          <a href={d.taglineHref} className="mt-1.5 block text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors hover:text-brand">
-                            {d.tagline}
-                          </a>
-                        ) : (
-                          <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
-                            {d.tagline}
-                          </p>
-                        )}
                       </div>
                       <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
                         <ChevronRightIcon className="size-5" />
@@ -102,7 +92,6 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex -ml-5 pb-2">
               {luxuryDoors.map((d) => {
-                const slug = d.code.toLowerCase().replace(/\s+/g, '-');
                 return (
                   <div key={d.code} className="min-w-0 flex-[0_0_auto] pl-5 w-[240px] sm:w-[280px] md:w-[320px]">
                     <div
@@ -120,17 +109,8 @@ export function LuxuryShowcase({ variant = "carousel" }: LuxuryShowcaseProps) {
                       <div className="flex items-end justify-between px-2">
                         <div>
                           <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#818181]">
-                            {d.code}
+                            {formatLuxuryCode(d.code)}
                           </p>
-                          {d.taglineHref ? (
-                            <a href={d.taglineHref} className="mt-1.5 block text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors hover:text-brand">
-                              {d.tagline}
-                            </a>
-                          ) : (
-                            <p className="mt-1.5 text-[20px] font-medium leading-[1.2] tracking-tight text-ink transition-colors group-hover:text-brand">
-                              {d.tagline}
-                            </p>
-                          )}
                         </div>
                         <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-[#111111] transition group-hover:translate-x-0.5 group-hover:bg-brand group-hover:text-white">
                           <ChevronRightIcon className="size-5" />

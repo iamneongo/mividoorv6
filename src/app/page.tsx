@@ -7,6 +7,7 @@ import { ProductShowcase } from "@/components/ProductShowcase";
 import { NewProductBanner } from "@/components/NewProductBanner";
 import { LuxuryShowcase } from "@/components/LuxuryShowcase";
 import { BrandStory } from "@/components/BrandStory";
+import { QualityCertificate } from "@/components/QualityCertificate";
 import { MaterialsShowcase } from "@/components/MaterialsShowcase";
 import { FeaturesShowcase } from "@/components/FeaturesShowcase";
 import { ColorPalette } from "@/components/ColorPalette";
@@ -29,6 +30,7 @@ export default function Home() {
       <LuxuryShowcase />
 
       <BrandStory />
+      <QualityCertificate />
       <MaterialsShowcase />
       <FeaturesShowcase />
       <ColorPalette />

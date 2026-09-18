@@ -21,6 +21,7 @@ const originalsRoot = path.join(root, "private-assets", "watermark-originals");
 const watermarkedRoot = path.join(publicImages, "watermarked-detail");
 const logoPath = path.join(root, "assets", "watermark", "mividoor-logo.png");
 const writeChanges = process.argv.includes("--write");
+const forceWrite = process.argv.includes("--force");
 const onlyIndex = process.argv.indexOf("--only");
 const onlyPath = onlyIndex >= 0 ? process.argv[onlyIndex + 1]?.replaceAll("/", path.sep) : undefined;
 
@@ -108,12 +109,12 @@ async function watermarkImage(targetPath, watermark) {
     await fs.mkdir(path.dirname(originalPath), { recursive: true });
     await fs.copyFile(targetPath, originalPath);
   }
-  if (watermarkExists) return { relativePath, status: "already watermarked" };
+  if (watermarkExists && !forceWrite) return { relativePath, status: "already watermarked" };
 
   const output = sharp(sourcePath).rotate().composite([{ input: overlay, left, top }]);
   await fs.mkdir(path.dirname(publishedPath), { recursive: true });
   await encoder(output, path.extname(targetPath).toLowerCase()).toFile(publishedPath);
-  return { relativePath, status: backupExists ? "watermarked" : "backed up + watermarked" };
+  return { relativePath, status: forceWrite && watermarkExists ? "watermark refreshed" : backupExists ? "watermarked" : "backed up + watermarked" };
 }
 
 async function main() {

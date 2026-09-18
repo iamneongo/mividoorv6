@@ -1,0 +1,55 @@
+RewriteEngine On
+
+# Keep a single crawlable protocol. The cPanel Redirects UI cannot distinguish
+# HTTP from HTTPS, whereas this rule safely redirects only insecure requests.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://mividoor.vn%{REQUEST_URI} [R=301,L,NE]
+
+# Serve machine-readable text files as UTF-8 so Vietnamese characters render correctly.
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .txt
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.txt$">
+    Header set Content-Type "text/plain; charset=UTF-8"
+  </FilesMatch>
+
+  # Security headers supported by LiteSpeed/Apache. Keep same-origin framing for
+  # legitimate internal integrations while blocking third-party clickjacking.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# The Resend API key is kept in a PHP include file and must never be served.
+<FilesMatch "^\.resend-config\.php$">
+  Require all denied
+</FilesMatch>
+
+# The static export lives in /mividoor, but public pages use the root domain.
+# Next Link prepends its basePath, so normalize those generated page URLs before
+# they can produce a 404 or create duplicate URLs for search engines.
+RewriteRule ^mividoor/?$ https://mividoor.vn/ [R=301,L,NE]
+RewriteRule ^mividoor/(san-pham|luxury|tin-tuc|tim-kiem|lien-he|ve-chung-toi|mau-2-canh|mau-di-epoxy|mau-di-nep|mau-lua|mau-o-fix|mau-o-kinh-la-sach|mau-phang|mau-phao-chi-noi|mau-soi-huynh|mau-vom)/?$ https://mividoor.vn/$1/ [R=301,L,NE,NC]
+
+# Door originals are retained in the deployment for future production use, but
+# public requests are always served the protected, watermarked counterpart.
+RewriteCond %{REQUEST_URI} !^/mividoor/images/watermarked-detail/ [NC]
+RewriteRule ^mividoor/images/products/(.+\.(?:jpe?g|png|webp))$ /mividoor/images/watermarked-detail/products/$1 [R=301,L,NE,NC]
+RewriteCond %{REQUEST_URI} !^/mividoor/images/watermarked-detail/ [NC]
+RewriteRule ^mividoor/images/luxury/(.+\.(?:jpe?g|png|webp))$ /mividoor/images/watermarked-detail/luxury/$1 [R=301,L,NE,NC]
+RewriteCond %{REQUEST_URI} !^/mividoor/images/watermarked-detail/ [NC]
+RewriteRule ^mividoor/images/(mau-(?:cua-lua|cua-phang|cua-vom|hoa-van-cnc|nep-nhom-inox|o-fix|o-kinh|o-la-sach|phao-chi-noi)\.webp)$ /mividoor/images/watermarked-detail/$1 [R=301,L,NE,NC]
+
+# Canonicalize exported Next.js page directories with a trailing slash.
+# This also avoids a redirect chain when a legacy .com URL omits the slash.
+# Static assets are excluded because only page directories contain index.html.
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+)$ https://mividoor.vn/$1/ [R=301,L,NE]
+
+# Consolidate the legacy .com domain into the canonical .vn domain.
+RewriteCond %{HTTP_HOST} ^(www\.)?mividoor\.com$ [NC]
+RewriteRule ^ https://mividoor.vn%{REQUEST_URI} [R=301,L,NE]

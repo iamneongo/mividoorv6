@@ -102,7 +102,7 @@ export function SiteHeader({ theme = "dark" }: { theme?: "dark" | "light" }) {
         </svg>
         {/* Desktop Right Icons */}
         <div className="hidden lg:flex items-center gap-6 text-ink">
-          <button aria-label="Search" className="hover:text-brand transition-colors">
+          <button aria-label="Tìm kiếm" className="hover:text-brand transition-colors">
             <SearchIcon className="size-5" />
           </button>
         </div>

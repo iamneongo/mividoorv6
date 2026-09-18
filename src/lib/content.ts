@@ -39,6 +39,7 @@ export const navLinks: NavLink[] = [
     ]
   },
   { label: "BST Mividoor Luxury", href: "/luxury/" },
+  { label: "Catalogue", href: "/catalogue/" },
   { label: "Tin tức", href: "/tin-tuc/" },
   { label: "Liên hệ", href: "/lien-he/" },
 ];
@@ -279,6 +280,34 @@ export const productCatalog: Product[] = [
     image: `${WATERMARKED_IMG}/products/cua-o-fix/cua-o-fix-09.webp`,
   },
   {
+    name: "Cửa Ô Fix",
+    code: "MV-OFIX-10",
+    tagline: "Thoáng sáng - Hiện đại",
+    descr: "Thiết kế ô fix tạo điểm nhấn kiến trúc, giúp không gian thêm sáng và rộng mở.",
+    image: `${WATERMARKED_IMG}/products/cua-o-fix/cua-o-fix-10.webp`,
+  },
+  {
+    name: "Cửa Ô Fix",
+    code: "MV-OFIX-11",
+    tagline: "Tinh tế - Cân đối",
+    descr: "Ô kính cố định được hoàn thiện chỉn chu, kết hợp hài hòa cùng cánh cửa composite.",
+    image: `${WATERMARKED_IMG}/products/cua-o-fix/cua-o-fix-11.webp`,
+  },
+  {
+    name: "Cửa Ô Fix",
+    code: "MV-OFIX-12",
+    tagline: "Đón sáng - Thanh lịch",
+    descr: "Giải pháp ô fix giúp tăng ánh sáng tự nhiên và giữ sự riêng tư cần thiết.",
+    image: `${WATERMARKED_IMG}/products/cua-o-fix/cua-o-fix-12.webp`,
+  },
+  {
+    name: "Cửa Ô Fix",
+    code: "MV-OFIX-13",
+    tagline: "Bền đẹp - Sang trọng",
+    descr: "Mẫu cửa ô fix có đường nét hiện đại, phù hợp nhiều không gian nội thất.",
+    image: `${WATERMARKED_IMG}/products/cua-o-fix/cua-o-fix-13.webp`,
+  },
+  {
     name: "Cửa Vòm",
     code: "MV-VOM-01",
     tagline: "Mềm mại - Độc đáo",
@@ -370,6 +399,69 @@ export const productCatalog: Product[] = [
     descr: "Ba đường nẹp vàng dọc tạo điểm nhấn thanh thoát trên nền vân gỗ nâu trầm.",
     image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-09.webp`,
   },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-10",
+    tagline: "Sang trọng - Hiện đại",
+    descr: "Thiết kế cửa nẹp kim loại sắc nét, tôn lên vẻ hiện đại cho không gian nội thất.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-10.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-11",
+    tagline: "Tinh tế - Nổi bật",
+    descr: "Điểm nhấn nẹp trang trí cân đối, mang đến diện mạo sang trọng và chỉn chu.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-11.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-12",
+    tagline: "Trầm ấm - Thanh lịch",
+    descr: "Bề mặt vân gỗ hài hòa kết hợp nẹp kim loại, phù hợp nhiều phong cách sống.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-12.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-13",
+    tagline: "Đẳng cấp - Bền đẹp",
+    descr: "Mẫu cửa hoàn thiện sắc nét, tạo điểm nhấn bền vững cho công trình.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-13.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-14",
+    tagline: "Hiện đại - Cân đối",
+    descr: "Đường nẹp thanh mảnh giúp tổng thể cánh cửa thêm hài hòa và nổi bật.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-14.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-15",
+    tagline: "Tối giản - Sang trọng",
+    descr: "Thiết kế đề cao tỷ lệ tinh gọn cùng chất liệu hoàn thiện cao cấp.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-15.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-16",
+    tagline: "Ấm áp - Tinh xảo",
+    descr: "Sự kết hợp giữa sắc gỗ và nẹp trang trí tạo nên vẻ đẹp tinh tế.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-16.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-17",
+    tagline: "Nổi bật - Thanh lịch",
+    descr: "Bề mặt cửa chỉn chu cùng chi tiết nẹp tạo chiều sâu cho không gian.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-17.webp`,
+  },
+  {
+    name: "Cửa Nẹp",
+    code: "MV-NEP-18",
+    tagline: "Bền vững - Đẳng cấp",
+    descr: "Mẫu cửa nẹp hoàn thiện sắc sảo, đáp ứng nhu cầu thẩm mỹ và sử dụng lâu dài.",
+    image: `${WATERMARKED_IMG}/products/cua-nep/cua-nep-18.webp`,
+  },
 
   {
     name: "Cửa Soi Huỳnh",
@@ -440,6 +532,48 @@ export const productCatalog: Product[] = [
     tagline: "Tinh xảo - Đẳng cấp",
     descr: "Soi huỳnh bằng công nghệ CNC cho các đường nét hoa văn chính xác tuyệt đối.",
     image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-10.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-11",
+    tagline: "Tinh xảo - Sang trọng",
+    descr: "Đường soi huỳnh được gia công sắc nét, tạo chiều sâu thẩm mỹ cho cánh cửa.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-11.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-12",
+    tagline: "Hiện đại - Nổi bật",
+    descr: "Thiết kế soi huỳnh cân đối, mang đến diện mạo hiện đại và khác biệt.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-12.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-13",
+    tagline: "Tinh tế - Cân đối",
+    descr: "Hoa văn soi huỳnh hài hòa giúp tôn lên vẻ chỉn chu của không gian nội thất.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-13.webp?v=20260918-1512`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-14",
+    tagline: "Đẳng cấp - Bền đẹp",
+    descr: "Mẫu cửa nổi bật với các đường soi sắc sảo và bề mặt hoàn thiện cao cấp.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-14.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-15",
+    tagline: "Thanh lịch - Hiện đại",
+    descr: "Chi tiết soi huỳnh tạo nhịp điệu tinh tế, phù hợp nhiều phong cách kiến trúc.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-15.webp`,
+  },
+  {
+    name: "Cửa Soi Huỳnh",
+    code: "MV-SH-16",
+    tagline: "Nghệ thuật - Tinh xảo",
+    descr: "Công nghệ CNC giúp hoàn thiện các đường soi chính xác và bền đẹp theo thời gian.",
+    image: `${WATERMARKED_IMG}/products/soi-huynh/soi-huynh-16.webp`,
   },
 
   {
@@ -646,6 +780,38 @@ export const productCatalog: Product[] = [
     image: `${WATERMARKED_IMG}/products/cua-2-canh/cua-2-canh-04.webp`,
   },
   {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-05",
+    tagline: "Hiện đại - Nổi bật",
+    descr:
+      "Thiết kế cửa 2 cánh cân đối, tạo điểm nhấn sang trọng và bền đẹp cho không gian sống.",
+    image: `${WATERMARKED_IMG}/products/cua-2-canh/cua-2-canh-05.webp`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-06",
+    tagline: "Tinh tế - Sang trọng",
+    descr:
+      "Bề mặt hoàn thiện chỉn chu cùng đường nét hiện đại, phù hợp với nhiều phong cách nội thất.",
+    image: `${WATERMARKED_IMG}/products/cua-2-canh/cua-2-canh-06.webp`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-07",
+    tagline: "Ấm áp - Thanh lịch",
+    descr:
+      "Cửa 2 cánh với sắc gỗ hài hòa, mang lại cảm giác gần gũi và tinh tế cho công trình.",
+    image: `${WATERMARKED_IMG}/products/cua-2-canh/cua-2-canh-07.webp`,
+  },
+  {
+    name: "Cửa 2 Cánh",
+    code: "MV-2CANH-08",
+    tagline: "Bền vững - Đẳng cấp",
+    descr:
+      "Mẫu cửa 2 cánh hoàn thiện sắc nét, kết hợp vẻ đẹp thẩm mỹ với độ bền sử dụng lâu dài.",
+    image: `${WATERMARKED_IMG}/products/cua-2-canh/cua-2-canh-08.webp`,
+  },
+  {
     name: "Cửa Ô Kính",
     isCategory: true,
     code: "MV-07",
@@ -686,7 +852,8 @@ const luxTaglines = [
   "Mẫu soi huỳnh",
   "Mẫu đi nẹp nhôm/nẹp inox",
   "Mẫu đi nẹp nhôm/nẹp inox",
-  "Mẫu ô kính",
+  "Mẫu đi nẹp nhôm/nẹp inox",
+  "Cửa Ô Kính",
 ];
 
 const luxFiles = [
@@ -719,12 +886,17 @@ export const luxuryDoors: LuxuryDoor[] = luxFiles.map((filename, i) => ({
   return door;
 }).filter((door) => !["MIVI-LUX 08", "MIVI-LUX 10"].includes(door.code));
 
+/** Public-facing label for the Luxury collection. Keep the internal code stable. */
+export function formatLuxuryCode(code: string) {
+  return `Mã ${code.replace("MIVI-", "MV-")}`;
+}
+
 export const materials: Material[] = [
   { title: "Phôi PVC cao cấp", subtitle: "Tiêu chuẩn nhà máy", image: `${IMG}/phoi-pvc-v3.webp` },
   { title: "Keo Jowat Đức", subtitle: "Mividoor sử dụng", image: `${IMG}/keo-jowat-v3.webp` },
   { title: "Lớp phim PVC", subtitle: "Cao cấp dày dặn", image: `${IMG}/phim-pvc-v3.webp` },
-  { title: "Công nghệ phủ phim", subtitle: "Máy Burkle nhập từ Đức", image: `${IMG}/burkle-machine-v3.webp` },
-  { title: "Dán cạnh biên keo PUR", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/wpb-plastic-v3.webp` },
+  { title: "Công nghệ phủ phim từ Đức", subtitle: "Máy Burkle nhập từ Đức", image: `${IMG}/burkle-machine-v3.webp` },
+  { title: "Dán cạnh biên keo PUR", subtitle: "Vào 4 cạnh cánh cửa", image: `${IMG}/pur-edge-banding-machine.webp` },
 ];
 
 export const features: Feature[] = [
@@ -765,7 +937,7 @@ const swatchHashes = [
   "298cb06f5192d0cc8983", "2d2bfdd41c299d77c438", "ef061ae4fb197a472308", "m04",
   "6bb4095ee8a369fd30b2", "e97cf39a12679339ca76", "744cffb11e4c9f12c65d", "332761c5803801665829",
   "eaddd33f32c2b39cead3", "774a59a8b855390b6044", "2c8d9a1d7be0fabea3f1", "c25d2ebfcf424e1c1753",
-  "m13", "1de54807a9fa28a471eb", "113c94df7522f47cad33", "edf75714b6e937b76ef8", "m17", "m18",
+  "m13", "1de54807a9fa28a471eb", "113c94df7522f47cad33", "edf75714b6e937b76ef8", "m17", "m18", "m19", "m20",
 ];
 
 export const colorSwatches: ColorSwatch[] = swatchHashes.map((h, i) => ({
